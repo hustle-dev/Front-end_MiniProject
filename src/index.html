@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <div class="container">
         <header class="header">
@@ -15,11 +18,60 @@
 
         </nav>
         <main class="main">
-            
+            <section class="intro">
+                <h2 class="intro__heading a11yHidden">Free Gallery 소개 섹션</h2>
+                <div class="intro-container">
+                    <div class="intro-videoContainer">
+                        <video muted playsinline loop autoplay>
+                            <source src="assets/video/Photographer - 91.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="intro__text">
+                        <span>세상의</span>
+                        <span>모든 여행</span>
+                        <p>
+                            Yanolja app만 있으면<br>
+                            누구나 언제 어디서든<br>
+                            여행을 즐길 수 있습니다.
+                        </p>
+                        <a href="#"><span>사진 보러가기</span><i class="fas fa-images fa-lg"></i> </a>
+                    </div>
+                </div>
+            </section>
+            <section class="author">
+                <h2 class="author__heading">신규 작가</h2>
+                <ul class="author__list">
+                    <li class="author__item">
+                        <figure class="author__container">
+                            <img class="author__img" src="./assets/images/example.png"" alt=" 작가 인물 사진" />
+                            <figcaption class="author__caption">윤석규</figcaption>
+                        </figure>
+                    </li>
+                    <li class="author__item">
+                        <figure class="author__container">
+                            <img class="author__img" src="./assets/images/example.png"" alt=" 작가 인물 사진" />
+                            <figcaption class="author__caption">이정민</figcaption>
+                        </figure>
+                    </li>
+                    <li class="author__item">
+                        <figure class="author__container">
+                            <img class="author__img" src="./assets/images/example.png"" alt=" 작가 인물 사진" />
+                            <figcaption class="author__caption">박채영</figcaption>
+                        </figure>
+                    </li>
+                    <li class="author__item">
+                        <figure class="author__container">
+                            <img class="author__img" src="./assets/images/example.png"" alt=" 작가 인물 사진" />
+                            <figcaption class="author__caption">강희</figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </section>
         </main>
         <footer class="footer">
 
         </footer>
     </div>
 </body>
+
 </html>
