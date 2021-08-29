@@ -3,7 +3,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
-// const CopyPlugin = require('copy-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 const paths = {
@@ -91,16 +91,16 @@ module.exports = {
       linkType: false,
       filename: 'css/style.css',
     }),
-    // new CopyPlugin({
-    //   patterns: [
-    //     {
-    //       from: path.join(__dirname, 'src/assets'),
-    //       to: path.join(
-    //         __dirname,
-    //         `${isDevelopment ? paths.dist : paths.build}/assets`
-    //       ),
-    //     },
-    //   ],
-    // }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.join(__dirname, 'src/assets'),
+          to: path.join(
+            __dirname,
+            `${isDevelopment ? paths.dist : paths.build}/assets`,
+          ),
+        },
+      ],
+    }),
   ],
 };
