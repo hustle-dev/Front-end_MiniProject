@@ -1,22 +1,21 @@
 @use './../utils' as *;
 
-.header {
-    width: 100%;
-    height: 100px;
-    background-color: yellow;
-}
-
 .intro {
     padding: rem(60px);
 
     &-container {
-        overflow: hidden;
-        position: relative;
-        margin: 0 auto;
         display: flex;
-        justify-content: space-between;
         width: 100%;
         height: 100%;
+        margin: 0 auto;
+        @include desktop {
+            max-width: 1200px;
+            justify-content: space-between;
+        }
+
+        @include mobile {
+            flex-flow: column wrap;
+        }
     }
 
     &-videoContainer {
