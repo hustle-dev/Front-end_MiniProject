@@ -1,1 +1,66 @@
 @use './../utils' as *;
+
+.author {
+  max-width: $maxWidth;
+  margin: 0 auto;
+  padding: 0 rem(20px);
+  &__heading {
+    text-align: center;
+    margin-bottom: rem(50px);
+
+    @include mobile {
+      font-size: rem(32px);
+    }
+    @include desktop {
+      font-size: rem(42px);
+    }
+  }
+  &__list {
+    @include mobile {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      gap: 15px;
+      justify-content: center;
+    }
+    @include desktop {
+      @include flexbox($justify-content: center);
+    }
+  }
+
+  &__item {
+    position: relative;
+    &:hover .author__caption {
+      transform: translate(-50%, -100%);
+    }
+    @include desktop {
+      max-width: rem(250px);
+      & + .author__item {
+        margin-left: rem(30px);
+      }
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+    @include desktop {
+      height: rem(325px);
+    }
+  }
+
+  &__caption {
+    position: absolute;
+    color: $white;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 300ms ease;
+    @include mobile {
+      font-size: rem(20px);
+    }
+    @include desktop {
+      font-size: rem(24px);
+    }
+  }
+}
