@@ -55,6 +55,7 @@
     }
 
     & > span {
+        
 
       @include desktop {
         display: block;
@@ -63,25 +64,42 @@
       }
 
       @include mobile {
-          font-size: 10vw;
-
+          font-size: rem(60px);
       }
     }
+
     p {
-      margin-top: rem(12px);
-      font-size: rem(16px);
-      line-height: rem(20px);
-      text-align: end;
+
+        @include desktop {
+            margin-top: rem(12px);
+            font-size: rem(16px);
+            line-height: rem(20px);
+            text-align: end;
+        }
+
+        @include mobile {
+            margin-top: rem(20px);
+            font-size: rem(24px);
+            line-height: rem(30px);
+        }
     }
     a {
+        @include desktop {
+            font-size: rem(12px);
+            width: 50%;
+            padding: rem(16px);
+        }
       display: flex;
       margin-top: rem(32px);
       border: 2px solid black;
-      font-size: rem(12px);
-      padding: rem(16px);
-      width: 50%;
+
       flex-flow: row nowrap;
       justify-content: space-between;
+
+      @include mobile {
+          padding: rem(32px) rem(16px); 
+      }
+
     }
   }
 }
