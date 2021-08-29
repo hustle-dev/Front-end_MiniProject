@@ -1,41 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>commit</title>
+    <title>Free Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    <!-- register -->
-    <div class="register">
-        <h2 class="register__heading">
-            <span class="register__heading--underline">이미지 업로드</span>
-        </h2>
-        <p class="register__detail">당신의 사진을 공유해주세요. 당신의 행복한 순간을 다른 사람들과 공유할 수 있습니다.</p>
-        <div class="register__container">
-            <form action="#" class="register__formbox" method="POST">
-                <legend class="register__heading a11yHidden">이미지 업로드 폼 양식</legend>
-                <ul class="register__list">
-                    <li class="register__item">
-                        <label for="Name" class="a11yHidden">작성자 이름</label>
-                        <input type="text" id="Name" class="register__item--name" placeholder="이름을 입력해주세요">
+    <div class="container">
+        <header class="header">
+
+        </header>
+        <nav class="navigation">
+
+        </nav>
+        <main class="main">
+            <section class="intro">
+                <h2 class="intro__heading a11yHidden">Free Gallery 소개 섹션</h2>
+                <div class="intro-container">
+                    <div class="intro-videoContainer">
+                        <video muted playsinline loop autoplay>
+                            <source src="assets/video/Photographer - 91.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="intro__text">
+                        <span>세상의</span>
+                        <span>모든 여행</span>
+                        <p>
+                            Yanolja app만 있으면<br>
+                            누구나 언제 어디서든<br>
+                            여행을 즐길 수 있습니다.
+                        </p>
+                        <a href="#"><span>사진 보러가기</span><i class="fas fa-images fa-lg"></i> </a>
+                    </div>
+                </div>
+            </section>
+            <section class="author">
+                <h2 class="author__heading">신규 작가</h2>
+                <ul class="author__list">
+                    <li class="author__item">
+                        <figure class="author__container">
+                            <img class="author__img" src="./assets/images/example.png"" alt=" 작가 인물 사진" />
+                            <figcaption class="author__caption">윤석규</figcaption>
+                        </figure>
                     </li>
-                    <li class="register__item">
-                        <label for="Explain" class="a11yHidden">사진 설명</label>
-                        <textarea name="image-explanation" id="Explain" rows="5" class="register__item--explain" placeholder="사진에 대해 간단히 설명해주세요"></textarea>
+                    <li class="author__item">
+                        <figure class="author__container">
+                            <img class="author__img" src="./assets/images/example.png"" alt=" 작가 인물 사진" />
+                            <figcaption class="author__caption">이정민</figcaption>
+                        </figure>
                     </li>
-                    <li class="register__item">
-                        <label for="File" class="register__item--upload" data-label="">파일 업로드</label>
-                        <input type="file" id="File" class="register__item--file" accept="image/*">
+                    <li class="author__item">
+                        <figure class="author__container">
+                            <img class="author__img" src="./assets/images/example.png"" alt=" 작가 인물 사진" />
+                            <figcaption class="author__caption">박채영</figcaption>
+                        </figure>
+                    </li>
+                    <li class="author__item">
+                        <figure class="author__container">
+                            <img class="author__img" src="./assets/images/example.png"" alt=" 작가 인물 사진" />
+                            <figcaption class="author__caption">강희</figcaption>
+                        </figure>
                     </li>
                 </ul>
-                <button class="register__button">공유하기</button>
-            </form>
-            <div class="register__thumbnail-container">
-                <img class="register__thumbnail" src="" alt="">
-            </div>
-        </div>
+            </section>
+            <section class="register">
+                <h2 class="register__heading">
+                    <span class="register__heading--underline">이미지 업로드</span>
+                </h2>
+                <p class="register__detail">당신의 사진을 공유해주세요. 당신의 행복한 순간을 다른 사람들과 공유할 수 있습니다.</p>
+                <div class="register__container">
+                    <form action="#" class="register__formbox" method="POST">
+                        <legend class="register__heading a11yHidden">이미지 업로드 폼 양식</legend>
+                        <ul class="register__list">
+                            <li class="register__item">
+                                <label for="Name" class="a11yHidden">작성자 이름</label>
+                                <input type="text" id="Name" class="register__item--name" placeholder="이름을 입력해주세요">
+                            </li>
+                            <li class="register__item">
+                                <label for="Explain" class="a11yHidden">사진 설명</label>
+                                <textarea name="image-explanation" id="Explain" rows="5" class="register__item--explain" placeholder="사진에 대해 간단히 설명해주세요"></textarea>
+                            </li>
+                            <li class="register__item">
+                                <label for="File" class="register__item--upload" data-label="">파일 업로드</label>
+                                <input type="file" id="File" class="register__item--file" accept="image/*">
+                            </li>
+                        </ul>
+                        <button class="register__button">공유하기</button>
+                    </form>
+                    <div class="register__thumbnail-container">
+                        <img class="register__thumbnail" src="" alt="">
+                    </div>
+                </div>
+            </section>  
+        </main>
+        <footer class="footer">
+
+        </footer>
     </div>
 </body>
+
 </html>
+ 
