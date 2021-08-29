@@ -97,7 +97,7 @@ module.exports = {
           from: path.join(__dirname, 'src/assets'),
           to: path.join(
             __dirname,
-            `${isDevelopment ? paths.dist : paths.build}/assets`
+            `${isDevelopment ? paths.dist : paths.build}/assets`,
           ),
         },
       ],
