@@ -29,24 +29,43 @@
     border-radius: 10%;
     overflow: hidden;
 
+    @include mobile {
+        margin-bottom: rem(80px);
+    }
+
     video {
       @include responsive;
     }
   }
 
   &__text {
-    width: 50%;
+    width: 100%;
     margin-bottom: rem(30px);
     word-break: keep-all;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: flex-end;
     font-weight: bold;
 
+    @include desktop {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: flex-end;
+    }
+
+    @include mobile {
+        margin-bottom: rem(80px);
+    }
+
     & > span {
-      display: block;
-      font-size: rem(40px);
-      line-height: rem(50px);
+
+      @include desktop {
+        display: block;
+        font-size: rem(40px);
+        line-height: rem(50px);
+      }
+
+      @include mobile {
+          font-size: 10vw;
+
+      }
     }
     p {
       margin-top: rem(12px);
