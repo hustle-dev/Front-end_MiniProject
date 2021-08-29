@@ -7,7 +7,35 @@
     <title>commit</title>
 </head>
 <body>
-    <div>hi</div>
-    <so
+    <!-- register -->
+    <div class="register">
+        <h2 class="register__heading">
+            <span class="register__heading--underline">이미지 업로드</span>
+        </h2>
+        <p class="register__detail">당신의 사진을 공유해주세요. 당신의 행복한 순간을 다른 사람들과 공유할 수 있습니다.</p>
+        <div class="register__container">
+            <form action="#" class="register__formbox" method="POST">
+                <legend class="register__heading a11yHidden">이미지 업로드 폼 양식</legend>
+                <ul class="register__list">
+                    <li class="register__item">
+                        <label for="Name" class="a11yHidden">작성자 이름</label>
+                        <input type="text" id="Name" class="register__item--name" placeholder="이름을 입력해주세요">
+                    </li>
+                    <li class="register__item">
+                        <label for="Explain" class="a11yHidden">사진 설명</label>
+                        <textarea name="image-explanation" id="Explain" rows="5" class="register__item--explain" placeholder="사진에 대해 간단히 설명해주세요"></textarea>
+                    </li>
+                    <li class="register__item">
+                        <label for="File" class="register__item--upload" data-label="">파일 업로드</label>
+                        <input type="file" id="File" class="register__item--file" accept="image/*">
+                    </li>
+                </ul>
+                <button class="register__button">공유하기</button>
+            </form>
+            <div class="register__thumbnail-container">
+                <img class="register__thumbnail" src="" alt="">
+            </div>
+        </div>
+    </div>
 </body>
 </html>
