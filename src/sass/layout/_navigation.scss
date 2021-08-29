@@ -1,2 +1,77 @@
 @use './../utils' as *;
 @use './../components' as *;
+
+.nav {
+  // 데스크탑
+  @include desktop {
+    @include boxSizeMax;
+    &__list {
+      @include flexbox(row, space-between);
+      padding: rem(120px) rem(20px) 0;
+      font-weight: lighter;
+    }
+    &__link {
+      transition: all 0.3s ease;
+    }
+    &__link a {
+      display: block;
+      line-height: 3;
+      margin: 0 rem(20px);
+    }
+    &__link:hover {
+      transform: scale(1.3);
+    }
+    &__close {
+      display: none;
+    }
+  }
+
+  // 모바일
+  @include mobile {
+    &__list {
+      display: block;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      background-color: rgba($gray3, 0.8);
+      padding: rem(90px) 0;
+      color: white;
+      font-weight: lighter;
+      font-size: rem(20px);
+      word-break: keep-all;
+      @include flexbox(column);
+      height: 100%;
+      width: 40%;
+      transform: translateX(-100%);
+      transition: all 0.3s ease;
+    }
+
+    &__list.is-active {
+      transform: translateX(0%);
+    }
+    &__link {
+      transition: all 0.3s ease;
+    }
+    &__link a {
+      display: block;
+      line-height: 3;
+      margin: rem(10px) rem(20px);
+    }
+    &__link:hover {
+      background-color: rgba($gray3, 0.9);
+    }
+    &__close {
+      position: absolute;
+      background-color: transparent;
+      border: 0;
+      color: white;
+      top: rem(30px);
+      left: rem(20px);
+      transition: all 0.3s ease;
+    }
+    &__close:hover {
+      transform: scale(1.3);
+    }
+  }
+}
