@@ -175,6 +175,82 @@
   }
 }
 
+.carousel {
+  padding: rem(80px);
+  width: 100%;
+  margin: 0 auto;
+
+  &__heading {
+    font-size: rem(42px);
+    text-align: center;
+  }
+
+  &__button-wrapper {
+    @include desktop {
+      position: relative;
+      max-width: 750px;
+      margin: 0 auto;
+    }
+  }
+
+  &__inner {
+    width: 100%;
+    @include desktop {
+      overflow: hidden;
+      // max-width: 750px;
+      // margin: 0 auto;
+    }
+  }
+
+  .carousel__btn {
+    @include mobile {
+      display: none;
+    }
+    @include desktop {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: rem(32px);
+      height: rem(32px);
+      line-height: rem(34px);
+      border-radius: 50%;
+      border: 0;
+      background-color: #fff;
+      z-index: 10;
+      &--previous {
+        left: 0;
+      }
+      &--next {
+        right: 0;
+      }
+    }
+  }
+
+  &__list {
+    @include flexbox($align-items: center);
+    @include mobile {
+      overflow: auto;
+      max-width: 750px;
+      margin: 0 auto;
+    }
+  }
+
+  &__item {
+    width: rem(250px);
+    min-width: rem(250px);
+    padding-right: rem(15px);
+
+    &--detail {
+      display: none;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
 .author {
   max-width: $maxWidth;
   margin: 0 auto;
