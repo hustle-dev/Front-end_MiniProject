@@ -2,12 +2,18 @@
 @use './../components' as *;
 
 .nav {
+  // 스크롤 top에 닿아있는 경우
+  transition: all 0.2s ease;
+  @at-root .nav.is-top {
+    transform: translateY(0);
+  }
+
   // 데스크탑
   @include desktop {
     width: 100%;
     position: absolute;
     z-index: 10;
-    top: rem(120px);
+    transform: translateY(rem(100px));
 
     // @include boxSizeMax;
     &__list {

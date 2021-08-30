@@ -9,12 +9,6 @@
 .greeting {
   position: relative;
 
-  @include desktop {
-  }
-  @include mobile {
-    margin: rem(100px) 0;
-  }
-
   // 비디오
   &__videoContainer {
     width: 100vw;
