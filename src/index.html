@@ -52,24 +52,203 @@
       </nav>
       <main class="main">
         <section class="intro">
-            <h2 class="intro__heading a11yHidden">Free Gallery 소개 섹션</h2>
-            <div class="intro-container">
-                <div class="intro-videoContainer">
-                    <video muted playsinline loop autoplay>
-                        <source src="assets/video/Photographer - 91.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="intro__text">
-                    <span>세상의</span>
-                    <span>모든 여행</span>
-                    <p>
-                        Yanolja app만 있으면<br>
-                        누구나 언제 어디서든<br>
-                        여행을 즐길 수 있습니다.
-                    </p>
-                    <a href="#"><span>사진 보러가기</span><i class="fas fa-images fa-lg"></i> </a>
-                </div>
+          <h2 class="intro__heading a11yHidden">Free Gallery 소개 섹션</h2>
+          <div class="intro-container">
+            <div class="intro-videoContainer">
+              <video muted playsinline loop autoplay>
+                <source
+                  src="assets/video/Photographer - 91.mp4"
+                  type="video/mp4"
+                />
+              </video>
             </div>
+            <div class="intro__text">
+              <span>세상의</span>
+              <span>모든 여행</span>
+              <p>
+                Yanolja app만 있으면<br />
+                누구나 언제 어디서든<br />
+                여행을 즐길 수 있습니다.
+              </p>
+              <a href="#"
+                ><span>사진 보러가기</span><i class="fas fa-images fa-lg"></i>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section id="carousel" class="carousel">
+          <div class="carousel__inner">
+            <ul class="carousel__list">
+              <button
+                id="previous"
+                type="button"
+                class="carousel__btn carousel__btn--previous"
+                aria-controls="carousel__button carousel-items"
+                aria-label="이전"
+              >
+                이전 슬라이드
+              </button>
+              <button
+                id="next"
+                type="button"
+                class="carousel__btn carousel__btn--next"
+                aria-controls="carousel-items"
+                aria-label="다음"
+              >
+                다음 슬라이드
+              </button>
+              <li class="carousel__item">
+                <a href="" class="carousel__popupbutton" role="button">
+                  <div class="carousel__imageWrapper">
+                    <img
+                      src="./assets/images/example.png"
+                      alt="별이 빛나는 밤"
+                      class="carousel__img"
+                    />
+                  </div>
+                </a>
+                <div
+                  class="carousel__item--detail"
+                  role="dialog"
+                  aria-labelldby="dialogTitle"
+                >
+                  <h3 class="carousel__item--name"></h3>
+                  <dl class="carousel__item--column">
+                    <dt>게시자</dt>
+                    <dd>박채영</dd>
+                    <dt>게시일</dt>
+                    <dd>2021/08/29</dd>
+                    <dt>설명글</dt>
+                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
+                  </dl>
+                  <button id="No1" type="button" class="carousel__item--close">
+                    <i class="far fa-heart is-active"></i>
+                    <i class="fas fa-heart"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="carousel__item">
+                <a href="" class="carousel__popupbutton" role="button">
+                  <div class="carousel__imageWrapper">
+                    <img
+                      src="./assets/images/example.png"
+                      alt="별이 빛나는 밤"
+                      class="carousel__img"
+                    />
+                  </div>
+                </a>
+                <div
+                  class="carousel__item--detail"
+                  role="dialog"
+                  aria-labelldby="dialogTitle"
+                >
+                  <h3 class="carousel__item--name"></h3>
+                  <dl class="carousel__item--column">
+                    <dt>게시자</dt>
+                    <dd>박채영</dd>
+                    <dt>게시일</dt>
+                    <dd>2021/08/29</dd>
+                    <dt>설명글</dt>
+                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
+                  </dl>
+                  <button id="No2" type="button" class="carousel__item--close">
+                    <i class="far fa-heart is-active"></i>
+                    <i class="fas fa-heart"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="carousel__item">
+                <a href="" class="carousel__popupbutton" role="button">
+                  <div class="carousel__imageWrapper">
+                    <img
+                      src="./assets/images/example.png"
+                      alt="별이 빛나는 밤"
+                      class="carousel__img"
+                    />
+                  </div>
+                </a>
+                <div
+                  class="carousel__item--detail"
+                  role="dialog"
+                  aria-labelldby="dialogTitle"
+                >
+                  <h3 class="carousel__item--name"></h3>
+                  <dl class="carousel__item--column">
+                    <dt>게시자</dt>
+                    <dd>박채영</dd>
+                    <dt>게시일</dt>
+                    <dd>2021/08/29</dd>
+                    <dt>설명글</dt>
+                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
+                  </dl>
+                  <button id="No3" type="button" class="carousel__item--close">
+                    <i class="far fa-heart is-active"></i>
+                    <i class="fas fa-heart"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="carousel__item">
+                <a href="" class="carousel__popupbutton" role="button">
+                  <div class="carousel__imageWrapper">
+                    <img
+                      src="./assets/images/example.png"
+                      alt="별이 빛나는 밤"
+                      class="carousel__img"
+                    />
+                  </div>
+                </a>
+                <div
+                  class="carousel__item--detail"
+                  role="dialog"
+                  aria-labelldby="dialogTitle"
+                >
+                  <h3 class="carousel__item--name"></h3>
+                  <dl class="carousel__item--column">
+                    <dt>게시자</dt>
+                    <dd>박채영</dd>
+                    <dt>게시일</dt>
+                    <dd>2021/08/29</dd>
+                    <dt>설명글</dt>
+                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
+                  </dl>
+                  <button id="No4" type="button" class="carousel__item--close">
+                    <i class="far fa-heart is-active"></i>
+                    <i class="fas fa-heart"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="carousel__item">
+                <a href="" class="carousel__popupbutton" role="button">
+                  <div class="carousel__imageWrapper">
+                    <img
+                      src="./assets/images/example.png"
+                      alt="별이 빛나는 밤"
+                      class="carousel__img"
+                    />
+                  </div>
+                </a>
+                <div
+                  class="carousel__item--detail"
+                  role="dialog"
+                  aria-labelldby="dialogTitle"
+                >
+                  <h3 class="carousel__item--name"></h3>
+                  <dl class="carousel__item--column">
+                    <dt>게시자</dt>
+                    <dd>박채영</dd>
+                    <dt>게시일</dt>
+                    <dd>2021/08/29</dd>
+                    <dt>설명글</dt>
+                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
+                  </dl>
+                  <button id="No5" type="button" class="carousel__item--close">
+                    <i class="far fa-heart"></i>
+                    <i class="fas fa-heart is-active"></i>
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
         </section>
         <section class="author">
           <h2 class="author__heading">신규 작가</h2>
@@ -105,33 +284,56 @@
           </ul>
         </section>
         <section class="register">
-            <h2 class="register__heading">
-                <span class="register__heading--underline">이미지 업로드</span>
-            </h2>
-            <p class="register__detail">당신의 사진을 공유해주세요. 당신의 행복한 순간을 다른 사람들과 공유할 수 있습니다.</p>
-            <div class="register__container">
-                <form action="#" class="register__formbox" method="POST">
-                    <legend class="register__heading a11yHidden">이미지 업로드 폼 양식</legend>
-                    <ul class="register__list">
-                        <li class="register__item">
-                            <label for="Name" class="a11yHidden">작성자 이름</label>
-                            <input type="text" id="Name" class="register__item--name" placeholder="이름을 입력해주세요">
-                        </li>
-                        <li class="register__item">
-                            <label for="Explain" class="a11yHidden">사진 설명</label>
-                            <textarea name="image-explanation" id="Explain" rows="5" class="register__item--explain" placeholder="사진에 대해 간단히 설명해주세요"></textarea>
-                        </li>
-                        <li class="register__item">
-                            <label for="File" class="register__item--upload" data-label="">파일 업로드</label>
-                            <input type="file" id="File" class="register__item--file" accept="image/*">
-                        </li>
-                    </ul>
-                    <button class="register__button">공유하기</button>
-                </form>
-                <div class="register__thumbnail-container">
-                    <img class="register__thumbnail" src="" alt="">
-                </div>
+          <h2 class="register__heading">
+            <span class="register__heading--underline">이미지 업로드</span>
+          </h2>
+          <p class="register__detail">
+            당신의 사진을 공유해주세요. 당신의 행복한 순간을 다른 사람들과
+            공유할 수 있습니다.
+          </p>
+          <div class="register__container">
+            <form action="#" class="register__formbox" method="POST">
+              <legend class="register__heading a11yHidden">
+                이미지 업로드 폼 양식
+              </legend>
+              <ul class="register__list">
+                <li class="register__item">
+                  <label for="Name" class="a11yHidden">작성자 이름</label>
+                  <input
+                    type="text"
+                    id="Name"
+                    class="register__item--name"
+                    placeholder="이름을 입력해주세요"
+                  />
+                </li>
+                <li class="register__item">
+                  <label for="Explain" class="a11yHidden">사진 설명</label>
+                  <textarea
+                    name="image-explanation"
+                    id="Explain"
+                    rows="5"
+                    class="register__item--explain"
+                    placeholder="사진에 대해 간단히 설명해주세요"
+                  ></textarea>
+                </li>
+                <li class="register__item">
+                  <label for="File" class="register__item--upload" data-label=""
+                    >파일 업로드</label
+                  >
+                  <input
+                    type="file"
+                    id="File"
+                    class="register__item--file"
+                    accept="image/*"
+                  />
+                </li>
+              </ul>
+              <button class="register__button">공유하기</button>
+            </form>
+            <div class="register__thumbnail-container">
+              <img class="register__thumbnail" src="" alt="" />
             </div>
+          </div>
         </section>
       </main>
       <footer class="footer"></footer>
@@ -140,5 +342,5 @@
       src="https://kit.fontawesome.com/e8b41302b7.js"
       crossorigin="anonymous"
     ></script>
-</body>
+  </body>
 </html>
