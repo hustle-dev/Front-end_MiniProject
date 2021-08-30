@@ -5,23 +5,91 @@
   height: 100px;
 }
 
+// greeting
+.greeting {
+  position: relative;
+
+  @include desktop {
+  }
+  @include mobile {
+    margin: rem(100px) 0;
+  }
+
+  // 비디오
+  &__videoContainer {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  &__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+  }
+
+  // 슬로건
+  &__slogan {
+    position: absolute;
+    color: white;
+    line-height: 1.2;
+    font-weight: lighter;
+    word-break: keep-all;
+
+    @include desktop {
+      top: 60%;
+      right: 10%;
+      font-size: clamp(4rem, 6vw, 6rem);
+    }
+    @include mobile {
+      top: 50%;
+      left: 10%;
+      font-size: clamp(2rem, 5vw, 4rem);
+    }
+  }
+
+  // 영상 재생 버튼
+  &__button {
+    position: absolute;
+    background-color: transparent;
+    color: rgba(256, 256, 256, 0.5);
+    border: 0;
+    font-size: rem(25px);
+    transition: all 0.3s ease;
+
+    // 데스크탑
+    @include desktop {
+      bottom: rem(50px);
+      left: rem(50px);
+    }
+    // 모바일
+    @include mobile {
+      top: rem(50px);
+      right: rem(50px);
+    }
+  }
+  &__button:hover {
+    transform: scale(1.3);
+  }
+}
+
 .intro {
   padding: rem(60px);
 
-    &-container {
-        display: flex;
-        width: 100%;
-        height: 100%;
-        margin: 0 auto;
-        @include desktop {
-            max-width: 1200px;
-            justify-content: space-between;
-        }
-
-        @include mobile {
-            flex-flow: column wrap;
-        }
+  &-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    @include desktop {
+      max-width: 1200px;
+      justify-content: space-between;
     }
+
+    @include mobile {
+      flex-flow: column wrap;
+    }
+  }
 
   &-videoContainer {
     width: 100%;
@@ -30,7 +98,7 @@
     overflow: hidden;
 
     @include mobile {
-        margin-bottom: rem(80px);
+      margin-bottom: rem(80px);
     }
 
     video {
@@ -45,18 +113,16 @@
     font-weight: bold;
 
     @include desktop {
-        display: flex;
-        flex-flow: column wrap;
-        align-items: flex-end;
+      display: flex;
+      flex-flow: column wrap;
+      align-items: flex-end;
     }
 
     @include mobile {
-        margin-bottom: rem(80px);
+      margin-bottom: rem(80px);
     }
 
     & > span {
-        
-
       @include desktop {
         display: block;
         font-size: rem(40px);
@@ -64,31 +130,30 @@
       }
 
       @include mobile {
-          font-size: rem(60px);
+        font-size: rem(60px);
       }
     }
 
     p {
+      @include desktop {
+        margin-top: rem(12px);
+        font-size: rem(16px);
+        line-height: rem(20px);
+        text-align: end;
+      }
 
-        @include desktop {
-            margin-top: rem(12px);
-            font-size: rem(16px);
-            line-height: rem(20px);
-            text-align: end;
-        }
-
-        @include mobile {
-            margin-top: rem(20px);
-            font-size: rem(24px);
-            line-height: rem(30px);
-        }
+      @include mobile {
+        margin-top: rem(20px);
+        font-size: rem(24px);
+        line-height: rem(30px);
+      }
     }
     a {
-        @include desktop {
-            font-size: rem(12px);
-            width: 50%;
-            padding: rem(16px);
-        }
+      @include desktop {
+        font-size: rem(12px);
+        width: 50%;
+        padding: rem(16px);
+      }
       display: flex;
       margin-top: rem(32px);
       border: 2px solid black;
@@ -97,9 +162,8 @@
       justify-content: space-between;
 
       @include mobile {
-          padding: rem(32px) rem(16px); 
+        padding: rem(32px) rem(16px);
       }
-
     }
   }
 }
@@ -169,164 +233,165 @@
   }
 }
 
-.register{
-    // @include autoMargin;
-    // max-width: rem(1000px); 
-    min-width: rem(320px); 
-    // width: 90%;
-    background-color: $gray1;
-    // border-radius: rem(15px); 
-    padding : rem(20px) rem(40px);
-    color : $gray3; 
+.register {
+  // @include autoMargin;
+  // max-width: rem(1000px);
+  min-width: rem(320px);
+  // width: 90%;
+  background-color: $gray1;
+  // border-radius: rem(15px);
+  padding: rem(20px) rem(40px);
+  color: $gray3;
 
-    // 사진 등록 제목
-    &__heading{
-        font-size: rem(25px);
-        font-weight: 700;
-        text-align: center;
-        margin-bottom: rem(16px);
+  // 사진 등록 제목
+  &__heading {
+    font-size: rem(25px);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: rem(16px);
 
-        &--underline{
-            display: inline-block;
-            padding: 0 0 rem(15px) 0;
-            border-bottom: 2px solid $red2;
-        }
+    &--underline {
+      display: inline-block;
+      padding: 0 0 rem(15px) 0;
+      border-bottom: 2px solid $red2;
+    }
+  }
+
+  // 사진 등록 설명
+  &__detail {
+    // @include ellipsis;
+    font-size: rem(14px);
+    text-align: center;
+    line-height: 1.5;
+    word-break: keep-all;
+  }
+
+  // 입력 서식 및 이미지 박스 컨테이너
+  &__container {
+    @include autoMargin;
+    margin-top: rem(35px);
+    min-width: rem(320px);
+
+    @include desktop {
+      @include flexbox(row, space-between);
+      gap: 5%;
+      min-height: rem(350px);
+      max-width: 80%;
     }
 
-    // 사진 등록 설명 
-    &__detail{
-        // @include ellipsis; 
-        font-size: rem(14px);
-        text-align: center;
-        line-height: 1.5;
-        word-break: keep-all;
+    @include mobile {
+      @include flexbox(column);
+    }
+  }
+
+  // 입력 서식
+  &__formbox {
+    // background-color: pink;
+    @include flexbox(column, space-between);
+    gap: 10%;
+
+    @include desktop {
+      max-width: 50%;
+      flex: 1 1 50%;
+    }
+  }
+
+  &__list {
+    flex: 1 1 80%;
+  }
+
+  &__item {
+    width: 100%;
+    position: relative;
+
+    &--name,
+    &--explain,
+    &--upload {
+      appearance: none;
+      width: 100%;
+      margin-bottom: rem(30px);
+      border: 0;
+      background-color: white;
+      padding: rem(12px) rem(10px);
+      border-radius: rem(10px);
+      font-size: rem(14px);
     }
 
-    // 입력 서식 및 이미지 박스 컨테이너
-    &__container{
-        @include autoMargin;
-        margin-top: rem(35px);
-        min-width: rem(320px);
-
-        @include desktop{
-            @include flexbox(row, space-between);
-            gap : 5%;
-            min-height: rem(350px);
-            max-width : 80%;
-        };
-        
-        @include mobile{
-            @include flexbox(column);
-        }
+    // 작성일
+    &--explain {
+      resize: none;
     }
 
-    // 입력 서식
-    &__formbox{
-        // background-color: pink;
-        @include flexbox(column, space-between);
-        gap : 10%; 
-
-        @include desktop{
-            max-width: 50%;
-            flex : 1 1 50%;
-        }
+    // 파일 업로드
+    &--file {
+      display: none;
     }
 
-    &__list{
-        flex : 1 1 80%;
+    // 업로드 버튼
+    &--upload {
+      display: block;
+
+      width: 25%;
+      text-align: center;
+      box-shadow: 0 0 5px $gray2;
+      @include ellipsis;
     }
 
-    &__item{
-        width: 100%;
-        position: relative;
-        
-        &--name, &--explain, &--upload{
-            appearance: none;
-            width: 100%;
-            margin-bottom : rem(30px);
-            border : 0; 
-            background-color: white;
-            padding: rem(12px) rem(10px);
-            border-radius: rem(10px);
-            font-size: rem(14px);
-        }
-
-        // 작성일
-        &--explain{
-            resize: none;
-        }
-
-        // 파일 업로드 
-        &--file{
-            display: none;
-        }
-
-        // 업로드 버튼 
-        &--upload{
-            display: block;
-            
-            width: 25%;
-            text-align: center;
-            box-shadow: 0 0 5px $gray2;
-            @include ellipsis;
-        }
-
-        &--upload:hover{
-            color : $gray3;
-            font-weight: 700;
-            box-shadow: 0 0 5px $gray3;
-        }
-
-        &--upload::after{
-            @include ellipsis;
-            content: attr(data-label);
-            position: absolute;
-            top : 50%; 
-            left : 30%;
-            transform: translateY(-50%);
-            font-weight: 700;
-            max-width: rem(200px);
-        }
+    &--upload:hover {
+      color: $gray3;
+      font-weight: 700;
+      box-shadow: 0 0 5px $gray3;
     }
 
-    // 사진 등록 버튼
-    &__button{
-        // margin-top: rem(10px);
-        flex : 1 1 10%; 
-        padding : rem(10px);
-        border : 0; 
-        border-radius: rem(4px);
-        width: 100%;
-        box-shadow: 0 0 10px rgba($gray3, 0.5);
-        color : $gray3; 
-        font-weight: 700;
+    &--upload::after {
+      @include ellipsis;
+      content: attr(data-label);
+      position: absolute;
+      top: 50%;
+      left: 30%;
+      transform: translateY(-50%);
+      font-weight: 700;
+      max-width: rem(200px);
+    }
+  }
+
+  // 사진 등록 버튼
+  &__button {
+    // margin-top: rem(10px);
+    flex: 1 1 10%;
+    padding: rem(10px);
+    border: 0;
+    border-radius: rem(4px);
+    width: 100%;
+    box-shadow: 0 0 10px rgba($gray3, 0.5);
+    color: $gray3;
+    font-weight: 700;
+  }
+
+  &__button:hover {
+    background: $red1;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  // 사진 미리보기
+  &__thumbnail-container {
+    background-color: white;
+
+    @include desktop {
+      flex: 1 1 0;
+      box-shadow: 0 0 10px rgba($gray3, 0.5);
+      border-radius: rem(10px);
+      overflow: hidden;
     }
 
-    &__button:hover{
-        background: $red1;
-        color: #fff;
-        font-weight: 700;
+    @include mobile {
+      display: none;
     }
+  }
 
-    // 사진 미리보기 
-    &__thumbnail-container{
-        background-color: white;
-
-        @include desktop{
-            flex : 1 1 0;
-            box-shadow: 0 0 10px rgba($gray3, 0.5);
-            border-radius: rem(10px);
-            overflow: hidden;
-        }
-
-        @include mobile{
-            display: none;
-        }
-    }
-
-    &__thumbnail{
-        max-width: 100%;
-        height: 100%;
-    }
+  &__thumbnail {
+    max-width: 100%;
+    height: 100%;
+  }
 }
-
