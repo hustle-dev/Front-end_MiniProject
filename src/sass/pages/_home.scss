@@ -161,6 +161,13 @@
       flex-flow: row nowrap;
       justify-content: space-between;
 
+      transition: all 250ms;
+
+      &:hover {
+        background-color: black;
+        color: white;
+      }
+
       @include mobile {
         padding: rem(32px) rem(16px);
       }
