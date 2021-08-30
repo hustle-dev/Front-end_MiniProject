@@ -1,2 +1,122 @@
 @use './../utils' as *;
 @use './../components' as *;
+
+
+.footer {
+
+    @include boxSizeMax(1200px);
+    font-weight: bold;
+    padding: rem(40px);
+    position: relative;
+
+    &-container {
+        border-top: 1px solid black;
+
+        @include desktop {
+            position: relative;
+        }
+    }
+
+    &-heading {
+        display: block;
+        padding: rem(30px) 0;
+        @include mobile {
+            font-size: rem(16px);
+            padding-left: rem(16px);
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+
+        @include desktop {
+            margin-top: rem(-12px);
+            font-size: rem(24px);
+        }
+    }
+
+    &-address {
+        span {
+            display: block;
+            padding: rem(15px) 0;
+            font-size: rem(14px);
+        }
+
+
+        @include mobile {
+            margin-top: rem(32px);
+
+            span {
+                padding-left: rem(16px);
+            }
+        }
+
+        @include desktop {
+            position: absolute;
+            top: 50%;
+            left: 35%;
+        }
+    }
+
+    @at-root .address__telephone {
+        @include mobile {
+            margin-left: rem(8px);
+        }
+    }
+
+    &-sns {
+
+        position: relative;
+        display: flex;
+        margin: rem(32px) 0;
+        padding: rem(16px) 0;
+        padding-left: rem(16px);
+        gap: rem(20px);
+
+        img {
+            @include responsive;
+
+            @include desktop {
+                margin-top: rem(16px);
+            }
+        }
+
+        &-heading {
+            @include mobile {
+                position: absolute;
+                top: rem(-12px);
+                left: 0;
+                padding-left: rem(16px);
+            }
+
+            @include desktop {
+                position: absolute;
+                top: -20%;
+                right: 60%;
+            }
+        }
+
+        @include desktop {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+    }
+
+    &-copyright {
+        line-height: rem(24px);
+        font-size: rem(14px);
+        word-break: keep-all;
+        @include mobile {
+            display: block;
+            padding-left: rem(16px);
+        }
+
+        @include desktop {
+            position: absolute;
+            width: rem(240px);
+            top: 300%;
+            left: 35%;
+        }
+
+    }
+}
