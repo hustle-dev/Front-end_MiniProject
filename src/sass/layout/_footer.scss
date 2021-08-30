@@ -13,6 +13,7 @@
         border-top: 1px solid black;
 
         @include desktop {
+            position: relative;
         }
     }
 
@@ -29,7 +30,6 @@
         @include desktop {
             margin-top: rem(-12px);
             font-size: rem(24px);
-            grid-area: heading;
         }
     }
 
@@ -50,7 +50,9 @@
         }
 
         @include desktop {
-            grid-area: address;
+            position: absolute;
+            top: 50%;
+            left: 35%;
         }
     }
 
@@ -63,6 +65,19 @@
     &-sns {
 
         position: relative;
+        display: flex;
+        margin: rem(32px) 0;
+        padding: rem(16px) 0;
+        padding-left: rem(16px);
+        gap: rem(20px);
+
+        img {
+            @include responsive;
+
+            @include desktop {
+                margin-top: rem(16px);
+            }
+        }
 
         &-heading {
             @include mobile {
@@ -71,36 +86,36 @@
                 left: 0;
                 padding-left: rem(16px);
             }
-        }
 
-        @include mobile {
-            display: flex;
-            margin: rem(32px) 0;
-            padding: rem(16px) 0;
-            padding-left: rem(16px);
-            gap: rem(20px);
-    
-            img {
-                @include responsive;
+            @include desktop {
+                position: absolute;
+                top: -20%;
+                right: 60%;
             }
         }
 
         @include desktop {
-            grid-area: sns;
+            position: absolute;
+            top: 0;
+            right: 0;
         }
+
     }
 
     &-copyright {
+        line-height: rem(24px);
+        font-size: rem(14px);
+        word-break: keep-all;
         @include mobile {
-            font-size: rem(14px);
-            line-height: rem(24px);
             display: block;
             padding-left: rem(16px);
-            word-break: keep-all;
         }
 
         @include desktop {
-            grid-area: copyright;
+            position: absolute;
+            width: rem(240px);
+            top: 300%;
+            left: 35%;
         }
 
     }
