@@ -84,11 +84,11 @@
         }
     }
     a {
-        @include desktop {
-            font-size: rem(12px);
-            width: 50%;
-            padding: rem(16px);
-        }
+      @include desktop {
+          font-size: rem(12px);
+          width: 50%;
+          padding: rem(16px);
+      }
       display: flex;
       margin-top: rem(32px);
       border: 2px solid black;
@@ -96,10 +96,16 @@
       flex-flow: row nowrap;
       justify-content: space-between;
 
+      transition: all 250ms;
+
+      &:hover {
+        background-color: black;
+        color: white;
+      }
+
       @include mobile {
           padding: rem(32px) rem(16px); 
       }
-
     }
   }
 }
