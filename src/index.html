@@ -7,16 +7,24 @@
     <title>Free Gallery</title>
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/titleLogo.ico"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
   </head>
-
   <body>
     <div class="container">
-      <header class="header">
+      <header class="header is-top">
         <h1>
           <a href="#">
             <img
@@ -38,7 +46,7 @@
           <i class="fas fa-bars"></i>
         </button>
       </header>
-      <nav class="nav">
+      <nav class="nav is-top">
         <ul class="nav__list">
           <li class="nav__link"><a href="#">FREE GALLERY 소개</a></li>
           <li class="nav__link"><a href="#">갤러리 둘러보기</a></li>
@@ -51,6 +59,22 @@
         </ul>
       </nav>
       <main class="main">
+        <section class="greeting">
+          <h2 class="greeting__heading a11yHidden">Free gallery 환영영상</h2>
+          <div class="greeting__videoContainer">
+            <video class="greeting__video" muted playsinline loop autoplay stop>
+              <source src="assets/video/greeting.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <span class="greeting__slogan">
+            당신의<br />추억을<br />공유하세요.</span
+          >
+          <button class="greeting__button">
+            <!-- <i class="fas fa-play"></i> -->
+            <!-- <i class="fas fa-pause"></i> -->
+            <i class="play fas fa-pause"></i>
+          </button>
+        </section>
         <section class="intro">
           <h2 class="intro__heading a11yHidden">Free Gallery 소개 섹션</h2>
           <div class="intro-container">
@@ -77,177 +101,200 @@
           </div>
         </section>
         <section id="carousel" class="carousel">
-          <div class="carousel__inner">
-            <ul class="carousel__list">
-              <button
-                id="previous"
-                type="button"
-                class="carousel__btn carousel__btn--previous"
-                aria-controls="carousel__button carousel-items"
-                aria-label="이전"
+          <h2 class="carousel__heading">인기 사진</h2>
+          <div class="carousel__button-wrapper">
+            <button
+              id="previous"
+              type="button"
+              class="carousel__btn carousel__btn--previous"
+              aria-controls="carousel__button carousel-items"
+              aria-label="이전"
+            >
+              &lt;
+            </button>
+            <button
+              id="next"
+              type="button"
+              class="carousel__btn carousel__btn--next"
+              aria-controls="carousel-items"
+              aria-label="다음"
+            >
               >
-                이전 슬라이드
-              </button>
-              <button
-                id="next"
-                type="button"
-                class="carousel__btn carousel__btn--next"
-                aria-controls="carousel-items"
-                aria-label="다음"
-              >
-                다음 슬라이드
-              </button>
-              <li class="carousel__item">
-                <a href="" class="carousel__popupbutton" role="button">
-                  <div class="carousel__imageWrapper">
-                    <img
-                      src="./assets/images/example.png"
-                      alt="별이 빛나는 밤"
-                      class="carousel__img"
-                    />
+            </button>
+            <div class="carousel__inner">
+              <ul class="carousel__list">
+                <li class="carousel__item">
+                  <a href="" class="carousel__popupbutton" role="button">
+                    <div class="carousel__imageWrapper">
+                      <img
+                        src="./assets/images/example.png"
+                        alt="별이 빛나는 밤"
+                        class="carousel__img"
+                      />
+                    </div>
+                  </a>
+                  <div
+                    class="carousel__item--detail"
+                    role="dialog"
+                    aria-labelldby="dialogTitle"
+                  >
+                    <h3 class="carousel__item--name"></h3>
+                    <dl class="carousel__item--column">
+                      <dt>게시자</dt>
+                      <dd>박채영</dd>
+                      <dt>게시일</dt>
+                      <dd>2021/08/29</dd>
+                      <dt>설명글</dt>
+                      <dd>고흐 - 론강의 별이 빛나는 밤</dd>
+                    </dl>
+                    <button
+                      id="No1"
+                      type="button"
+                      class="carousel__item--close"
+                    >
+                      <i class="far fa-heart is-active animate__bounceIn"></i>
+                      <i class="fas fa-heart animate__bounceIn"></i>
+                    </button>
                   </div>
-                </a>
-                <div
-                  class="carousel__item--detail"
-                  role="dialog"
-                  aria-labelldby="dialogTitle"
-                >
-                  <h3 class="carousel__item--name"></h3>
-                  <dl class="carousel__item--column">
-                    <dt>게시자</dt>
-                    <dd>박채영</dd>
-                    <dt>게시일</dt>
-                    <dd>2021/08/29</dd>
-                    <dt>설명글</dt>
-                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
-                  </dl>
-                  <button id="No1" type="button" class="carousel__item--close">
-                    <i class="far fa-heart is-active"></i>
-                    <i class="fas fa-heart"></i>
-                  </button>
-                </div>
-              </li>
-              <li class="carousel__item">
-                <a href="" class="carousel__popupbutton" role="button">
-                  <div class="carousel__imageWrapper">
-                    <img
-                      src="./assets/images/example.png"
-                      alt="별이 빛나는 밤"
-                      class="carousel__img"
-                    />
+                </li>
+                <li class="carousel__item">
+                  <a href="" class="carousel__popupbutton" role="button">
+                    <div class="carousel__imageWrapper">
+                      <img
+                        src="./assets/images/example2.jpeg"
+                        alt="별이 빛나는 밤"
+                        class="carousel__img"
+                      />
+                    </div>
+                  </a>
+                  <div
+                    class="carousel__item--detail"
+                    role="dialog"
+                    aria-labelldby="dialogTitle"
+                  >
+                    <h3 class="carousel__item--name"></h3>
+                    <dl class="carousel__item--column">
+                      <dt>게시자</dt>
+                      <dd>박채영</dd>
+                      <dt>게시일</dt>
+                      <dd>2021/08/29</dd>
+                      <dt>설명글</dt>
+                      <dd>고흐 - 론강의 별이 빛나는 밤</dd>
+                    </dl>
+                    <button
+                      id="No1"
+                      type="button"
+                      class="carousel__item--close"
+                    >
+                      <i class="far fa-heart is-active animate__bounceIn"></i>
+                      <i class="fas fa-heart animate__bounceIn"></i>
+                    </button>
                   </div>
-                </a>
-                <div
-                  class="carousel__item--detail"
-                  role="dialog"
-                  aria-labelldby="dialogTitle"
-                >
-                  <h3 class="carousel__item--name"></h3>
-                  <dl class="carousel__item--column">
-                    <dt>게시자</dt>
-                    <dd>박채영</dd>
-                    <dt>게시일</dt>
-                    <dd>2021/08/29</dd>
-                    <dt>설명글</dt>
-                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
-                  </dl>
-                  <button id="No2" type="button" class="carousel__item--close">
-                    <i class="far fa-heart is-active"></i>
-                    <i class="fas fa-heart"></i>
-                  </button>
-                </div>
-              </li>
-              <li class="carousel__item">
-                <a href="" class="carousel__popupbutton" role="button">
-                  <div class="carousel__imageWrapper">
-                    <img
-                      src="./assets/images/example.png"
-                      alt="별이 빛나는 밤"
-                      class="carousel__img"
-                    />
+                </li>
+                <li class="carousel__item">
+                  <a href="" class="carousel__popupbutton" role="button">
+                    <div class="carousel__imageWrapper">
+                      <img
+                        src="./assets/images/example.png"
+                        alt="별이 빛나는 밤"
+                        class="carousel__img"
+                      />
+                    </div>
+                  </a>
+                  <div
+                    class="carousel__item--detail"
+                    role="dialog"
+                    aria-labelldby="dialogTitle"
+                  >
+                    <h3 class="carousel__item--name"></h3>
+                    <dl class="carousel__item--column">
+                      <dt>게시자</dt>
+                      <dd>박채영</dd>
+                      <dt>게시일</dt>
+                      <dd>2021/08/29</dd>
+                      <dt>설명글</dt>
+                      <dd>고흐 - 론강의 별이 빛나는 밤</dd>
+                    </dl>
+                    <button
+                      id="No1"
+                      type="button"
+                      class="carousel__item--close"
+                    >
+                      <i class="far fa-heart is-active animate__bounceIn"></i>
+                      <i class="fas fa-heart animate__bounceIn"></i>
+                    </button>
                   </div>
-                </a>
-                <div
-                  class="carousel__item--detail"
-                  role="dialog"
-                  aria-labelldby="dialogTitle"
-                >
-                  <h3 class="carousel__item--name"></h3>
-                  <dl class="carousel__item--column">
-                    <dt>게시자</dt>
-                    <dd>박채영</dd>
-                    <dt>게시일</dt>
-                    <dd>2021/08/29</dd>
-                    <dt>설명글</dt>
-                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
-                  </dl>
-                  <button id="No3" type="button" class="carousel__item--close">
-                    <i class="far fa-heart is-active"></i>
-                    <i class="fas fa-heart"></i>
-                  </button>
-                </div>
-              </li>
-              <li class="carousel__item">
-                <a href="" class="carousel__popupbutton" role="button">
-                  <div class="carousel__imageWrapper">
-                    <img
-                      src="./assets/images/example.png"
-                      alt="별이 빛나는 밤"
-                      class="carousel__img"
-                    />
+                </li>
+                <li class="carousel__item">
+                  <a href="" class="carousel__popupbutton" role="button">
+                    <div class="carousel__imageWrapper">
+                      <img
+                        src="./assets/images/example.png"
+                        alt="별이 빛나는 밤"
+                        class="carousel__img"
+                      />
+                    </div>
+                  </a>
+                  <div
+                    class="carousel__item--detail"
+                    role="dialog"
+                    aria-labelldby="dialogTitle"
+                  >
+                    <h3 class="carousel__item--name"></h3>
+                    <dl class="carousel__item--column">
+                      <dt>게시자</dt>
+                      <dd>박채영</dd>
+                      <dt>게시일</dt>
+                      <dd>2021/08/29</dd>
+                      <dt>설명글</dt>
+                      <dd>고흐 - 론강의 별이 빛나는 밤</dd>
+                    </dl>
+                    <button
+                      id="No1"
+                      type="button"
+                      class="carousel__item--close"
+                    >
+                      <i class="far fa-heart is-active animate__bounceIn"></i>
+                      <i class="fas fa-heart animate__bounceIn"></i>
+                    </button>
                   </div>
-                </a>
-                <div
-                  class="carousel__item--detail"
-                  role="dialog"
-                  aria-labelldby="dialogTitle"
-                >
-                  <h3 class="carousel__item--name"></h3>
-                  <dl class="carousel__item--column">
-                    <dt>게시자</dt>
-                    <dd>박채영</dd>
-                    <dt>게시일</dt>
-                    <dd>2021/08/29</dd>
-                    <dt>설명글</dt>
-                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
-                  </dl>
-                  <button id="No4" type="button" class="carousel__item--close">
-                    <i class="far fa-heart is-active"></i>
-                    <i class="fas fa-heart"></i>
-                  </button>
-                </div>
-              </li>
-              <li class="carousel__item">
-                <a href="" class="carousel__popupbutton" role="button">
-                  <div class="carousel__imageWrapper">
-                    <img
-                      src="./assets/images/example.png"
-                      alt="별이 빛나는 밤"
-                      class="carousel__img"
-                    />
+                </li>
+                <li class="carousel__item">
+                  <a href="" class="carousel__popupbutton" role="button">
+                    <div class="carousel__imageWrapper">
+                      <img
+                        src="./assets/images/example.png"
+                        alt="별이 빛나는 밤"
+                        class="carousel__img"
+                      />
+                    </div>
+                  </a>
+                  <div
+                    class="carousel__item--detail"
+                    role="dialog"
+                    aria-labelldby="dialogTitle"
+                  >
+                    <h3 class="carousel__item--name"></h3>
+                    <dl class="carousel__item--column">
+                      <dt>게시자</dt>
+                      <dd>박채영</dd>
+                      <dt>게시일</dt>
+                      <dd>2021/08/29</dd>
+                      <dt>설명글</dt>
+                      <dd>고흐 - 론강의 별이 빛나는 밤</dd>
+                    </dl>
+                    <button
+                      id="No1"
+                      type="button"
+                      class="carousel__item--close"
+                    >
+                      <i class="far fa-heart is-active animate__bounceIn"></i>
+                      <i class="fas fa-heart animate__bounceIn"></i>
+                    </button>
                   </div>
-                </a>
-                <div
-                  class="carousel__item--detail"
-                  role="dialog"
-                  aria-labelldby="dialogTitle"
-                >
-                  <h3 class="carousel__item--name"></h3>
-                  <dl class="carousel__item--column">
-                    <dt>게시자</dt>
-                    <dd>박채영</dd>
-                    <dt>게시일</dt>
-                    <dd>2021/08/29</dd>
-                    <dt>설명글</dt>
-                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
-                  </dl>
-                  <button id="No5" type="button" class="carousel__item--close">
-                    <i class="far fa-heart"></i>
-                    <i class="fas fa-heart is-active"></i>
-                  </button>
-                </div>
-              </li>
-            </ul>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
         <section class="author">
@@ -336,7 +383,42 @@
           </div>
         </section>
       </main>
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <div class="footer-container">
+          <span class="footer-heading">Free Gallery</span>
+          <address class="footer-address">
+            <span>서울특별시 강남구 강남대로 364</span>
+            <span
+              >TEL
+              <a class="address__telephone" href="tel:022345678"
+                >02-234-5678</a
+              ></span
+            >
+            <span
+              ><a class="address__link" href="mailto:dlwoabsdk@gmail.com"
+                >contact@freegallery.com</a
+              ></span
+            >
+          </address>
+          <div class="footer-sns">
+            <span class="footer-sns-heading">Follow us</span>
+            <a href="#"
+              ><img src="./assets/images/facebook.svg" alt="페이스북"
+            /></a>
+            <a href="#"
+              ><img src="./assets/images/instagram.svg" alt="인스타그램"
+            /></a>
+            <a href="#"><img src="./assets/images/naver.svg" alt="네이버" /></a>
+            <a href="#"
+              ><img src="./assets/images/youtube.svg" alt="유튜브"
+            /></a>
+          </div>
+          <small class="footer-copyright">
+            Copyright since &copy; 2021 by Free Gallery CORPORATION ALL RIGHTS
+            RESERVED.
+          </small>
+        </div>
+      </footer>
     </div>
     <script
       src="https://kit.fontawesome.com/e8b41302b7.js"

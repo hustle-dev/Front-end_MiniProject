@@ -2,13 +2,28 @@
 @use './../components' as *;
 
 .nav {
+  // 스크롤 top에 닿아있는 경우
+  transition: all 0.2s ease;
+  @at-root .nav.is-top {
+    transform: translateY(0);
+  }
+
   // 데스크탑
   @include desktop {
-    @include boxSizeMax;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    transform: translateY(rem(100px));
+
+    // @include boxSizeMax;
     &__list {
       @include flexbox(row, space-between);
-      padding: rem(120px) rem(20px) 0;
+      @include boxSizeMax(rem(1200px));
+      padding: 0 rem(20px);
       font-weight: lighter;
+      font-size: rem(18px);
+      color: white;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
     }
     &__link {
       transition: all 0.3s ease;
@@ -42,7 +57,7 @@
       word-break: keep-all;
       @include flexbox(column);
       height: 100%;
-      width: 40%;
+      width: 50%;
       transform: translateX(-100%);
       transition: all 0.3s ease;
     }
@@ -55,7 +70,7 @@
     }
     &__link a {
       display: block;
-      line-height: 3;
+      line-height: 1;
       margin: rem(10px) rem(20px);
     }
     &__link:hover {

@@ -6,6 +6,13 @@ body {
 }
 
 .header {
+  // 스크롤 top에 닿아있는 경우
+  transition: all 0.2s ease;
+  @at-root .header.is-top {
+    background-color: transparent;
+    transform: translateY(-100%);
+  }
+
   // 공통
   position: fixed;
   z-index: 999;
