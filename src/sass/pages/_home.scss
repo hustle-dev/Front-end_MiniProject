@@ -9,12 +9,6 @@
 .greeting {
   position: relative;
 
-  @include desktop {
-  }
-  @include mobile {
-    margin: rem(100px) 0;
-  }
-
   // 비디오
   &__videoContainer {
     width: 100vw;
@@ -171,6 +165,42 @@
       @include mobile {
         padding: rem(32px) rem(16px);
       }
+    }
+  }
+}
+
+.carousel {
+  @include boxSizeMax(1200px);
+  padding: rem(40px) 0;
+  margin-bottom: rem(20px);
+
+  &__heading {
+    padding-top: rem(20px);
+    text-align: center;
+    font-size: rem(42px);
+    margin-bottom: rem(-40px);
+  }
+
+  &__button-wrapper {
+    @include desktop {
+      position: relative;
+    }
+  }
+
+  &__item {
+    &--detail {
+      display: none;
+    }
+  }
+}
+
+.swiper {
+  &-slide {
+    background-color: transparent !important;
+    border-color: transparent !important;
+
+    img {
+      @include responsive;
     }
   }
 }
@@ -401,4 +431,37 @@
     max-width: 100%;
     height: 100%;
   }
+}
+
+.swiper {
+  width: 100%;
+  height: 50vh;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  border: 1px solid black;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
