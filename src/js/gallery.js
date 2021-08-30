@@ -8,7 +8,7 @@ window.addEventListener('scroll', () => {
     scrollLocation >= galleryPosition &&
     scrollLocation < galleryPosition + 4000
   ) {
-    let percent = ((scrollLocation - galleryPosition) / 4000) * -90;
+    let percent = ((scrollLocation - galleryPosition) / 4000) * -80;
     slide.style.transform = 'translateX(' + percent + '%)';
   }
 });
