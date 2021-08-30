@@ -17,6 +17,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
   </head>
 
   <body>
@@ -133,176 +137,73 @@
             </ul>
           </div>
         </section>
-        <section id="carousel" class="carousel">
+        <section id="carousel" class="carousel" aria-roledescription="carousel">
           <h2 class="carousel__heading">인기 사진</h2>
-          <div class="carousel__button-wrapper">
-            <button
-              id="previous"
-              type="button"
-              class="carousel__btn carousel__btn--previous"
-              aria-controls="carousel__button carousel-items"
-              aria-label="이전"
-            >
-              &lt;
-            </button>
-            <button
-              id="next"
-              type="button"
-              class="carousel__btn carousel__btn--next"
-              aria-controls="carousel-items"
-              aria-label="다음"
-            >
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="" class="carousel__popupbutton" role="button">
+                  <img src="./assets/images/example.png" alt="" />
+                </a>
+              </div>
+              <div
+                class="carousel__item--detail"
+                role="dialog"
+                aria-labelldby="dialogTitle"
               >
-            </button>
-            <div class="carousel__inner">
-              <ul class="carousel__list">
-                <li class="carousel__item">
-                  <a href="" class="carousel__popupbutton" role="button">
-                    <div class="carousel__imageWrapper">
-                      <img
-                        src="./assets/images/example.png"
-                        alt="별이 빛나는 밤"
-                        class="carousel__img"
-                      />
-                    </div>
-                  </a>
-                  <div
-                    class="carousel__item--detail"
-                    role="dialog"
-                    aria-labelldby="dialogTitle"
-                  >
-                    <h3 class="carousel__item--name"></h3>
-                    <dl class="carousel__item--column">
-                      <dt>게시자</dt>
-                      <dd>박채영</dd>
-                      <dt>게시일</dt>
-                      <dd>2021/08/29</dd>
-                      <dt>설명글</dt>
-                      <dd>고흐 - 론강의 별이 빛나는 밤</dd>
-                    </dl>
-                    <button type="button" class="carousel__item--close">
-                      X
-                    </button>
-                  </div>
-                </li>
-                <li class="carousel__item">
-                  <a href="" class="carousel__popupbutton" role="button">
-                    <div class="carousel__imageWrapper">
-                      <img
-                        src="./assets/images/example2.jpeg"
-                        alt="별이 빛나는 밤"
-                        class="carousel__img"
-                      />
-                    </div>
-                  </a>
-                  <div
-                    class="carousel__item--detail"
-                    role="dialog"
-                    aria-labelldby="dialogTitle"
-                  >
-                    <h3 class="carousel__item--name"></h3>
-                    <dl class="carousel__item--column">
-                      <dt>게시자</dt>
-                      <dd>박채영</dd>
-                      <dt>게시일</dt>
-                      <dd>2021/08/29</dd>
-                      <dt>설명글</dt>
-                      <dd>고흐 - 론강의 별이 빛나는 밤</dd>
-                    </dl>
-                    <button type="button" class="carousel__item--close">
-                      X
-                    </button>
-                  </div>
-                </li>
-                <li class="carousel__item">
-                  <a href="" class="carousel__popupbutton" role="button">
-                    <div class="carousel__imageWrapper">
-                      <img
-                        src="./assets/images/example.png"
-                        alt="별이 빛나는 밤"
-                        class="carousel__img"
-                      />
-                    </div>
-                  </a>
-                  <div
-                    class="carousel__item--detail"
-                    role="dialog"
-                    aria-labelldby="dialogTitle"
-                  >
-                    <h3 class="carousel__item--name"></h3>
-                    <dl class="carousel__item--column">
-                      <dt>게시자</dt>
-                      <dd>박채영</dd>
-                      <dt>게시일</dt>
-                      <dd>2021/08/29</dd>
-                      <dt>설명글</dt>
-                      <dd>고흐 - 론강의 별이 빛나는 밤</dd>
-                    </dl>
-                    <button type="button" class="carousel__item--close">
-                      X
-                    </button>
-                  </div>
-                </li>
-                <li class="carousel__item">
-                  <a href="" class="carousel__popupbutton" role="button">
-                    <div class="carousel__imageWrapper">
-                      <img
-                        src="./assets/images/example.png"
-                        alt="별이 빛나는 밤"
-                        class="carousel__img"
-                      />
-                    </div>
-                  </a>
-                  <div
-                    class="carousel__item--detail"
-                    role="dialog"
-                    aria-labelldby="dialogTitle"
-                  >
-                    <h3 class="carousel__item--name"></h3>
-                    <dl class="carousel__item--column">
-                      <dt>게시자</dt>
-                      <dd>박채영</dd>
-                      <dt>게시일</dt>
-                      <dd>2021/08/29</dd>
-                      <dt>설명글</dt>
-                      <dd>고흐 - 론강의 별이 빛나는 밤</dd>
-                    </dl>
-                    <button type="button" class="carousel__item--close">
-                      X
-                    </button>
-                  </div>
-                </li>
-                <li class="carousel__item">
-                  <a href="" class="carousel__popupbutton" role="button">
-                    <div class="carousel__imageWrapper">
-                      <img
-                        src="./assets/images/example.png"
-                        alt="별이 빛나는 밤"
-                        class="carousel__img"
-                      />
-                    </div>
-                  </a>
-                  <div
-                    class="carousel__item--detail"
-                    role="dialog"
-                    aria-labelldby="dialogTitle"
-                  >
-                    <h3 class="carousel__item--name"></h3>
-                    <dl class="carousel__item--column">
-                      <dt>게시자</dt>
-                      <dd>박채영</dd>
-                      <dt>게시일</dt>
-                      <dd>2021/08/29</dd>
-                      <dt>설명글</dt>
-                      <dd>고흐 - 론강의 별이 빛나는 밤</dd>
-                    </dl>
-                    <button type="button" class="carousel__item--close">
-                      X
-                    </button>
-                  </div>
-                </li>
-              </ul>
+                <h3 class="carousel__item--name"></h3>
+                <dl class="carousel__item--column">
+                  <dt>게시자</dt>
+                  <dd>박채영</dd>
+                  <dt>게시일</dt>
+                  <dd>2021/08/29</dd>
+                  <dt>설명글</dt>
+                  <dd>고흐 - 론강의 별이 빛나는 밤</dd>
+                </dl>
+                <button type="button" class="carousel__item--close">X</button>
+              </div>
+              <div class="swiper-slide">
+                <a href="" class="carousel__popupbutton" role="button">
+                  <img src="./assets/images/example.png" alt="" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="" class="carousel__popupbutton" role="button">
+                  <img src="./assets/images/example.png" alt="" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="" class="carousel__popupbutton" role="button">
+                  <img src="./assets/images/example.png" alt="" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="" class="carousel__popupbutton" role="button">
+                  <img src="./assets/images/example.png" alt="" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="" class="carousel__popupbutton" role="button">
+                  <img src="./assets/images/example.png" alt="" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="" class="carousel__popupbutton" role="button">
+                  <img src="./assets/images/example.png" alt="" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="" class="carousel__popupbutton" role="button">
+                  <img src="./assets/images/example.png" alt="" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="" class="carousel__popupbutton" role="button">
+                  <img src="./assets/images/example.png" alt="" />
+                </a>
+              </div>
             </div>
+            <div class="swiper-pagination"></div>
           </div>
         </section>
         <section class="author">
@@ -432,5 +333,16 @@
       src="https://kit.fontawesome.com/e8b41302b7.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper('.mySwiper', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+    </script>
   </body>
 </html>
