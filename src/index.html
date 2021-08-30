@@ -68,7 +68,7 @@
             </video>
           </div>
           <span class="greeting__slogan">
-            당신의<br />추억을<br />공유하세요.</span
+            당신의<br /><strong>추억</strong>을<br />공유하세요.</span
           >
           <button class="greeting__button">
             <!-- <i class="fas fa-play"></i> -->
@@ -85,8 +85,8 @@
               </video>
             </div>
             <div class="intro__text">
-              <span>세상의</span>
-              <span>모든 여행</span>
+              <span>세상에서</span>
+              <span><strong>유일한</strong> 사진</span>
               <p>
                 Yanolja app만 있으면<br />
                 누구나 언제 어디서든<br />
@@ -101,7 +101,8 @@
         <section class="gallery">
           <div class="gallery__container">
             <div class="gallery__slogan">
-              <span class="slogan__lg">여러분<br />모두가<br />주인공</span
+              <span class="slogan__lg"
+                >여러분<br />모두가<br /><strong>주인공</strong></span
               ><br />
               <span class="slogan__sm"
                 >내가 찍은 사진이 갤러리에<br />지금 그 다채로움을
@@ -138,76 +139,85 @@
           </div>
         </section>
         <section id="carousel" class="carousel" aria-roledescription="carousel">
-          <h2 class="carousel__heading">인기 사진</h2>
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a href="" class="carousel__popupbutton" role="button">
-                  <img src="./assets/images/example.png" alt="" />
-                </a>
+          <div class="carousel__container">
+            <h2 class="carousel__heading">Best Photo</h2>
+            <span class="carousel__detail"
+              >Free Gallery 이용자에게 한 주간 가장 인기가 많았던 사진을
+              둘러보세요.</span
+            >
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="" class="carousel__popupbutton" role="button">
+                    <img src="./assets/images/example.png" alt="" />
+                  </a>
+                </div>
+                <div
+                  class="carousel__item--detail"
+                  role="dialog"
+                  aria-labelldby="dialogTitle"
+                >
+                  <h3 class="carousel__item--name"></h3>
+                  <dl class="carousel__item--column">
+                    <dt>게시자</dt>
+                    <dd>박채영</dd>
+                    <dt>게시일</dt>
+                    <dd>2021/08/29</dd>
+                    <dt>설명글</dt>
+                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
+                  </dl>
+                  <button type="button" class="carousel__item--close">X</button>
+                </div>
+                <div class="swiper-slide">
+                  <a href="" class="carousel__popupbutton" role="button">
+                    <img src="./assets/images/example.png" alt="" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="" class="carousel__popupbutton" role="button">
+                    <img src="./assets/images/example.png" alt="" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="" class="carousel__popupbutton" role="button">
+                    <img src="./assets/images/example.png" alt="" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="" class="carousel__popupbutton" role="button">
+                    <img src="./assets/images/example.png" alt="" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="" class="carousel__popupbutton" role="button">
+                    <img src="./assets/images/example.png" alt="" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="" class="carousel__popupbutton" role="button">
+                    <img src="./assets/images/example.png" alt="" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="" class="carousel__popupbutton" role="button">
+                    <img src="./assets/images/example.png" alt="" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="" class="carousel__popupbutton" role="button">
+                    <img src="./assets/images/example.png" alt="" />
+                  </a>
+                </div>
               </div>
-              <div
-                class="carousel__item--detail"
-                role="dialog"
-                aria-labelldby="dialogTitle"
-              >
-                <h3 class="carousel__item--name"></h3>
-                <dl class="carousel__item--column">
-                  <dt>게시자</dt>
-                  <dd>박채영</dd>
-                  <dt>게시일</dt>
-                  <dd>2021/08/29</dd>
-                  <dt>설명글</dt>
-                  <dd>고흐 - 론강의 별이 빛나는 밤</dd>
-                </dl>
-                <button type="button" class="carousel__item--close">X</button>
-              </div>
-              <div class="swiper-slide">
-                <a href="" class="carousel__popupbutton" role="button">
-                  <img src="./assets/images/example.png" alt="" />
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="" class="carousel__popupbutton" role="button">
-                  <img src="./assets/images/example.png" alt="" />
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="" class="carousel__popupbutton" role="button">
-                  <img src="./assets/images/example.png" alt="" />
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="" class="carousel__popupbutton" role="button">
-                  <img src="./assets/images/example.png" alt="" />
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="" class="carousel__popupbutton" role="button">
-                  <img src="./assets/images/example.png" alt="" />
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="" class="carousel__popupbutton" role="button">
-                  <img src="./assets/images/example.png" alt="" />
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="" class="carousel__popupbutton" role="button">
-                  <img src="./assets/images/example.png" alt="" />
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="" class="carousel__popupbutton" role="button">
-                  <img src="./assets/images/example.png" alt="" />
-                </a>
-              </div>
+              <div class="swiper-pagination"></div>
             </div>
-            <div class="swiper-pagination"></div>
           </div>
         </section>
         <section class="author">
           <h2 class="author__heading">신규 작가</h2>
+          <span class="author__detail"
+            >Free Gallery에서 뜨고 있는 새로운 작가를 소개합니다.</span
+          >
           <ul class="author__list">
             <li class="author__item">
               <figure class="author__container">
