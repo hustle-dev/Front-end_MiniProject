@@ -1,3 +1,5 @@
 import './sass/index.scss';
-
-console.log('hi');
+import './js/header.js';
+import './js/setThumbnail';
+import './js/greeting.js';
+import './js/Carousel.js';
