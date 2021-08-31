@@ -49,6 +49,9 @@
             <a href="#Intro">FREE GALLERY 소개</a>
           </li>
           <li class="nav__link">
+            <a href="#News">새소식</a>
+          </li>
+          <li class="nav__link">
             <a href="#Gallery">갤러리 둘러보기</a>
           </li>
           <li class="nav__link">
@@ -59,6 +62,9 @@
           </li>
           <li class="nav__link">
             <a href="#Register">사진 올리기</a>
+          </li>
+          <li class="nav__link">
+            <a href="#Voice">Customer Voice</a>
           </li>
         </ul>
         <button class="nav__close" aria-label="메뉴 닫기">
@@ -157,6 +163,7 @@
         </section>
         <section id="Gallery" class="gallery">
           <div class="gallery__container">
+            <div class="gallery__bg"></div>
             <div class="gallery__slogan">
               <span class="slogan__lg"
                 >여러분<br />모두가<br /><strong>주인공</strong></span
@@ -216,11 +223,11 @@
               <div
                 class="modal modal1"
                 role="dialog"
-                aria-labelledby="title-dialog"
+                aria-labelledby="title-dialog1"
                 aria-modal="true"
               >
                 <div class="modal-content" role="document" tabindex="-1">
-                  <h2 id="title-dialog" class="a11yHidden">사진 설명</h2>
+                  <h2 id="title-dialog1" class="a11yHidden">사진 설명</h2>
                   <div class="modal-image">
                     <img
                       src="./assets/images/daily1.jpg"
@@ -257,11 +264,11 @@
               <div
                 class="modal modal2"
                 role="dialog"
-                aria-labelledby="title-dialog"
+                aria-labelledby="title-dialog2"
                 aria-modal="true"
               >
                 <div class="modal-content" role="document" tabindex="-1">
-                  <h2 id="title-dialog" class="a11yHidden">사진 설명</h2>
+                  <h2 id="title-dialog2" class="a11yHidden">사진 설명</h2>
                   <div class="modal-image">
                     <img src="./assets/images/daily2.jpg" alt="전봇대와 구름" />
                   </div>
@@ -298,11 +305,11 @@
               <div
                 class="modal modal3"
                 role="dialog"
-                aria-labelledby="title-dialog"
+                aria-labelledby="title-dialog3"
                 aria-modal="true"
               >
                 <div class="modal-content" role="document" tabindex="-1">
-                  <h2 id="title-dialog" class="a11yHidden">사진 설명</h2>
+                  <h2 id="title-dialog3" class="a11yHidden">사진 설명</h2>
                   <div class="modal-image">
                     <img
                       src="./assets/images/daily3.jpg"
@@ -342,11 +349,11 @@
               <div
                 class="modal modal4"
                 role="dialog"
-                aria-labelledby="title-dialog"
+                aria-labelledby="title-dialog4"
                 aria-modal="true"
               >
                 <div class="modal-content" role="document" tabindex="-1">
-                  <h2 id="title-dialog" class="a11yHidden">사진 설명</h2>
+                  <h2 id="title-dialog4" class="a11yHidden">사진 설명</h2>
                   <div class="modal-image">
                     <img
                       src="./assets/images/daily4.jpg"
@@ -390,8 +397,11 @@
               <li class="author__item">
                 <a href="#">
                   <figure class="author__container">
-                    <img class="author__img" src="./assets/images/author1.jpg""
-                    alt=" 작가 인물 사진" />
+                    <img
+                      class="author__img"
+                      src="./assets/images/author1.jpg"
+                      alt=" 작가 인물 사진"
+                    />
                     <figcaption class="author__caption">Agnes</figcaption>
                   </figure>
                 </a>
@@ -446,7 +456,7 @@
             </p>
             <div class="register__container">
               <form action="#" class="register__formbox" method="POST">
-                <filedset>
+                <fieldset>
                   <legend class="register__heading a11yHidden">
                     이미지 업로드 폼 양식
                   </legend>
@@ -486,7 +496,7 @@
                     </li>
                   </ul>
                   <button class="register__button">공유하기</button>
-                </filedset>
+                </fieldset>
               </form>
               <div class="register__thumbnail-container">
                 <img
