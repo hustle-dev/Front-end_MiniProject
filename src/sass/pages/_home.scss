@@ -99,7 +99,7 @@
     width: 100%;
     margin-bottom: rem(30px);
     word-break: keep-all;
-    font-weight: bold;
+    // font-weight: bold;
 
     @include desktop {
       display: flex;
@@ -114,8 +114,8 @@
     & > span {
       @include desktop {
         display: block;
-        font-size: rem(40px);
-        line-height: rem(50px);
+        font-size: rem(60px);
+        line-height: 1.2;
       }
 
       @include mobile {
@@ -343,8 +343,8 @@
 
   // 사진 등록 제목
   &__heading {
-    font-size: rem(25px);
-    font-weight: 700;
+    font-size: rem(42px);
+    font-weight: 400;
     text-align: center;
     margin-bottom: rem(16px);
 
