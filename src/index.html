@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Free Gallery</title>
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
       rel="shortcut icon"
       type="image/x-icon"
       href="assets/images/titleLogo.ico"
@@ -22,7 +26,6 @@
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
   </head>
-
   <body>
     <div class="container">
       <header class="header is-top">
@@ -85,12 +88,12 @@
               </video>
             </div>
             <div class="intro__text">
-              <span>세상에서</span>
+              <span>세상의</span>
               <span><strong>유일한</strong> 사진</span>
               <p>
-                Yanolja app만 있으면<br />
+                Free Gallery만 있으면<br />
                 누구나 언제 어디서든<br />
-                여행을 즐길 수 있습니다.
+                추억을 즐길 수 있습니다.
               </p>
               <a href="#"
                 ><span>사진 보러가기</span><i class="fas fa-images fa-lg"></i>
@@ -140,7 +143,7 @@
         </section>
         <section id="carousel" class="carousel" aria-roledescription="carousel">
           <div class="carousel__container">
-            <h2 class="carousel__heading">Best Photo</h2>
+            <h2 class="carousel__heading">인기 사진</h2>
             <span class="carousel__detail"
               >Free Gallery 이용자에게 한 주간 가장 인기가 많았던 사진을
               둘러보세요.</span
@@ -166,50 +169,193 @@
                     <dt>설명글</dt>
                     <dd>고흐 - 론강의 별이 빛나는 밤</dd>
                   </dl>
-                  <button type="button" class="carousel__item--close">X</button>
+                  <button type="button" class="carousel__item--close">x</button>
                 </div>
                 <div class="swiper-slide">
                   <a href="" class="carousel__popupbutton" role="button">
                     <img src="./assets/images/example.png" alt="" />
                   </a>
                 </div>
-                <div class="swiper-slide">
-                  <a href="" class="carousel__popupbutton" role="button">
-                    <img src="./assets/images/example.png" alt="" />
-                  </a>
+                <div
+                  class="carousel__item--detail"
+                  role="dialog"
+                  aria-labelldby="dialogTitle"
+                >
+                  <h3 class="carousel__item--name"></h3>
+                  <dl class="carousel__item--column">
+                    <dt>게시자</dt>
+                    <dd>박채영</dd>
+                    <dt>게시일</dt>
+                    <dd>2021/08/29</dd>
+                    <dt>설명글</dt>
+                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
+                  </dl>
+                  <button id="No1" type="button" class="carousel__item--close">
+                    x
+                  </button>
                 </div>
                 <div class="swiper-slide">
                   <a href="" class="carousel__popupbutton" role="button">
                     <img src="./assets/images/example.png" alt="" />
                   </a>
                 </div>
-                <div class="swiper-slide">
-                  <a href="" class="carousel__popupbutton" role="button">
-                    <img src="./assets/images/example.png" alt="" />
-                  </a>
+                <div
+                  class="carousel__item--detail"
+                  role="dialog"
+                  aria-labelldby="dialogTitle"
+                >
+                  <h3 class="carousel__item--name"></h3>
+                  <dl class="carousel__item--column">
+                    <dt>게시자</dt>
+                    <dd>박채영</dd>
+                    <dt>게시일</dt>
+                    <dd>2021/08/29</dd>
+                    <dt>설명글</dt>
+                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
+                  </dl>
+                  <button id="No1" type="button" class="carousel__item--close">
+                    x
+                  </button>
                 </div>
                 <div class="swiper-slide">
                   <a href="" class="carousel__popupbutton" role="button">
                     <img src="./assets/images/example.png" alt="" />
                   </a>
                 </div>
-                <div class="swiper-slide">
-                  <a href="" class="carousel__popupbutton" role="button">
-                    <img src="./assets/images/example.png" alt="" />
-                  </a>
+                <div
+                  class="carousel__item--detail"
+                  role="dialog"
+                  aria-labelldby="dialogTitle"
+                >
+                  <h3 class="carousel__item--name"></h3>
+                  <dl class="carousel__item--column">
+                    <dt>게시자</dt>
+                    <dd>박채영</dd>
+                    <dt>게시일</dt>
+                    <dd>2021/08/29</dd>
+                    <dt>설명글</dt>
+                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
+                  </dl>
+                  <button id="No1" type="button" class="carousel__item--close">
+                    x
+                  </button>
                 </div>
                 <div class="swiper-slide">
                   <a href="" class="carousel__popupbutton" role="button">
                     <img src="./assets/images/example.png" alt="" />
                   </a>
                 </div>
+                <div
+                  class="carousel__item--detail"
+                  role="dialog"
+                  aria-labelldby="dialogTitle"
+                >
+                  <h3 class="carousel__item--name"></h3>
+                  <dl class="carousel__item--column">
+                    <dt>게시자</dt>
+                    <dd>박채영</dd>
+                    <dt>게시일</dt>
+                    <dd>2021/08/29</dd>
+                    <dt>설명글</dt>
+                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
+                  </dl>
+                  <button id="No1" type="button" class="carousel__item--close">
+                    x
+                  </button>
+                </div>
                 <div class="swiper-slide">
                   <a href="" class="carousel__popupbutton" role="button">
                     <img src="./assets/images/example.png" alt="" />
                   </a>
+                </div>
+                <div
+                  class="carousel__item--detail"
+                  role="dialog"
+                  aria-labelldby="dialogTitle"
+                >
+                  <h3 class="carousel__item--name"></h3>
+                  <dl class="carousel__item--column">
+                    <dt>게시자</dt>
+                    <dd>박채영</dd>
+                    <dt>게시일</dt>
+                    <dd>2021/08/29</dd>
+                    <dt>설명글</dt>
+                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
+                  </dl>
+                  <button id="No1" type="button" class="carousel__item--close">
+                    x
+                  </button>
+                </div>
+                <div class="swiper-slide">
+                  <a href="" class="carousel__popupbutton" role="button">
+                    <img src="./assets/images/example.png" alt="" />
+                  </a>
+                </div>
+                <div
+                  class="carousel__item--detail"
+                  role="dialog"
+                  aria-labelldby="dialogTitle"
+                >
+                  <h3 class="carousel__item--name"></h3>
+                  <dl class="carousel__item--column">
+                    <dt>게시자</dt>
+                    <dd>박채영</dd>
+                    <dt>게시일</dt>
+                    <dd>2021/08/29</dd>
+                    <dt>설명글</dt>
+                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
+                  </dl>
+                  <button id="No1" type="button" class="carousel__item--close">
+                    x
+                  </button>
+                </div>
+                <div class="swiper-slide">
+                  <a href="" class="carousel__popupbutton" role="button">
+                    <img src="./assets/images/example.png" alt="" />
+                  </a>
+                </div>
+                <div
+                  class="carousel__item--detail"
+                  role="dialog"
+                  aria-labelldby="dialogTitle"
+                >
+                  <h3 class="carousel__item--name"></h3>
+                  <dl class="carousel__item--column">
+                    <dt>게시자</dt>
+                    <dd>박채영</dd>
+                    <dt>게시일</dt>
+                    <dd>2021/08/29</dd>
+                    <dt>설명글</dt>
+                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
+                  </dl>
+                  <button id="No1" type="button" class="carousel__item--close">
+                    x
+                  </button>
+                </div>
+                <div class="swiper-slide">
+                  <a href="" class="carousel__popupbutton" role="button">
+                    <img src="./assets/images/example.png" alt="" />
+                  </a>
+                </div>
+                <div
+                  class="carousel__item--detail"
+                  role="dialog"
+                  aria-labelldby="dialogTitle"
+                >
+                  <h3 class="carousel__item--name"></h3>
+                  <dl class="carousel__item--column">
+                    <dt>게시자</dt>
+                    <dd>박채영</dd>
+                    <dt>게시일</dt>
+                    <dd>2021/08/29</dd>
+                    <dt>설명글</dt>
+                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
+                  </dl>
+                  <button id="No1" type="button" class="carousel__item--close">
+                    x
+                  </button>
                 </div>
               </div>
-              <div class="swiper-pagination"></div>
             </div>
           </div>
         </section>
@@ -228,22 +374,31 @@
             </li>
             <li class="author__item">
               <figure class="author__container">
-                <img class="author__img" src="./assets/images/example.png""
-                alt=" 작가 인물 사진" />
+                <img
+                  class="author__img"
+                  src="./assets/images/example.png"
+                  alt=" 작가 인물 사진"
+                />
                 <figcaption class="author__caption">이정민</figcaption>
               </figure>
             </li>
             <li class="author__item">
               <figure class="author__container">
-                <img class="author__img" src="./assets/images/example.png""
-                alt=" 작가 인물 사진" />
+                <img
+                  class="author__img"
+                  src="./assets/images/example.png"
+                  alt=" 작가 인물 사진"
+                />
                 <figcaption class="author__caption">박채영</figcaption>
               </figure>
             </li>
             <li class="author__item">
               <figure class="author__container">
-                <img class="author__img" src="./assets/images/example.png""
-                alt=" 작가 인물 사진" />
+                <img
+                  class="author__img"
+                  src="./assets/images/example.png"
+                  alt=" 작가 인물 사진"
+                />
                 <figcaption class="author__caption">강희</figcaption>
               </figure>
             </li>
