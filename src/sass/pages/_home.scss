@@ -194,16 +194,24 @@ body {
       height: rem(500px);
       overflow: hidden;
       object-fit: cover;
-      transform: translateY(rem(150px));
+    }
+    .ph2 img {
+      transform: translateX(rem(-200px));
     }
     .ph3 img {
       width: rem(600px);
       height: rem(600px);
-      transform: translateY(rem(150px));
+    }
+    .ph4 img {
+      width: rem(700px);
+      transform: translateY(-25vh);
     }
     .ph5 img {
       width: rem(700px);
-      transform: translate(rem(-200px), rem(150px));
+      transform: translateX(rem(-200px));
+    }
+    &__photo:nth-child(odd) {
+      @include flexbox(row, space-around, flex-end);
     }
   }
   @include mobile {
@@ -274,7 +282,6 @@ body {
     }
   }
   &__photo {
-    margin: rem(20px);
     img {
       border-radius: rem(10px);
       overflow: hidden;
@@ -292,6 +299,7 @@ body {
 
       img {
         width: rem(300px);
+        margin: 0 rem(20px);
       }
     }
   }
@@ -375,6 +383,9 @@ body {
   padding: 0 rem(20px);
 
   @include flexbox(column, center, center);
+  @include desktop {
+    height: 100vh;
+  }
   &__heading {
     text-align: center;
     margin-bottom: rem(20px);
@@ -384,10 +395,6 @@ body {
 
     @include mobile {
       font-size: rem(32px);
-    }
-    @include desktop {
-      // font-size: rem(42px);
-      height: 100vh;
     }
   }
   &__detail {
@@ -455,7 +462,6 @@ body {
 
   margin-top: rem(60px);
   min-width: rem(320px);
-  height: 100vh;
   background-color: $gray1;
 
   padding: rem(40px);
