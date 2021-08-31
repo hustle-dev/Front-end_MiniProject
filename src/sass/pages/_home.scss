@@ -455,44 +455,150 @@ body {
   }
 }
 
-.modal1 {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: rgba(0, 0, 0, 0.8);
-  display: none;
+@keyframes unfoldIn {
+  0% {
+    transform: scaleX(0) scaleY(0.005);
+  }
+  50% {
+    /* 0.5 초간 세로 크기는 작은상태로 가로 너비만 확대 */
+    transform: scaleX(1) scaleY(0.005);
+  }
+  100% {
+    /* 0.5 초간 세로 크기를 확대 */
+    transform: scaleY(1) scaleX(1);
+  }
 }
 
-.modal2 {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: rgba(0, 0, 0, 0.8);
-  display: none;
-}
-
-.modal3 {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: rgba(0, 0, 0, 0.8);
-  display: none;
-}
-
+.modal,
+.modal1,
+.modal2,
+.modal3,
 .modal4 {
   width: 100vw;
   height: 100vh;
-  position: absolute;
+  position: fixed;
+  z-index: 1000;
   left: 0;
   top: 0;
   background: rgba(0, 0, 0, 0.8);
+  padding: rem(40px);
   display: none;
+  animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+
+  &-image {
+    width: 50%;
+    border-radius: rem(20px);
+    overflow: hidden;
+
+    @include mobile {
+      width: 100%;
+      order: -1;
+    }
+
+    img {
+      @include responsive;
+    }
+  }
+
+  &-text {
+    padding: rem(30px);
+
+    @include desktop {
+      width: 50%;
+      order: -1;
+    }
+
+    @include mobile {
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    &__date {
+      display: block;
+      font-weight: bold;
+      font-size: rem(14px);
+    }
+
+    &__heading {
+      display: block;
+      margin-top: rem(50px);
+      font-size: rem(48px);
+      font-weight: lighter;
+
+      @include mobile {
+        order: -1;
+        width: 100%;
+        text-align: center;
+        margin-top: rem(-80px);
+      }
+    }
+
+    &__author {
+      display: block;
+
+      @include desktop {
+        margin-top: rem(30px);
+        padding-left: rem(160px);
+      }
+
+      @include mobile {
+        flex-grow: 1;
+        text-align: end;
+      }
+    }
+
+    &__details {
+      margin-top: rem(30px);
+      word-break: keep-all;
+      line-height: 1.4;
+      text-align: center;
+    }
+  }
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+
+  opacity: 0;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-delay: 800ms;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+
+  @include mobile {
+    flex-flow: row wrap;
+  }
+}
+
+.button-close1,
+.button-close2,
+.button-close3,
+.button-close4 {
+  position: absolute;
+  top: rem(16px);
+  right: rem(16px);
+  background-color: transparent;
+  padding: rem(16px);
+  cursor: pointer;
+  color: white;
+  font-size: rem(32px);
+  border: none;
 }
 
 // 신규작가
