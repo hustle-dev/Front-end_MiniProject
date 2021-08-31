@@ -52,15 +52,14 @@ body {
     border: 0;
     font-size: rem(25px);
     transition: all 0.3s ease;
+    bottom: rem(50px);
 
     // 데스크탑
     @include desktop {
-      bottom: rem(50px);
       left: rem(50px);
     }
     // 모바일
     @include mobile {
-      top: rem(50px);
       right: rem(50px);
     }
   }
@@ -385,23 +384,22 @@ body {
   }
 }
 
-// best photo
-.carousel {
-  padding: rem(40px) 0;
+// bestPhoto
+.bestPhoto {
+  position: relative;
+  padding: rem(40px) rem(40px);
+  height: 100vh;
   margin-bottom: rem(20px);
-  background-color: $gray3;
   color: white;
+  background-color: $gray3;
   @include flexbox(column, center, center);
-
-  @include desktop {
-    height: 100vh;
-  }
+  min-width: 320px;
+  word-break: keep-all;
 
   &__container {
     @include boxSizeMax(1200px);
     @include flexbox(column, center, center);
   }
-
   &__heading {
     padding-top: rem(20px);
     text-align: center;
@@ -410,63 +408,210 @@ body {
     font-weight: 700;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
   }
+
   &__detail {
     font-weight: lighter;
     font-size: rem(18px);
   }
 
-  &__button-wrapper {
-    @include desktop {
-      position: relative;
-    }
-  }
+  &__imgContainer {
+    margin-top: rem(60px);
+    display: flex;
 
-  &__item {
-    width: rem(250px);
-    min-width: rem(250px);
-    padding-right: rem(15px);
-
-    &--detail {
-      // 차후 수정 필요
-      display: block;
-    }
-  }
-
-  &__img {
     width: 100%;
-    height: rem(185px);
-    object-fit: cover;
+    @include desktop {
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    @include mobile {
+      flex-flow: row wrap;
+      justify-content: center;
+      gap: rem(20px);
+    }
+
+    &--item {
+      width: 50%;
+
+      @include mobile {
+        width: 45%;
+      }
+
+      img {
+        @include responsive;
+        border-radius: rem(10px);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+        transition: all 250ms;
+        cursor: pointer;
+      }
+
+      img:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+@keyframes unfoldIn {
+  0% {
+    transform: scaleX(0) scaleY(0.005);
+  }
+  50% {
+    /* 0.5 초간 세로 크기는 작은상태로 가로 너비만 확대 */
+    transform: scaleX(1) scaleY(0.005);
+  }
+  100% {
+    /* 0.5 초간 세로 크기를 확대 */
+    transform: scaleY(1) scaleX(1);
+  }
+}
+
+.modal,
+.modal1,
+.modal2,
+.modal3,
+.modal4 {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  padding: rem(40px);
+  display: none;
+  animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+
+  &-image {
+    width: 50%;
+    border-radius: rem(20px);
+    overflow: hidden;
+
+    @include mobile {
+      width: 100%;
+      order: -1;
+    }
+
+    img {
+      @include responsive;
+    }
   }
 
-  img {
-    @include responsive;
-    border-radius: rem(10px);
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-  }
+  &-text {
+    padding: rem(30px);
 
-  &__item--close {
-    border: 0;
-    background-color: transparent;
-    position: absolute;
-    bottom: rem(10px);
-    right: rem(20px);
-  }
+    @include desktop {
+      width: 50%;
+      order: -1;
+    }
 
-  &__item--column {
-    // 차후 수정 필요
-    display: none;
+    @include mobile {
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    &__date {
+      display: block;
+      font-weight: bold;
+      font-size: rem(14px);
+    }
+
+    &__heading {
+      display: block;
+      margin-top: rem(50px);
+      font-size: rem(48px);
+      font-weight: lighter;
+
+      @include mobile {
+        order: -1;
+        width: 100%;
+        text-align: center;
+        margin-top: rem(-80px);
+      }
+    }
+
+    &__author {
+      display: block;
+
+      @include desktop {
+        margin-top: rem(30px);
+        padding-left: rem(160px);
+      }
+
+      @include mobile {
+        flex-grow: 1;
+        text-align: end;
+      }
+    }
+
+    &__details {
+      margin-top: rem(30px);
+      word-break: keep-all;
+      line-height: 1.4;
+      text-align: center;
+    }
   }
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+
+  opacity: 0;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-delay: 800ms;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+
+  @include mobile {
+    flex-flow: row wrap;
+  }
+}
+
+.button-close1,
+.button-close2,
+.button-close3,
+.button-close4 {
+  position: absolute;
+  top: rem(16px);
+  right: rem(16px);
+  background-color: transparent;
+  padding: rem(16px);
+  cursor: pointer;
+  color: white;
+  font-size: rem(32px);
+  border: none;
 }
 
 // 신규작가
 .author {
   max-width: $maxWidth;
   margin: 0 auto;
-  padding: 0 rem(20px);
 
   @include flexbox(column, center, center);
   @include desktop {
     height: 100vh;
+    padding: 0 rem(20px);
+  }
+  @include mobile {
+    padding: rem(30px);
   }
   &__heading {
     text-align: center;
@@ -539,11 +684,13 @@ body {
   }
 }
 
+// 입력 폼
 .register {
   @include flexbox(column, center, center);
+
   margin-top: rem(60px);
   min-width: rem(320px);
-  background-color: $gray1;
+  background: #f8f9fa;
 
   padding: rem(40px);
   color: $gray3;
@@ -557,25 +704,28 @@ body {
 
   // 사진 등록 제목
   &__heading {
-    font-size: rem(42px);
-    font-weight: 400;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin-bottom: rem(16px);
 
-    &--underline {
-      display: inline-block;
-      padding: 0 0 rem(15px) 0;
-      border-bottom: 2px solid $red2;
+    @include desktop {
+      font-size: rem(50px);
+    }
+
+    @include mobile {
+      font-size: rem(32px);
     }
   }
 
   // 사진 등록 설명
   &__detail {
-    // @include ellipsis;
-    font-size: rem(14px);
     text-align: center;
     line-height: 1.5;
     word-break: keep-all;
+    font-weight: lighter;
+    font-size: rem(18px);
+    margin-bottom: rem(50px);
   }
 
   // 입력 서식 및 이미지 박스 컨테이너
@@ -631,6 +781,13 @@ body {
       padding: rem(12px) rem(10px);
       border-radius: rem(10px);
       font-size: rem(14px);
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    }
+    &--upload {
+      cursor: pointer;
+    }
+    &--upload::after {
+      color: $gray2;
     }
 
     // 작성일
@@ -646,17 +803,19 @@ body {
     // 업로드 버튼
     &--upload {
       display: block;
-
+      background-color: $gray3;
+      color: white;
       width: 25%;
       text-align: center;
-      box-shadow: 0 0 5px $gray2;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
       @include ellipsis;
+      transition: all 0.3s ease;
     }
 
     &--upload:hover {
-      color: $gray3;
-      font-weight: 700;
-      box-shadow: 0 0 5px $gray3;
+      background-color: $red2;
+      color: white;
+      transform: translateY(10%);
     }
 
     &--upload::after {
@@ -677,18 +836,19 @@ body {
     flex: 1 1 10%;
     padding: rem(10px);
     border: 0;
-    border-radius: rem(4px);
+    border-radius: rem(10px);
     width: 100%;
-    box-shadow: 0 0 10px rgba($gray3, 0.5);
-    color: $gray3;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    color: white;
+    background-color: $gray3;
     font-weight: 700;
-    // transform: translateX(50%);
+    transition: all 0.3s ease;
   }
 
   &__button:hover {
     background: $red1;
     color: #fff;
-    font-weight: 700;
+    transform: translateY(10%);
   }
 
   // 사진 미리보기
@@ -697,7 +857,7 @@ body {
 
     @include desktop {
       flex: 1 1 0;
-      box-shadow: 0 0 10px rgba($gray3, 0.5);
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
       border-radius: rem(10px);
       overflow: hidden;
     }
@@ -712,6 +872,7 @@ body {
   }
 }
 
+//
 .swiper {
   &-slide {
     background-color: transparent !important;
