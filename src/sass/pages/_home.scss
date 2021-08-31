@@ -566,7 +566,9 @@ body {
         order: -1;
         width: 100%;
         text-align: center;
-        margin-top: rem(-80px);
+
+        margin-top: rem(-30px);
+        padding: rem(16px);
       }
     }
 
@@ -621,7 +623,8 @@ body {
   animation-fill-mode: forwards;
 
   @include mobile {
-    flex-flow: row wrap;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
   }
 }
 
@@ -638,6 +641,12 @@ body {
   color: white;
   font-size: rem(32px);
   border: none;
+
+  @include mobile {
+    font-size: rem(24px);
+    top: -5%;
+    right: -5%;
+  }
 }
 
 // 신규작가
