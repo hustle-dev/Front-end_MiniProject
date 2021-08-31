@@ -21,10 +21,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
   </head>
   <body>
     <div class="container">
@@ -147,7 +143,7 @@
             </span>
             <div class="bestPhoto__imgContainer">
               <div class="bestPhoto__imgContainer--item">
-                <a href="" class="" role="button">
+                <a class="modal-button" role="button">
                   <img
                     src="./assets/images/daily1.jpg"
                     alt="양말이 걸려있는 의자"
@@ -155,41 +151,125 @@
                 </a>
               </div>
               <div
-                class="carousel__item--detail"
+                class="modal1"
                 role="dialog"
-                aria-labelldby="dialogTitle"
+                aria-labelledby="title-dialog"
+                aria-modal="true"
               >
-                <h3 class="carousel__item--name"></h3>
-                <dl class="carousel__item--column">
-                  <dt>게시자</dt>
-                  <dd>박채영</dd>
-                  <dt>게시일</dt>
-                  <dd>2021/08/29</dd>
-                  <dt>설명글</dt>
-                  <dd>고흐 - 론강의 별이 빛나는 밤</dd>
-                </dl>
-                <button type="button" class="carousel__item--close">x</button>
+                <div class="modal-content" role="document" tabindex="-1">
+                  <h2 id="title-dialog">모달 제목</h2>
+                  <dl class="carousel__item--column">
+                    <dt>게시자</dt>
+                    <dd>박채영</dd>
+                    <dt>게시일</dt>
+                    <dd>2021/08/29</dd>
+                    <dt>설명글</dt>
+                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
+                  </dl>
+                  <button
+                    class="button-close"
+                    type="button"
+                    aria-label="모달 닫기"
+                  >
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
               </div>
               <div class="bestPhoto__imgContainer--item">
-                <a href="" class="" role="button">
+                <a class="modal-button" role="button">
                   <img src="./assets/images/daily2.jpg" alt="전봇대와 구름" />
                 </a>
               </div>
+              <div
+                class="modal2"
+                role="dialog"
+                aria-labelledby="title-dialog"
+                aria-modal="true"
+              >
+                <div class="modal-content" role="document" tabindex="-1">
+                  <h2 id="title-dialog">모달 제목</h2>
+                  <dl class="carousel__item--column">
+                    <dt>게시자</dt>
+                    <dd>박채영</dd>
+                    <dt>게시일</dt>
+                    <dd>2021/08/29</dd>
+                    <dt>설명글</dt>
+                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
+                  </dl>
+                  <button
+                    class="button-close"
+                    type="button"
+                    aria-label="모달 닫기"
+                  >
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+              </div>
               <div class="bestPhoto__imgContainer--item">
-                <a href="" class="" role="button">
+                <a class="modal-button" role="button">
                   <img
                     src="./assets/images/daily3.jpg"
                     alt="커피, 책, 볼펜, 식물"
                   />
                 </a>
               </div>
+              <div
+                class="modal3"
+                role="dialog"
+                aria-labelledby="title-dialog"
+                aria-modal="true"
+              >
+                <div class="modal-content" role="document" tabindex="-1">
+                  <h2 id="title-dialog">모달 제목</h2>
+                  <dl class="carousel__item--column">
+                    <dt>게시자</dt>
+                    <dd>박채영</dd>
+                    <dt>게시일</dt>
+                    <dd>2021/08/29</dd>
+                    <dt>설명글</dt>
+                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
+                  </dl>
+                  <button
+                    class="button-close"
+                    type="button"
+                    aria-label="모달 닫기"
+                  >
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+              </div>
               <div class="bestPhoto__imgContainer--item">
-                <a href="" class="" role="button">
+                <a class="modal-button" role="button">
                   <img
                     src="./assets/images/daily4.jpg"
                     alt="어두운 분위기의 작업실 모습"
                   />
                 </a>
+              </div>
+              <div
+                class="modal4"
+                role="dialog"
+                aria-labelledby="title-dialog"
+                aria-modal="true"
+              >
+                <div class="modal-content" role="document" tabindex="-1">
+                  <h2 id="title-dialog">모달 제목</h2>
+                  <dl class="carousel__item--column">
+                    <dt>게시자</dt>
+                    <dd>박채영</dd>
+                    <dt>게시일</dt>
+                    <dd>2021/08/29</dd>
+                    <dt>설명글</dt>
+                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
+                  </dl>
+                  <button
+                    class="button-close"
+                    type="button"
+                    aria-label="모달 닫기"
+                  >
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -330,20 +410,6 @@
         </div>
       </footer>
     </div>
-    <script
-      src="https://kit.fontawesome.com/e8b41302b7.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-      var swiper = new Swiper('.mySwiper', {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-      });
-    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </body>
 </html>

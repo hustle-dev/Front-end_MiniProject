@@ -307,6 +307,7 @@ body {
 
 // bestPhoto
 .bestPhoto {
+  position: relative;
   padding: rem(40px) rem(40px);
   height: 100vh;
   margin-bottom: rem(20px);
@@ -363,16 +364,54 @@ body {
         @include responsive;
         border-radius: rem(10px);
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+        transition: all 250ms;
+        cursor: pointer;
       }
 
-      // img:hover {
-      //   transform: scale(1.5);
-      // }
+      img:hover {
+        transform: scale(1.1);
+      }
     }
   }
 }
 
-.carousel__item--detail {
+.modal1 {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+.modal2 {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+.modal3 {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+.modal4 {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
   display: none;
 }
 
