@@ -21,17 +21,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
   </head>
   <body>
     <div class="container">
       <header class="header is-top">
         <div class="header__container">
           <h1>
-            <a href="#">
+            <a class="header__link" href="#">
               <img
                 class="header__logo"
                 src="./assets/images/logo-bold.svg"
@@ -49,21 +45,31 @@
       </header>
       <nav class="nav is-top">
         <ul class="nav__list">
-          <li class="nav__link"><a href="#">FREE GALLERY 소개</a></li>
-          <li class="nav__link"><a href="#">갤러리 둘러보기</a></li>
-          <li class="nav__link"><a href="#">인기 사진</a></li>
-          <li class="nav__link"><a href="#">신규 작가</a></li>
-          <li class="nav__link"><a href="#">사진 올리기</a></li>
-          <button class="nav__close" aria-label="메뉴 열기">
-            <i class="fas fa-times"></i>
-          </button>
+          <li class="nav__link">
+            <a href="#">FREE GALLERY 소개</a>
+          </li>
+          <li class="nav__link">
+            <a href="#">갤러리 둘러보기</a>
+          </li>
+          <li class="nav__link">
+            <a href="#">인기 사진</a>
+          </li>
+          <li class="nav__link">
+            <a href="#">신규 작가</a>
+          </li>
+          <li class="nav__link">
+            <a href="#">사진 올리기</a>
+          </li>
         </ul>
+        <button class="nav__close" aria-label="메뉴 닫기">
+          <i class="fas fa-times"></i>
+        </button>
       </nav>
       <main class="main">
         <section class="greeting">
           <h2 class="greeting__heading a11yHidden">Free gallery 환영영상</h2>
           <div class="greeting__videoContainer">
-            <video class="greeting__video" muted playsinline loop autoplay stop>
+            <video class="greeting__video" muted playsinline loop autoplay>
               <source src="assets/video/greeting.mp4" type="video/mp4" />
             </video>
           </div>
@@ -71,8 +77,6 @@
             당신의<br /><strong>추억</strong>을<br />공유하세요.</span
           >
           <button class="greeting__button">
-            <!-- <i class="fas fa-play"></i> -->
-            <!-- <i class="fas fa-pause"></i> -->
             <i class="play fas fa-pause"></i>
           </button>
         </section>
@@ -97,6 +101,55 @@
               </a>
             </div>
           </div>
+        </section>
+        <section class="news">
+          <h2 class="news__heading">새소식</h2>
+          <ul class="news__article-list">
+            <li class="news__article-item">
+              <a href="#">
+                <article class="news__article">
+                  <h3 class="news__article--title">새소식 제목</h3>
+                  <p class="news__article--body">
+                    야무와, 한글 로렘입숨. 서서 조금씩 비치어, 것을 허공을
+                    결박된, 걸려 오랫동안 알리는 스스로의 눈에 흘러가는 마을은
+                    구름처럼 어둠에 섬들은 있는 듯싶었다.! 따라서 구름처럼
+                    결박된 모를 섬들은 있었다. 깎아내고 어두워지는 걸려
+                    그뭄달빛은.
+                  </p>
+                  <small class="news__article--date">2021-08-31</small>
+                  <figure class="news__article--imageContainer">
+                    <img
+                      src="./assets/images/example.png"
+                      alt="사진 설명"
+                      class="news__article--image"
+                    />
+                  </figure>
+                </article>
+              </a>
+            </li>
+            <li class="news__article-item">
+              <a href="#">
+                <article class="news__article">
+                  <h3 class="news__article--title">새소식 제목</h3>
+                  <p class="news__article--body">
+                    야무와, 한글 로렘입숨. 서서 조금씩 비치어, 것을 허공을
+                    결박된, 걸려 오랫동안 알리는 스스로의 눈에 흘러가는 마을은
+                    구름처럼 어둠에 섬들은 있는 듯싶었다.! 따라서 구름처럼
+                    결박된 모를 섬들은 있었다. 깎아내고 어두워지는 걸려
+                    그뭄달빛은.
+                  </p>
+                  <small class="news__article--date">2021-08-31</small>
+                  <figure class="news__article--imageContainer">
+                    <img
+                      src="./assets/images/example.png"
+                      alt="사진 설명"
+                      class="news__article--image"
+                    />
+                  </figure>
+                </article>
+              </a>
+            </li>
+          </ul>
         </section>
         <section class="gallery">
           <div class="gallery__container">
@@ -138,218 +191,181 @@
             </ul>
           </div>
         </section>
-        <section id="carousel" class="carousel" aria-roledescription="carousel">
-          <div class="carousel__container">
-            <h2 class="carousel__heading">인기 사진</h2>
-            <span class="carousel__detail"
-              >Free Gallery 이용자에게 한 주간 가장 인기가 많았던 사진을
-              둘러보세요.</span
-            >
-            <div class="swiper mySwiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <a href="" class="carousel__popupbutton" role="button">
-                    <img src="./assets/images/example.png" alt="" />
-                  </a>
-                </div>
-                <div
-                  class="carousel__item--detail"
-                  role="dialog"
-                  aria-labelldby="dialogTitle"
-                >
-                  <h3 class="carousel__item--name"></h3>
-                  <dl class="carousel__item--column">
-                    <dt>게시자</dt>
-                    <dd>박채영</dd>
-                    <dt>게시일</dt>
-                    <dd>2021/08/29</dd>
-                    <dt>설명글</dt>
-                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
-                  </dl>
-                  <button type="button" class="carousel__item--close">x</button>
-                </div>
-                <div class="swiper-slide">
-                  <a href="" class="carousel__popupbutton" role="button">
-                    <img src="./assets/images/example.png" alt="" />
-                  </a>
-                </div>
-                <div
-                  class="carousel__item--detail"
-                  role="dialog"
-                  aria-labelldby="dialogTitle"
-                >
-                  <h3 class="carousel__item--name"></h3>
-                  <dl class="carousel__item--column">
-                    <dt>게시자</dt>
-                    <dd>박채영</dd>
-                    <dt>게시일</dt>
-                    <dd>2021/08/29</dd>
-                    <dt>설명글</dt>
-                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
-                  </dl>
-                  <button id="No1" type="button" class="carousel__item--close">
-                    x
+        <section class="bestPhoto">
+          <div class="bestPhoto__container">
+            <h2 class="bestPhoto__heading">인기 사진</h2>
+            <span class="bestPhoto__detail">
+              Free Gallery 이용자에게 한 주간 가장 인기가 많았던 사진을
+              둘러보세요.
+            </span>
+            <div class="bestPhoto__imgContainer">
+              <div class="bestPhoto__imgContainer--item">
+                <a class="modal-button1" role="button">
+                  <img
+                    src="./assets/images/daily1.jpg"
+                    alt="양말이 걸려있는 의자"
+                  />
+                </a>
+              </div>
+              <div
+                class="modal modal1"
+                role="dialog"
+                aria-labelledby="title-dialog"
+                aria-modal="true"
+              >
+                <div class="modal-content" role="document" tabindex="-1">
+                  <h2 id="title-dialog" class="a11yHidden">사진 설명</h2>
+                  <div class="modal-image">
+                    <img
+                      src="./assets/images/daily1.jpg"
+                      alt="양말이 걸려있는 의자"
+                    />
+                  </div>
+                  <div class="modal-text">
+                    <span class="modal-text__date"
+                      ><time datetime="2021-08-29">2021/08/29</time></span
+                    >
+                    <span class="modal-text__heading">우리가족</span>
+                    <span class="modal-text__author">박채영</span>
+                    <p class="modal-text__details">
+                      야무와, 한글 로렘입숨. 어둠에 보이지 구름처럼 알리는,
+                      있었다. 파묻혀 희멀건 사슬을 서서 어두워지는 눈에 오랫동안
+                      저녁 통하는 동녘 성이 흐렸다. 섬마다 숲에 꽃이 조차 따라서
+                      언제 하늘에 바라보고 도착했다. 스스로의 나무다리.
+                    </p>
+                  </div>
+                  <button
+                    class="button-close1"
+                    type="button"
+                    aria-label="모달 닫기"
+                  >
+                    <span aria-hidden="true">×</span>
                   </button>
                 </div>
-                <div class="swiper-slide">
-                  <a href="" class="carousel__popupbutton" role="button">
-                    <img src="./assets/images/example.png" alt="" />
-                  </a>
-                </div>
-                <div
-                  class="carousel__item--detail"
-                  role="dialog"
-                  aria-labelldby="dialogTitle"
-                >
-                  <h3 class="carousel__item--name"></h3>
-                  <dl class="carousel__item--column">
-                    <dt>게시자</dt>
-                    <dd>박채영</dd>
-                    <dt>게시일</dt>
-                    <dd>2021/08/29</dd>
-                    <dt>설명글</dt>
-                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
-                  </dl>
-                  <button id="No1" type="button" class="carousel__item--close">
-                    x
+              </div>
+              <div class="bestPhoto__imgContainer--item">
+                <a class="modal-button2" role="button">
+                  <img src="./assets/images/daily2.jpg" alt="전봇대와 구름" />
+                </a>
+              </div>
+              <div
+                class="modal modal2"
+                role="dialog"
+                aria-labelledby="title-dialog"
+                aria-modal="true"
+              >
+                <div class="modal-content" role="document" tabindex="-1">
+                  <h2 id="title-dialog" class="a11yHidden">사진 설명</h2>
+                  <div class="modal-image">
+                    <img src="./assets/images/daily2.jpg" alt="전봇대와 구름" />
+                  </div>
+                  <div class="modal-text">
+                    <span class="modal-text__date"
+                      ><time datetime="2021-08-29">2021/08/29</time></span
+                    >
+                    <span class="modal-text__heading">하늘하늘</span>
+                    <span class="modal-text__author">박채영</span>
+                    <p class="modal-text__details">
+                      야무와, 한글 로렘입숨. 어둠에 보이지 구름처럼 알리는,
+                      있었다. 파묻혀 희멀건 사슬을 서서 어두워지는 눈에 오랫동안
+                      저녁 통하는 동녘 성이 흐렸다. 섬마다 숲에 꽃이 조차 따라서
+                      언제 하늘에 바라보고 도착했다. 스스로의 나무다리.
+                    </p>
+                  </div>
+                  <button
+                    class="button-close2"
+                    type="button"
+                    aria-label="모달 닫기"
+                  >
+                    <span aria-hidden="true">×</span>
                   </button>
                 </div>
-                <div class="swiper-slide">
-                  <a href="" class="carousel__popupbutton" role="button">
-                    <img src="./assets/images/example.png" alt="" />
-                  </a>
-                </div>
-                <div
-                  class="carousel__item--detail"
-                  role="dialog"
-                  aria-labelldby="dialogTitle"
-                >
-                  <h3 class="carousel__item--name"></h3>
-                  <dl class="carousel__item--column">
-                    <dt>게시자</dt>
-                    <dd>박채영</dd>
-                    <dt>게시일</dt>
-                    <dd>2021/08/29</dd>
-                    <dt>설명글</dt>
-                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
-                  </dl>
-                  <button id="No1" type="button" class="carousel__item--close">
-                    x
+              </div>
+              <div class="bestPhoto__imgContainer--item">
+                <a class="modal-button3" role="button">
+                  <img
+                    src="./assets/images/daily3.jpg"
+                    alt="커피, 책, 볼펜, 식물"
+                  />
+                </a>
+              </div>
+              <div
+                class="modal modal3"
+                role="dialog"
+                aria-labelledby="title-dialog"
+                aria-modal="true"
+              >
+                <div class="modal-content" role="document" tabindex="-1">
+                  <h2 id="title-dialog" class="a11yHidden">사진 설명</h2>
+                  <div class="modal-image">
+                    <img
+                      src="./assets/images/daily3.jpg"
+                      alt="커피, 책, 볼펜, 식물"
+                    />
+                  </div>
+                  <div class="modal-text">
+                    <span class="modal-text__date"
+                      ><time datetime="2021-08-29">2021/08/29</time></span
+                    >
+                    <span class="modal-text__heading">여유</span>
+                    <span class="modal-text__author">박채영</span>
+                    <p class="modal-text__details">
+                      야무와, 한글 로렘입숨. 어둠에 보이지 구름처럼 알리는,
+                      있었다. 파묻혀 희멀건 사슬을 서서 어두워지는 눈에 오랫동안
+                      저녁 통하는 동녘 성이 흐렸다. 섬마다 숲에 꽃이 조차 따라서
+                      언제 하늘에 바라보고 도착했다. 스스로의 나무다리.
+                    </p>
+                  </div>
+                  <button
+                    class="button-close3"
+                    type="button"
+                    aria-label="모달 닫기"
+                  >
+                    <span aria-hidden="true">×</span>
                   </button>
                 </div>
-                <div class="swiper-slide">
-                  <a href="" class="carousel__popupbutton" role="button">
-                    <img src="./assets/images/example.png" alt="" />
-                  </a>
-                </div>
-                <div
-                  class="carousel__item--detail"
-                  role="dialog"
-                  aria-labelldby="dialogTitle"
-                >
-                  <h3 class="carousel__item--name"></h3>
-                  <dl class="carousel__item--column">
-                    <dt>게시자</dt>
-                    <dd>박채영</dd>
-                    <dt>게시일</dt>
-                    <dd>2021/08/29</dd>
-                    <dt>설명글</dt>
-                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
-                  </dl>
-                  <button id="No1" type="button" class="carousel__item--close">
-                    x
-                  </button>
-                </div>
-                <div class="swiper-slide">
-                  <a href="" class="carousel__popupbutton" role="button">
-                    <img src="./assets/images/example.png" alt="" />
-                  </a>
-                </div>
-                <div
-                  class="carousel__item--detail"
-                  role="dialog"
-                  aria-labelldby="dialogTitle"
-                >
-                  <h3 class="carousel__item--name"></h3>
-                  <dl class="carousel__item--column">
-                    <dt>게시자</dt>
-                    <dd>박채영</dd>
-                    <dt>게시일</dt>
-                    <dd>2021/08/29</dd>
-                    <dt>설명글</dt>
-                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
-                  </dl>
-                  <button id="No1" type="button" class="carousel__item--close">
-                    x
-                  </button>
-                </div>
-                <div class="swiper-slide">
-                  <a href="" class="carousel__popupbutton" role="button">
-                    <img src="./assets/images/example.png" alt="" />
-                  </a>
-                </div>
-                <div
-                  class="carousel__item--detail"
-                  role="dialog"
-                  aria-labelldby="dialogTitle"
-                >
-                  <h3 class="carousel__item--name"></h3>
-                  <dl class="carousel__item--column">
-                    <dt>게시자</dt>
-                    <dd>박채영</dd>
-                    <dt>게시일</dt>
-                    <dd>2021/08/29</dd>
-                    <dt>설명글</dt>
-                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
-                  </dl>
-                  <button id="No1" type="button" class="carousel__item--close">
-                    x
-                  </button>
-                </div>
-                <div class="swiper-slide">
-                  <a href="" class="carousel__popupbutton" role="button">
-                    <img src="./assets/images/example.png" alt="" />
-                  </a>
-                </div>
-                <div
-                  class="carousel__item--detail"
-                  role="dialog"
-                  aria-labelldby="dialogTitle"
-                >
-                  <h3 class="carousel__item--name"></h3>
-                  <dl class="carousel__item--column">
-                    <dt>게시자</dt>
-                    <dd>박채영</dd>
-                    <dt>게시일</dt>
-                    <dd>2021/08/29</dd>
-                    <dt>설명글</dt>
-                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
-                  </dl>
-                  <button id="No1" type="button" class="carousel__item--close">
-                    x
-                  </button>
-                </div>
-                <div class="swiper-slide">
-                  <a href="" class="carousel__popupbutton" role="button">
-                    <img src="./assets/images/example.png" alt="" />
-                  </a>
-                </div>
-                <div
-                  class="carousel__item--detail"
-                  role="dialog"
-                  aria-labelldby="dialogTitle"
-                >
-                  <h3 class="carousel__item--name"></h3>
-                  <dl class="carousel__item--column">
-                    <dt>게시자</dt>
-                    <dd>박채영</dd>
-                    <dt>게시일</dt>
-                    <dd>2021/08/29</dd>
-                    <dt>설명글</dt>
-                    <dd>고흐 - 론강의 별이 빛나는 밤</dd>
-                  </dl>
-                  <button id="No1" type="button" class="carousel__item--close">
-                    x
+              </div>
+              <div class="bestPhoto__imgContainer--item">
+                <a class="modal-button4" role="button">
+                  <img
+                    src="./assets/images/daily4.jpg"
+                    alt="어두운 분위기의 작업실 모습"
+                  />
+                </a>
+              </div>
+              <div
+                class="modal modal4"
+                role="dialog"
+                aria-labelledby="title-dialog"
+                aria-modal="true"
+              >
+                <div class="modal-content" role="document" tabindex="-1">
+                  <h2 id="title-dialog" class="a11yHidden">사진 설명</h2>
+                  <div class="modal-image">
+                    <img
+                      src="./assets/images/daily4.jpg"
+                      alt="어두운 분위기의 작업실 모습"
+                    />
+                  </div>
+                  <div class="modal-text">
+                    <span class="modal-text__date"
+                      ><time datetime="2021-08-29">2021/08/29</time></span
+                    >
+                    <span class="modal-text__heading">작업실</span>
+                    <span class="modal-text__author">박채영</span>
+                    <p class="modal-text__details">
+                      야무와, 한글 로렘입숨. 어둠에 보이지 구름처럼 알리는,
+                      있었다. 파묻혀 희멀건 사슬을 서서 어두워지는 눈에 오랫동안
+                      저녁 통하는 동녘 성이 흐렸다. 섬마다 숲에 꽃이 조차 따라서
+                      언제 하늘에 바라보고 도착했다. 스스로의 나무다리.
+                    </p>
+                  </div>
+                  <button
+                    class="button-close4"
+                    type="button"
+                    aria-label="모달 닫기"
+                  >
+                    <span aria-hidden="true">×</span>
                   </button>
                 </div>
               </div>
@@ -363,49 +379,55 @@
           >
           <ul class="author__list">
             <li class="author__item">
-              <figure class="author__container">
-                <img class="author__img" src="./assets/images/example.png""
-                alt=" 작가 인물 사진" />
-                <figcaption class="author__caption">윤석규</figcaption>
-              </figure>
+              <a href="#">
+                <figure class="author__container">
+                  <img class="author__img" src="./assets/images/author1.jpg""
+                  alt=" 작가 인물 사진" />
+                  <figcaption class="author__caption">Agnes</figcaption>
+                </figure>
+              </a>
             </li>
             <li class="author__item">
-              <figure class="author__container">
-                <img
-                  class="author__img"
-                  src="./assets/images/example.png"
-                  alt=" 작가 인물 사진"
-                />
-                <figcaption class="author__caption">이정민</figcaption>
-              </figure>
+              <a href="#">
+                <figure class="author__container">
+                  <img
+                    class="author__img"
+                    src="./assets/images/author2.jpg"
+                    alt=" 작가 인물 사진"
+                  />
+                  <figcaption class="author__caption">Bella</figcaption>
+                </figure>
+              </a>
             </li>
             <li class="author__item">
-              <figure class="author__container">
-                <img
-                  class="author__img"
-                  src="./assets/images/example.png"
-                  alt=" 작가 인물 사진"
-                />
-                <figcaption class="author__caption">박채영</figcaption>
-              </figure>
+              <a href="#"
+                ><figure class="author__container">
+                  <img
+                    class="author__img"
+                    src="./assets/images/author3.jpg"
+                    alt=" 작가 인물 사진"
+                  />
+                  <figcaption class="author__caption">Jackson</figcaption>
+                </figure></a
+              >
             </li>
             <li class="author__item">
-              <figure class="author__container">
-                <img
-                  class="author__img"
-                  src="./assets/images/example.png"
-                  alt=" 작가 인물 사진"
-                />
-                <figcaption class="author__caption">강희</figcaption>
-              </figure>
+              <a href="#">
+                <figure class="author__container">
+                  <img
+                    class="author__img"
+                    src="./assets/images/author4.jpg"
+                    alt=" 작가 인물 사진"
+                  />
+                  <figcaption class="author__caption">Noah</figcaption>
+                </figure>
+              </a>
             </li>
           </ul>
         </section>
         <section class="register">
           <div class="register__box">
-            <h2 class="register__heading">
-              <span class="register__heading--underline">이미지 업로드</span>
-            </h2>
+            <h2 class="register__heading">이미지 업로드</h2>
             <p class="register__detail">
               당신의 사진을 공유해주세요. 당신의 행복한 순간을 다른 사람들과
               공유할 수 있습니다.
@@ -453,7 +475,39 @@
                 <button class="register__button">공유하기</button>
               </form>
               <div class="register__thumbnail-container">
-                <img class="register__thumbnail" src="" alt="" />
+                <img
+                  class="register__thumbnail"
+                  src="./assets/images/default.png"
+                  alt="업로드 썸네일 이미지"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="voice">
+          <div class="voice__container">
+            <h2 class="voice__heading">
+              <span class="voice__heading--line">Customer Voice</span>
+            </h2>
+            <div class="voice__contentbox">
+              <p class="voice__content">
+                <q
+                  >Free Gallery를 통해서 저의 추억을 다른 사람들과 공유할 수
+                  있어서 좋아요. 이제 편리하게 언제 어디서든 저의 추억을 볼 수
+                  있어 이전보다 사진을 관리하기 편리해졌어요</q
+                >
+              </p>
+              <div class="voice__member">
+                <span class="voice__member--name">이민정</span>
+                <span class="voice__member--detail">Free Gallery 멤버</span>
+              </div>
+              <div class="voice__imgbox">
+                <div class="voice__background" aria-hidden="true"></div>
+                <img
+                  src="./assets/images/customer.jpeg"
+                  alt="Free Gallery 리뷰를 남긴 30대 여자 사진"
+                  class="voice__image"
+                />
               </div>
             </div>
           </div>
@@ -461,7 +515,7 @@
       </main>
       <footer class="footer">
         <div class="footer-container">
-          <span class="footer-heading">Free Gallery</span>
+          <span class="footer-heading">FREE GALLERY</span>
           <address class="footer-address">
             <span>서울특별시 강남구 강남대로 364</span>
             <span
@@ -478,16 +532,12 @@
           </address>
           <div class="footer-sns">
             <span class="footer-sns-heading">Follow us</span>
-            <a href="#"
-              ><img src="./assets/images/facebook.svg" alt="페이스북"
-            /></a>
-            <a href="#"
-              ><img src="./assets/images/instagram.svg" alt="인스타그램"
-            /></a>
-            <a href="#"><img src="./assets/images/naver.svg" alt="네이버" /></a>
-            <a href="#"
-              ><img src="./assets/images/youtube.svg" alt="유튜브"
-            /></a>
+            <div class="sns-wrap">
+              <a href="#"><i class="fab fa-facebook-square"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-github"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
           </div>
           <small class="footer-copyright">
             Copyright since &copy; 2021 by Free Gallery CORPORATION ALL RIGHTS
@@ -496,20 +546,6 @@
         </div>
       </footer>
     </div>
-    <script
-      src="https://kit.fontawesome.com/e8b41302b7.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-      var swiper = new Swiper('.mySwiper', {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-      });
-    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </body>
 </html>
