@@ -356,6 +356,7 @@
 
   &__box {
     width: 100%;
+    max-width: rem(800px);
   }
 
   // 사진 등록 제목
@@ -385,13 +386,12 @@
   &__container {
     @include autoMargin;
     margin-top: rem(35px);
-    min-width: rem(320px);
+    // min-width: rem(320px);
 
     @include desktop {
       @include flexbox(row, space-between);
       gap: 5%;
       min-height: rem(350px);
-      max-width: rem(1000px);
     }
 
     @include mobile {
@@ -401,11 +401,8 @@
 
   // 입력 서식
   &__formbox {
-    // background-color: pink;
     // @include flexbox(column);
     gap: 10%;
-    // background-color: rgba(#fff, 0.7);
-    // border-radius: rem(15px);
     // box-shadow: 0 0 5px $gray2;
     padding: rem(20px) rem(10px);
 
@@ -449,7 +446,7 @@
     // 업로드 버튼
     &--upload {
       display: block;
-
+      min-width: rem(100px);
       width: 25%;
       text-align: center;
       box-shadow: 0 0 5px $gray2;
@@ -467,10 +464,11 @@
       content: attr(data-label);
       position: absolute;
       top: 50%;
-      left: 30%;
+      left: rem(150px);
       transform: translateY(-50%);
       font-weight: 700;
       max-width: rem(200px);
+      width: 40%;
     }
   }
 
