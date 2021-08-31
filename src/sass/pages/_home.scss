@@ -1,8 +1,7 @@
 @use './../utils' as *;
 
-.header {
-  width: 100%;
-  height: 100px;
+body {
+  color: $gray3;
 }
 
 // greeting
@@ -40,6 +39,9 @@
       left: 10%;
       font-size: clamp(2rem, 5vw, 4rem);
     }
+    strong {
+      font-weight: 700;
+    }
   }
 
   // 영상 재생 버튼
@@ -66,30 +68,33 @@
     transform: scale(1.3);
   }
 }
-
+// intro
 .intro {
   padding: rem(60px);
+  width: 100vw;
+  // color: $gray3;
 
   &-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     margin: 0 auto;
     @include desktop {
       max-width: 1200px;
+      height: 100vh;
       justify-content: space-between;
     }
 
     @include mobile {
-      flex-flow: column wrap;
+      flex-flow: column nowrap;
     }
   }
 
   &-videoContainer {
     width: 100%;
-    height: 100%;
-    border-radius: 10%;
-    overflow: hidden;
+    height: auto;
 
     @include mobile {
       margin-bottom: rem(80px);
@@ -97,6 +102,9 @@
 
     video {
       @include responsive;
+      border-radius: rem(10px);
+      overflow: hidden;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
     }
   }
 
@@ -104,7 +112,6 @@
     width: 100%;
     margin-bottom: rem(30px);
     word-break: keep-all;
-    font-weight: bold;
 
     @include desktop {
       display: flex;
@@ -117,10 +124,14 @@
     }
 
     & > span {
+      strong {
+        font-weight: 800;
+      }
       @include desktop {
         display: block;
-        font-size: rem(40px);
-        line-height: rem(50px);
+        font-size: rem(50px);
+        line-height: 1.3;
+        font-weight: lighter;
       }
 
       @include mobile {
@@ -134,6 +145,7 @@
         font-size: rem(16px);
         line-height: rem(20px);
         text-align: end;
+        font-weight: lighter;
       }
 
       @include mobile {
@@ -150,7 +162,7 @@
       }
       display: flex;
       margin-top: rem(32px);
-      border: 2px solid black;
+      border: 2px solid $gray3;
 
       flex-flow: row nowrap;
       justify-content: space-between;
@@ -158,7 +170,8 @@
       transition: all 250ms;
 
       &:hover {
-        background-color: black;
+        background-color: $red2;
+        border-color: $red2;
         color: white;
       }
 
@@ -169,56 +182,450 @@
   }
 }
 
-.carousel {
-  @include boxSizeMax(1200px);
-  padding: rem(40px) 0;
-  margin-bottom: rem(20px);
+.news {
+  min-width: 320px;
+  max-width: 1200px;
+  margin: 0 auto;
 
-  &__heading {
-    padding-top: rem(20px);
-    text-align: center;
-    font-size: rem(42px);
-    margin-bottom: rem(-40px);
+  @include mobile {
+    padding: rem(40px);
+  }
+  @include desktop {
+    padding: rem(80px);
+    height: 100vh;
   }
 
-  &__button-wrapper {
+  .news__heading {
+    margin-bottom: rem(40px);
+    text-align: center;
+    font-size: rem(40px);
+  }
+
+  &__article-list {
+    width: 100%;
+
     @include desktop {
-      position: relative;
+      @include flexbox(row, center, center);
     }
   }
 
-  &__item {
-    &--detail {
-      display: none;
+  &__article-item {
+    @include mobile {
+      padding-top: rem(32px);
+
+      &:first-child {
+        border-bottom: 1px solid $gray2;
+        padding-bottom: rem(32px);
+      }
+    }
+    @include desktop {
+      &:first-child {
+        margin-right: rem(32px);
+      }
+    }
+  }
+
+  &__article {
+    @include flexbox(column);
+
+    &--title {
+      line-height: 1.5;
+      font-size: rem(24px);
+      word-break: keep-all;
+      margin-bottom: rem(16px);
+
+      @include multiEllipsis(2);
+    }
+
+    &--body {
+      word-break: keep-all;
+      margin-bottom: rem(16px);
+
+      @include multiEllipsis(3);
+    }
+
+    &--date {
+      font-weight: 600;
+    }
+
+    &--imageContainer {
+      order: -1;
+      width: 100%;
+      text-align: center;
+      margin-bottom: rem(16px);
+    }
+    &--image {
+      max-width: 100%;
+      object-fit: cover;
+      object-position: center;
     }
   }
 }
 
-.swiper {
-  &-slide {
-    background-color: transparent !important;
-    border-color: transparent !important;
+// gallery
+.gallery {
+  background-color: $gray1;
+  width: 100vw;
+
+  @include desktop {
+    height: 4000px;
+
+    .ph1 img {
+      height: rem(500px);
+      overflow: hidden;
+      object-fit: cover;
+    }
+    .ph2 img {
+      transform: translateX(rem(-200px));
+    }
+    .ph3 img {
+      width: rem(600px);
+      height: rem(600px);
+    }
+    .ph4 img {
+      width: rem(700px);
+      transform: translateY(-25vh);
+    }
+    .ph5 img {
+      width: rem(700px);
+      transform: translateX(rem(-200px));
+    }
+    &__photo:nth-child(odd) {
+      @include flexbox(row, space-around, flex-end);
+    }
+  }
+  @include mobile {
+    .ph1 img {
+      height: rem(300px);
+      overflow: hidden;
+      object-fit: cover;
+    }
+    .ph2 img {
+      position: relative;
+      bottom: rem(50px);
+    }
+    .ph3 img {
+      width: rem(300px);
+      height: rem(300px);
+      position: relative;
+      bottom: rem(50px);
+    }
+    .ph5 img {
+      width: rem(400px);
+      position: relative;
+      bottom: rem(50px);
+    }
+  }
+  &__container {
+    @include desktop {
+      position: sticky;
+      overflow: hidden;
+      padding-top: rem(100px);
+      position: -webkit-sticky;
+      top: 0;
+    }
+  }
+  &__slogan {
+    color: $gray3;
+    border-radius: rem(20px);
+    position: absolute;
+    z-index: 10;
+    left: rem(20px);
+    padding: rem(20px);
+    line-height: 1.2;
+    text-shadow: 2px 2px 2px rgba(256, 256, 256, 0.6);
+
+    font-weight: lighter;
+
+    .slogan__lg {
+      font-size: rem(70px);
+    }
+    strong {
+      font-weight: 700;
+    }
+  }
+  &__slide {
+    @include desktop {
+      width: 4000px;
+      height: 100vh;
+      @include flexbox(row, space-around);
+    }
+  }
+  &__blank {
+    @include mobile {
+      width: rem(300px);
+      height: rem(320px);
+    }
+    @include desktop {
+      width: rem(300px);
+      height: 100%;
+    }
+  }
+  &__photo {
+    img {
+      border-radius: rem(10px);
+      overflow: hidden;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    }
+    @include desktop {
+      img {
+        width: rem(500px);
+      }
+    }
+    @include mobile {
+      &:nth-child(even) {
+        @include flexbox(column, center, flex-end);
+      }
+
+      img {
+        width: rem(300px);
+        margin: 0 rem(20px);
+      }
+    }
+  }
+}
+
+// bestPhoto
+.bestPhoto {
+  position: relative;
+  padding: rem(40px) rem(40px);
+  height: 100vh;
+  margin-bottom: rem(20px);
+  color: white;
+  background-color: $gray3;
+  @include flexbox(column, center, center);
+  min-width: 320px;
+  word-break: keep-all;
+
+  &__container {
+    @include boxSizeMax(1200px);
+    @include flexbox(column, center, center);
+  }
+  &__heading {
+    padding-top: rem(20px);
+    text-align: center;
+    font-size: rem(50px);
+    margin-bottom: rem(20px);
+    font-weight: 700;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  }
+
+  &__detail {
+    font-weight: lighter;
+    font-size: rem(18px);
+  }
+
+  &__imgContainer {
+    margin-top: rem(60px);
+    display: flex;
+
+    width: 100%;
+    @include desktop {
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    @include mobile {
+      flex-flow: row wrap;
+      justify-content: center;
+      gap: rem(20px);
+    }
+
+    &--item {
+      width: 50%;
+
+      @include mobile {
+        width: 45%;
+      }
+
+      img {
+        @include responsive;
+        border-radius: rem(10px);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+        transition: all 250ms;
+        cursor: pointer;
+      }
+
+      img:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+@keyframes unfoldIn {
+  0% {
+    transform: scaleX(0) scaleY(0.005);
+  }
+  50% {
+    /* 0.5 초간 세로 크기는 작은상태로 가로 너비만 확대 */
+    transform: scaleX(1) scaleY(0.005);
+  }
+  100% {
+    /* 0.5 초간 세로 크기를 확대 */
+    transform: scaleY(1) scaleX(1);
+  }
+}
+
+.modal,
+.modal1,
+.modal2,
+.modal3,
+.modal4 {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  padding: rem(40px);
+  display: none;
+  animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+
+  &-image {
+    width: 50%;
+    border-radius: rem(20px);
+    overflow: hidden;
+
+    @include mobile {
+      width: 100%;
+      order: -1;
+    }
 
     img {
       @include responsive;
     }
   }
+
+  &-text {
+    padding: rem(30px);
+
+    @include desktop {
+      width: 50%;
+      order: -1;
+    }
+
+    @include mobile {
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    &__date {
+      display: block;
+      font-weight: bold;
+      font-size: rem(14px);
+    }
+
+    &__heading {
+      display: block;
+      margin-top: rem(50px);
+      font-size: rem(48px);
+      font-weight: lighter;
+
+      @include mobile {
+        order: -1;
+        width: 100%;
+        text-align: center;
+        margin-top: rem(-80px);
+      }
+    }
+
+    &__author {
+      display: block;
+
+      @include desktop {
+        margin-top: rem(30px);
+        padding-left: rem(160px);
+      }
+
+      @include mobile {
+        flex-grow: 1;
+        text-align: end;
+      }
+    }
+
+    &__details {
+      margin-top: rem(30px);
+      word-break: keep-all;
+      line-height: 1.4;
+      text-align: center;
+    }
+  }
 }
 
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+
+  opacity: 0;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-delay: 800ms;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+
+  @include mobile {
+    flex-flow: row wrap;
+  }
+}
+
+.button-close1,
+.button-close2,
+.button-close3,
+.button-close4 {
+  position: absolute;
+  top: rem(16px);
+  right: rem(16px);
+  background-color: transparent;
+  padding: rem(16px);
+  cursor: pointer;
+  color: white;
+  font-size: rem(32px);
+  border: none;
+}
+
+// 신규작가
 .author {
   max-width: $maxWidth;
   margin: 0 auto;
   padding: 0 rem(20px);
+
+  @include flexbox(column, center, center);
+  @include desktop {
+    height: 100vh;
+  }
   &__heading {
     text-align: center;
-    margin-bottom: rem(50px);
+    margin-bottom: rem(20px);
+    font-weight: 700;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    font-size: rem(50px);
 
     @include mobile {
       font-size: rem(32px);
     }
-    @include desktop {
-      font-size: rem(42px);
-    }
+  }
+  &__detail {
+    font-weight: lighter;
+    font-size: rem(18px);
+    margin-bottom: rem(50px);
   }
   &__list {
     @include mobile {
@@ -235,6 +642,7 @@
 
   &__item {
     position: relative;
+    cursor: pointer;
     &:hover .author__caption {
       transform: translate(-50%, -100%);
     }
@@ -249,8 +657,12 @@
   &__img {
     max-width: 100%;
     height: auto;
+    border-radius: rem(10px);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
     @include desktop {
       height: rem(325px);
+      object-fit: cover;
+      object-position: center;
     }
   }
 
@@ -271,19 +683,26 @@
 }
 
 .register {
-  // @include autoMargin;
-  // max-width: rem(1000px);
+  @include flexbox(column, center, center);
+
+  margin-top: rem(60px);
   min-width: rem(320px);
-  // width: 90%;
   background-color: $gray1;
-  // border-radius: rem(15px);
-  padding: rem(20px) rem(40px);
+
+  padding: rem(40px);
   color: $gray3;
+  @include desktop {
+    height: 100vh;
+  }
+
+  &__box {
+    width: 100%;
+  }
 
   // 사진 등록 제목
   &__heading {
-    font-size: rem(25px);
-    font-weight: 700;
+    font-size: rem(42px);
+    font-weight: 400;
     text-align: center;
     margin-bottom: rem(16px);
 
@@ -313,7 +732,7 @@
       @include flexbox(row, space-between);
       gap: 5%;
       min-height: rem(350px);
-      max-width: 80%;
+      max-width: rem(1000px);
     }
 
     @include mobile {
@@ -324,8 +743,12 @@
   // 입력 서식
   &__formbox {
     // background-color: pink;
-    @include flexbox(column, space-between);
+    // @include flexbox(column);
     gap: 10%;
+    // background-color: rgba(#fff, 0.7);
+    // border-radius: rem(15px);
+    // box-shadow: 0 0 5px $gray2;
+    padding: rem(20px) rem(10px);
 
     @include desktop {
       max-width: 50%;
@@ -403,6 +826,7 @@
     box-shadow: 0 0 10px rgba($gray3, 0.5);
     color: $gray3;
     font-weight: 700;
+    // transform: translateX(50%);
   }
 
   &__button:hover {
@@ -426,7 +850,6 @@
       display: none;
     }
   }
-
   &__thumbnail {
     max-width: 100%;
     height: 100%;
@@ -434,6 +857,15 @@
 }
 
 .swiper {
+  &-slide {
+    background-color: transparent !important;
+    border-color: transparent !important;
+    position: relative;
+
+    img {
+      @include responsive;
+    }
+  }
   width: 100%;
   height: 50vh;
 }

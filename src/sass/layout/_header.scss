@@ -12,6 +12,12 @@ body {
     background-color: transparent;
     transform: translateY(-100%);
   }
+  &__container {
+    @include boxSizeMax(1200px);
+    width: 100%;
+    position: relative;
+    @include flexbox(row, center, center);
+  }
 
   // 공통
   position: fixed;
@@ -19,16 +25,36 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  background-color: #fff;
+  background-color: rgba(white, 0.9);
   @include flexbox(row, center, center);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
   &__logo {
     height: rem(40px);
   }
 
+  // 메뉴 버튼
+  &__menu {
+    display: block;
+    appearance: none;
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+    transform: translateY(5%);
+    right: rem(20px);
+    top: rem(8px);
+    font-size: rem(25px);
+    transform: translateX(0px);
+    transition: all 0.3s ease;
+  }
+
+  &__menu.is-active {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
   // 데스크탑
   @include desktop {
-    height: rem(100px);
+    height: rem(80px);
 
     // 헤더 배경
     &__bg {
@@ -37,51 +63,9 @@ body {
         @include walkingCat {
           zoom: 0.2;
           position: absolute;
-          bottom: rem(10px);
           left: 100%;
         }
       }
-
-      // 배경 갤러리
-      &__gallery {
-        position: absolute;
-        right: rem(20px);
-        bottom: rem(10px);
-        .box1 {
-          position: absolute;
-          right: rem(20px);
-          bottom: 0;
-          width: rem(40px);
-          height: rem(50px);
-          background-color: $red1;
-          border-radius: rem(2px);
-        }
-        .box2 {
-          position: absolute;
-          right: rem(50px);
-          bottom: rem(30px);
-          width: rem(50px);
-          height: rem(40px);
-          background-color: transparent;
-          border: 1px solid $gray3;
-          border-radius: rem(2px);
-        }
-        .box3 {
-          position: absolute;
-          right: rem(90px);
-          bottom: rem(10px);
-          width: rem(40px);
-          height: rem(40px);
-          background-color: $gray3;
-          border: 1px solid $gray3;
-          border-radius: rem(2px);
-        }
-      }
-    }
-
-    // 메뉴 버튼
-    &__menu {
-      display: none;
     }
   }
 
@@ -90,28 +74,5 @@ body {
     // 공통
     height: rem(80px);
     min-width: rem(360px);
-
-    // 배경 이미지 없앰
-    &__bg {
-      display: none;
-    }
-
-    // 메뉴 버튼
-    &__menu {
-      display: block;
-      appearance: none;
-      border: 0;
-      background-color: transparent;
-      position: absolute;
-      transform: translateY(5%);
-      right: rem(20px);
-      font-size: rem(25px);
-      transform: translateX(0px);
-      transition: all 0.3s ease;
-    }
-
-    &__menu.is-active {
-      transform: translateX(100px);
-    }
   }
 }
