@@ -46,19 +46,19 @@
       <nav class="nav is-top">
         <ul class="nav__list">
           <li class="nav__link">
-            <a href="#">FREE GALLERY 소개</a>
+            <a href="#Intro">FREE GALLERY 소개</a>
           </li>
           <li class="nav__link">
-            <a href="#">갤러리 둘러보기</a>
+            <a href="#Gallery">갤러리 둘러보기</a>
           </li>
           <li class="nav__link">
-            <a href="#">인기 사진</a>
+            <a href="#BestPhoto">인기 사진</a>
           </li>
           <li class="nav__link">
-            <a href="#">신규 작가</a>
+            <a href="#Author">신규 작가</a>
           </li>
           <li class="nav__link">
-            <a href="#">사진 올리기</a>
+            <a href="#Register">사진 올리기</a>
           </li>
         </ul>
         <button class="nav__close" aria-label="메뉴 닫기">
@@ -80,7 +80,7 @@
             <i class="play fas fa-pause"></i>
           </button>
         </section>
-        <section class="intro">
+        <section id="Intro" class="intro">
           <h2 class="intro__heading a11yHidden">Free Gallery 소개 섹션</h2>
           <div class="intro-container">
             <div class="intro-videoContainer">
@@ -102,56 +102,60 @@
             </div>
           </div>
         </section>
-        <section class="news">
-          <h2 class="news__heading">새소식</h2>
-          <ul class="news__article-list">
-            <li class="news__article-item">
-              <a href="#">
-                <article class="news__article">
-                  <h3 class="news__article--title">새소식 제목</h3>
-                  <p class="news__article--body">
-                    야무와, 한글 로렘입숨. 서서 조금씩 비치어, 것을 허공을
-                    결박된, 걸려 오랫동안 알리는 스스로의 눈에 흘러가는 마을은
-                    구름처럼 어둠에 섬들은 있는 듯싶었다.! 따라서 구름처럼
-                    결박된 모를 섬들은 있었다. 깎아내고 어두워지는 걸려
-                    그뭄달빛은.
-                  </p>
-                  <small class="news__article--date">2021-08-31</small>
-                  <figure class="news__article--imageContainer">
-                    <img
-                      src="./assets/images/example.png"
-                      alt="사진 설명"
-                      class="news__article--image"
-                    />
-                  </figure>
-                </article>
-              </a>
-            </li>
-            <li class="news__article-item">
-              <a href="#">
-                <article class="news__article">
-                  <h3 class="news__article--title">새소식 제목</h3>
-                  <p class="news__article--body">
-                    야무와, 한글 로렘입숨. 서서 조금씩 비치어, 것을 허공을
-                    결박된, 걸려 오랫동안 알리는 스스로의 눈에 흘러가는 마을은
-                    구름처럼 어둠에 섬들은 있는 듯싶었다.! 따라서 구름처럼
-                    결박된 모를 섬들은 있었다. 깎아내고 어두워지는 걸려
-                    그뭄달빛은.
-                  </p>
-                  <small class="news__article--date">2021-08-31</small>
-                  <figure class="news__article--imageContainer">
-                    <img
-                      src="./assets/images/example.png"
-                      alt="사진 설명"
-                      class="news__article--image"
-                    />
-                  </figure>
-                </article>
-              </a>
-            </li>
-          </ul>
+        <section id="News" class="news">
+          <div class="news__container">
+            <h2 class="news__heading">
+              <span class="news__heading--line">새소식</span>
+            </h2>
+            <ul class="news__article-list">
+              <li class="news__article-item">
+                <a href="#">
+                  <article class="news__article">
+                    <h3 class="news__article--title">새소식 제목</h3>
+                    <p class="news__article--body">
+                      야무와, 한글 로렘입숨. 서서 조금씩 비치어, 것을 허공을
+                      결박된, 걸려 오랫동안 알리는 스스로의 눈에 흘러가는 마을은
+                      구름처럼 어둠에 섬들은 있는 듯싶었다.! 따라서 구름처럼
+                      결박된 모를 섬들은 있었다. 깎아내고 어두워지는 걸려
+                      그뭄달빛은.
+                    </p>
+                    <small class="news__article--date">2021-08-31</small>
+                    <figure class="news__article--imageContainer">
+                      <img
+                        src="./assets/images/news1.jpg"
+                        alt="사진 설명"
+                        class="news__article--image"
+                      />
+                    </figure>
+                  </article>
+                </a>
+              </li>
+              <li class="news__article-item">
+                <a href="#">
+                  <article class="news__article">
+                    <h3 class="news__article--title">새소식 제목</h3>
+                    <p class="news__article--body">
+                      야무와, 한글 로렘입숨. 서서 조금씩 비치어, 것을 허공을
+                      결박된, 걸려 오랫동안 알리는 스스로의 눈에 흘러가는 마을은
+                      구름처럼 어둠에 섬들은 있는 듯싶었다.! 따라서 구름처럼
+                      결박된 모를 섬들은 있었다. 깎아내고 어두워지는 걸려
+                      그뭄달빛은.
+                    </p>
+                    <small class="news__article--date">2021-08-31</small>
+                    <figure class="news__article--imageContainer">
+                      <img
+                        src="./assets/images/news2.jpg"
+                        alt="사진 설명"
+                        class="news__article--image"
+                      />
+                    </figure>
+                  </article>
+                </a>
+              </li>
+            </ul>
+          </div>
         </section>
-        <section class="gallery">
+        <section id="Gallery" class="gallery">
           <div class="gallery__container">
             <div class="gallery__slogan">
               <span class="slogan__lg"
@@ -191,9 +195,11 @@
             </ul>
           </div>
         </section>
-        <section class="bestPhoto">
+        <section id="BestPhoto" class="bestPhoto">
           <div class="bestPhoto__container">
-            <h2 class="bestPhoto__heading">인기 사진</h2>
+            <h2 class="bestPhoto__heading">
+              <span class="bestPhoto__heading--line">인기 사진</span>
+            </h2>
             <span class="bestPhoto__detail">
               Free Gallery 이용자에게 한 주간 가장 인기가 많았던 사진을
               둘러보세요.
@@ -372,107 +378,115 @@
             </div>
           </div>
         </section>
-        <section class="author">
-          <h2 class="author__heading">신규 작가</h2>
-          <span class="author__detail"
-            >Free Gallery에서 뜨고 있는 새로운 작가를 소개합니다.</span
-          >
-          <ul class="author__list">
-            <li class="author__item">
-              <a href="#">
-                <figure class="author__container">
-                  <img class="author__img" src="./assets/images/author1.jpg""
-                  alt=" 작가 인물 사진" />
-                  <figcaption class="author__caption">Agnes</figcaption>
-                </figure>
-              </a>
-            </li>
-            <li class="author__item">
-              <a href="#">
-                <figure class="author__container">
-                  <img
-                    class="author__img"
-                    src="./assets/images/author2.jpg"
-                    alt=" 작가 인물 사진"
-                  />
-                  <figcaption class="author__caption">Bella</figcaption>
-                </figure>
-              </a>
-            </li>
-            <li class="author__item">
-              <a href="#"
-                ><figure class="author__container">
-                  <img
-                    class="author__img"
-                    src="./assets/images/author3.jpg"
-                    alt=" 작가 인물 사진"
-                  />
-                  <figcaption class="author__caption">Jackson</figcaption>
-                </figure></a
-              >
-            </li>
-            <li class="author__item">
-              <a href="#">
-                <figure class="author__container">
-                  <img
-                    class="author__img"
-                    src="./assets/images/author4.jpg"
-                    alt=" 작가 인물 사진"
-                  />
-                  <figcaption class="author__caption">Noah</figcaption>
-                </figure>
-              </a>
-            </li>
-          </ul>
+        <section id="Author" class="author">
+          <div class="autor__container">
+            <h2 class="author__heading">
+              <span class="author__heading--line">신규 작가</span>
+            </h2>
+            <span class="author__detail"
+              >Free Gallery에서 뜨고 있는 새로운 작가를 소개합니다.</span
+            >
+            <ul class="author__list">
+              <li class="author__item">
+                <a href="#">
+                  <figure class="author__container">
+                    <img class="author__img" src="./assets/images/author1.jpg""
+                    alt=" 작가 인물 사진" />
+                    <figcaption class="author__caption">Agnes</figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li class="author__item">
+                <a href="#">
+                  <figure class="author__container">
+                    <img
+                      class="author__img"
+                      src="./assets/images/author2.jpg"
+                      alt=" 작가 인물 사진"
+                    />
+                    <figcaption class="author__caption">Bella</figcaption>
+                  </figure>
+                </a>
+              </li>
+              <li class="author__item">
+                <a href="#"
+                  ><figure class="author__container">
+                    <img
+                      class="author__img"
+                      src="./assets/images/author3.jpg"
+                      alt=" 작가 인물 사진"
+                    />
+                    <figcaption class="author__caption">Jackson</figcaption>
+                  </figure></a
+                >
+              </li>
+              <li class="author__item">
+                <a href="#">
+                  <figure class="author__container">
+                    <img
+                      class="author__img"
+                      src="./assets/images/author4.jpg"
+                      alt=" 작가 인물 사진"
+                    />
+                    <figcaption class="author__caption">Noah</figcaption>
+                  </figure>
+                </a>
+              </li>
+            </ul>
+          </div>
         </section>
-        <section class="register">
+        <section id="Register" class="register">
           <div class="register__box">
-            <h2 class="register__heading">이미지 업로드</h2>
+            <h2 class="register__heading">
+              <span class="register__heading--line">이미지 업로드</span>
+            </h2>
             <p class="register__detail">
               당신의 사진을 공유해주세요. 당신의 행복한 순간을 다른 사람들과
               공유할 수 있습니다.
             </p>
             <div class="register__container">
               <form action="#" class="register__formbox" method="POST">
-                <legend class="register__heading a11yHidden">
-                  이미지 업로드 폼 양식
-                </legend>
-                <ul class="register__list">
-                  <li class="register__item">
-                    <label for="Name" class="a11yHidden">작성자 이름</label>
-                    <input
-                      type="text"
-                      id="Name"
-                      class="register__item--name"
-                      placeholder="이름을 입력해주세요"
-                    />
-                  </li>
-                  <li class="register__item">
-                    <label for="Explain" class="a11yHidden">사진 설명</label>
-                    <textarea
-                      name="image-explanation"
-                      id="Explain"
-                      rows="5"
-                      class="register__item--explain"
-                      placeholder="사진에 대해 간단히 설명해주세요"
-                    ></textarea>
-                  </li>
-                  <li class="register__item">
-                    <label
-                      for="File"
-                      class="register__item--upload"
-                      data-label=""
-                      >파일 업로드</label
-                    >
-                    <input
-                      type="file"
-                      id="File"
-                      class="register__item--file"
-                      accept="image/*"
-                    />
-                  </li>
-                </ul>
-                <button class="register__button">공유하기</button>
+                <filedset>
+                  <legend class="register__heading a11yHidden">
+                    이미지 업로드 폼 양식
+                  </legend>
+                  <ul class="register__list">
+                    <li class="register__item">
+                      <label for="Name" class="a11yHidden">작성자 이름</label>
+                      <input
+                        type="text"
+                        id="Name"
+                        class="register__item--name"
+                        placeholder="이름을 입력해주세요"
+                      />
+                    </li>
+                    <li class="register__item">
+                      <label for="Explain" class="a11yHidden">사진 설명</label>
+                      <textarea
+                        name="image-explanation"
+                        id="Explain"
+                        rows="5"
+                        class="register__item--explain"
+                        placeholder="사진에 대해 간단히 설명해주세요"
+                      ></textarea>
+                    </li>
+                    <li class="register__item">
+                      <label
+                        for="File"
+                        class="register__item--upload"
+                        data-label=""
+                        >파일 업로드</label
+                      >
+                      <input
+                        type="file"
+                        id="File"
+                        class="register__item--file"
+                        accept="image/*"
+                      />
+                    </li>
+                  </ul>
+                  <button class="register__button">공유하기</button>
+                </filedset>
               </form>
               <div class="register__thumbnail-container">
                 <img
@@ -484,7 +498,7 @@
             </div>
           </div>
         </section>
-        <section class="voice">
+        <section id="Voice" class="voice">
           <div class="voice__container">
             <h2 class="voice__heading">
               <span class="voice__heading--line">Customer Voice</span>
