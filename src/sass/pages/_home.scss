@@ -248,6 +248,7 @@ body {
   }
 }
 
+// bestPhoto
 .bestPhoto {
   padding: rem(40px) 0;
   height: 100vh;
@@ -425,6 +426,7 @@ body {
 
 .register {
   @include flexbox(column, center, center);
+
   margin-top: rem(60px);
   min-width: rem(320px);
   height: 100vh;
