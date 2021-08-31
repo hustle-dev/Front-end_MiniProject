@@ -4,4 +4,3 @@ import './js/setThumbnail';
 import './js/setHeart';
 import './js/greeting.js';
 import './js/gallery.js';
-import './js/swiper.js';

@@ -248,13 +248,40 @@ body {
   }
 }
 
+.bestPhoto {
+  padding: rem(40px) 0;
+  height: 100vh;
+  margin-bottom: rem(20px);
+  color: white;
+  background-color: $gray3;
+  @include flexbox(column, center, center);
+
+  &__container {
+    @include boxSizeMax(1200px);
+    @include flexbox(column, center, center);
+  }
+  &__heading {
+    padding-top: rem(20px);
+    text-align: center;
+    font-size: rem(50px);
+    margin-bottom: rem(20px);
+    font-weight: 700;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  }
+
+  &__detail {
+    font-weight: lighter;
+    font-size: rem(18px);
+  }
+}
+
 // best photo
 .carousel {
   padding: rem(40px) 0;
   height: 100vh;
   margin-bottom: rem(20px);
-  background-color: $gray3;
   color: white;
+  background-color: $gray3;
   @include flexbox(column, center, center);
   &__container {
     @include boxSizeMax(1200px);
