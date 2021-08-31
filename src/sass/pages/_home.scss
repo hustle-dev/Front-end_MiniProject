@@ -52,15 +52,14 @@ body {
     border: 0;
     font-size: rem(25px);
     transition: all 0.3s ease;
+    bottom: rem(50px);
 
     // 데스크탑
     @include desktop {
-      bottom: rem(50px);
       left: rem(50px);
     }
     // 모바일
     @include mobile {
-      top: rem(50px);
       right: rem(50px);
     }
   }
@@ -462,11 +461,14 @@ body {
 .author {
   max-width: $maxWidth;
   margin: 0 auto;
-  padding: 0 rem(20px);
 
   @include flexbox(column, center, center);
   @include desktop {
     height: 100vh;
+    padding: 0 rem(20px);
+  }
+  @include mobile {
+    padding: rem(30px);
   }
   &__heading {
     text-align: center;
@@ -539,11 +541,12 @@ body {
   }
 }
 
+// 입력 폼
 .register {
   @include flexbox(column, center, center);
   margin-top: rem(60px);
   min-width: rem(320px);
-  background-color: $gray1;
+  background: #f8f9fa;
 
   padding: rem(40px);
   color: $gray3;
@@ -557,25 +560,28 @@ body {
 
   // 사진 등록 제목
   &__heading {
-    font-size: rem(42px);
-    font-weight: 400;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin-bottom: rem(16px);
 
-    &--underline {
-      display: inline-block;
-      padding: 0 0 rem(15px) 0;
-      border-bottom: 2px solid $red2;
+    @include desktop {
+      font-size: rem(50px);
+    }
+
+    @include mobile {
+      font-size: rem(32px);
     }
   }
 
   // 사진 등록 설명
   &__detail {
-    // @include ellipsis;
-    font-size: rem(14px);
     text-align: center;
     line-height: 1.5;
     word-break: keep-all;
+    font-weight: lighter;
+    font-size: rem(18px);
+    margin-bottom: rem(50px);
   }
 
   // 입력 서식 및 이미지 박스 컨테이너
@@ -631,6 +637,13 @@ body {
       padding: rem(12px) rem(10px);
       border-radius: rem(10px);
       font-size: rem(14px);
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    }
+    &--upload {
+      cursor: pointer;
+    }
+    &--upload::after {
+      color: $gray2;
     }
 
     // 작성일
@@ -646,17 +659,19 @@ body {
     // 업로드 버튼
     &--upload {
       display: block;
-
+      background-color: $gray3;
+      color: white;
       width: 25%;
       text-align: center;
-      box-shadow: 0 0 5px $gray2;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
       @include ellipsis;
+      transition: all 0.3s ease;
     }
 
     &--upload:hover {
-      color: $gray3;
-      font-weight: 700;
-      box-shadow: 0 0 5px $gray3;
+      background-color: $red2;
+      color: white;
+      transform: translateY(10%);
     }
 
     &--upload::after {
@@ -677,18 +692,19 @@ body {
     flex: 1 1 10%;
     padding: rem(10px);
     border: 0;
-    border-radius: rem(4px);
+    border-radius: rem(10px);
     width: 100%;
-    box-shadow: 0 0 10px rgba($gray3, 0.5);
-    color: $gray3;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    color: white;
+    background-color: $gray3;
     font-weight: 700;
-    // transform: translateX(50%);
+    transition: all 0.3s ease;
   }
 
   &__button:hover {
     background: $red1;
     color: #fff;
-    font-weight: 700;
+    transform: translateY(10%);
   }
 
   // 사진 미리보기
@@ -697,7 +713,7 @@ body {
 
     @include desktop {
       flex: 1 1 0;
-      box-shadow: 0 0 10px rgba($gray3, 0.5);
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
       border-radius: rem(10px);
       overflow: hidden;
     }
@@ -712,6 +728,7 @@ body {
   }
 }
 
+//
 .swiper {
   &-slide {
     background-color: transparent !important;
