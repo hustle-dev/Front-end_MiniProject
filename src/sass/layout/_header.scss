@@ -9,7 +9,6 @@ body {
   // 스크롤 top에 닿아있는 경우
   transition: all 0.2s ease;
   @at-root .header.is-top {
-    background-color: transparent;
     transform: translateY(-100%);
   }
   &__container {
@@ -30,6 +29,7 @@ body {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
   &__logo {
     height: rem(40px);
+    padding: rem(10px);
   }
 
   // 메뉴 버튼
