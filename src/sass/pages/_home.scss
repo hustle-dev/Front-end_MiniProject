@@ -1,5 +1,9 @@
 @use './../utils' as *;
 
+body {
+  color: $gray3;
+}
+
 // greeting
 .greeting {
   position: relative;
@@ -35,6 +39,9 @@
       left: 10%;
       font-size: clamp(2rem, 5vw, 4rem);
     }
+    strong {
+      font-weight: 700;
+    }
   }
 
   // 영상 재생 버튼
@@ -61,30 +68,33 @@
     transform: scale(1.3);
   }
 }
-
+// intro
 .intro {
   padding: rem(60px);
+  width: 100vw;
+  // color: $gray3;
 
   &-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     margin: 0 auto;
     @include desktop {
       max-width: 1200px;
+      height: 100vh;
       justify-content: space-between;
     }
 
     @include mobile {
-      flex-flow: column wrap;
+      flex-flow: column nowrap;
     }
   }
 
   &-videoContainer {
     width: 100%;
-    height: 100%;
-    border-radius: 10%;
-    overflow: hidden;
+    height: auto;
 
     @include mobile {
       margin-bottom: rem(80px);
@@ -92,6 +102,9 @@
 
     video {
       @include responsive;
+      border-radius: rem(10px);
+      overflow: hidden;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
     }
   }
 
@@ -99,7 +112,6 @@
     width: 100%;
     margin-bottom: rem(30px);
     word-break: keep-all;
-    font-weight: bold;
 
     @include desktop {
       display: flex;
@@ -112,10 +124,14 @@
     }
 
     & > span {
+      strong {
+        font-weight: 800;
+      }
       @include desktop {
         display: block;
-        font-size: rem(40px);
-        line-height: rem(50px);
+        font-size: rem(50px);
+        line-height: 1.3;
+        font-weight: lighter;
       }
 
       @include mobile {
@@ -129,6 +145,7 @@
         font-size: rem(16px);
         line-height: rem(20px);
         text-align: end;
+        font-weight: lighter;
       }
 
       @include mobile {
@@ -145,7 +162,7 @@
       }
       display: flex;
       margin-top: rem(32px);
-      border: 2px solid black;
+      border: 2px solid $gray3;
 
       flex-flow: row nowrap;
       justify-content: space-between;
@@ -153,7 +170,8 @@
       transition: all 250ms;
 
       &:hover {
-        background-color: black;
+        background-color: $red2;
+        border-color: $red2;
         color: white;
       }
 
@@ -168,21 +186,61 @@
 .gallery {
   background-color: $gray1;
   width: 100vw;
-  // height: 320vw;
-  height: 4000px;
+
+  @include desktop {
+    height: 4000px;
+
+    .ph1 img {
+      height: rem(500px);
+      overflow: hidden;
+      object-fit: cover;
+      transform: translateY(rem(150px));
+    }
+    .ph3 img {
+      width: rem(600px);
+      height: rem(600px);
+      transform: translateY(rem(150px));
+    }
+    .ph5 img {
+      width: rem(700px);
+      transform: translate(rem(-200px), rem(150px));
+    }
+  }
+  @include mobile {
+    .ph1 img {
+      height: rem(300px);
+      overflow: hidden;
+      object-fit: cover;
+    }
+    .ph2 img {
+      position: relative;
+      bottom: rem(50px);
+    }
+    .ph3 img {
+      width: rem(300px);
+      height: rem(300px);
+      position: relative;
+      bottom: rem(50px);
+    }
+    .ph5 img {
+      width: rem(400px);
+      position: relative;
+      bottom: rem(50px);
+    }
+  }
   &__container {
-    position: sticky;
-    overflow: hidden;
-    padding-top: rem(100px);
-    position: -webkit-sticky;
-    top: 0;
+    @include desktop {
+      position: sticky;
+      overflow: hidden;
+      padding-top: rem(100px);
+      position: -webkit-sticky;
+      top: 0;
+    }
   }
   &__slogan {
-    // background-color: rgba(white, 0.5);
-    color: $gray2;
+    color: $gray3;
     border-radius: rem(20px);
     position: absolute;
-    // top: rem(150px);
     z-index: 10;
     left: rem(20px);
     padding: rem(20px);
@@ -194,52 +252,79 @@
     .slogan__lg {
       font-size: rem(70px);
     }
+    strong {
+      font-weight: 700;
+    }
   }
   &__slide {
-    width: 4000px;
-    height: 100vh;
-    @include flexbox(row, space-around);
+    @include desktop {
+      width: 4000px;
+      height: 100vh;
+      @include flexbox(row, space-around);
+    }
   }
   &__blank {
-    width: rem(300px);
-    height: 100%;
+    @include mobile {
+      width: rem(300px);
+      height: rem(320px);
+    }
+    @include desktop {
+      width: rem(300px);
+      height: 100%;
+    }
   }
   &__photo {
-    position: relative;
+    margin: rem(20px);
     img {
-      width: rem(500px);
       border-radius: rem(10px);
       overflow: hidden;
       box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
     }
-  }
-  .ph1 img {
-    height: rem(500px);
-    overflow: hidden;
-    object-fit: cover;
-    transform: translateY(rem(150px));
-  }
-  .ph3 img {
-    width: rem(600px);
-    height: rem(600px);
-    transform: translateY(rem(150px));
-  }
-  .ph5 img {
-    width: rem(700px);
-    transform: translate(rem(-200px), rem(150px));
+    @include desktop {
+      img {
+        width: rem(500px);
+      }
+    }
+    @include mobile {
+      &:nth-child(even) {
+        @include flexbox(column, center, flex-end);
+      }
+
+      img {
+        width: rem(300px);
+      }
+    }
   }
 }
 
+// best photo
 .carousel {
-  @include boxSizeMax(1200px);
   padding: rem(40px) 0;
   margin-bottom: rem(20px);
+  background-color: $gray3;
+  color: white;
+  @include flexbox(column, center, center);
+
+  @include desktop {
+    height: 100vh;
+  }
+
+  &__container {
+    @include boxSizeMax(1200px);
+    @include flexbox(column, center, center);
+  }
 
   &__heading {
     padding-top: rem(20px);
     text-align: center;
-    font-size: rem(42px);
-    margin-bottom: rem(-40px);
+    font-size: rem(50px);
+    margin-bottom: rem(20px);
+    font-weight: 700;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  }
+  &__detail {
+    font-weight: lighter;
+    font-size: rem(18px);
   }
 
   &__button-wrapper {
@@ -265,6 +350,12 @@
     object-fit: cover;
   }
 
+  img {
+    @include responsive;
+    border-radius: rem(10px);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  }
+
   &__item--close {
     border: 0;
     background-color: transparent;
@@ -279,20 +370,32 @@
   }
 }
 
+// 신규작가
 .author {
   max-width: $maxWidth;
   margin: 0 auto;
   padding: 0 rem(20px);
+
+  @include flexbox(column, center, center);
   &__heading {
     text-align: center;
-    margin-bottom: rem(50px);
+    margin-bottom: rem(20px);
+    font-weight: 700;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    font-size: rem(50px);
 
     @include mobile {
       font-size: rem(32px);
     }
     @include desktop {
-      font-size: rem(42px);
+      // font-size: rem(42px);
+      height: 100vh;
     }
+  }
+  &__detail {
+    font-weight: lighter;
+    font-size: rem(18px);
+    margin-bottom: rem(50px);
   }
   &__list {
     @include mobile {
@@ -309,6 +412,7 @@
 
   &__item {
     position: relative;
+    cursor: pointer;
     &:hover .author__caption {
       transform: translate(-50%, -100%);
     }
@@ -323,8 +427,12 @@
   &__img {
     max-width: 100%;
     height: auto;
+    border-radius: rem(10px);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
     @include desktop {
       height: rem(325px);
+      object-fit: cover;
+      object-position: center;
     }
   }
 
@@ -353,6 +461,9 @@
 
   padding: rem(40px);
   color: $gray3;
+  @include desktop {
+    height: 100vh;
+  }
 
   &__box {
     width: 100%;
@@ -361,8 +472,8 @@
 
   // 사진 등록 제목
   &__heading {
-    font-size: rem(25px);
-    font-weight: 700;
+    font-size: rem(42px);
+    font-weight: 400;
     text-align: center;
     margin-bottom: rem(16px);
 
