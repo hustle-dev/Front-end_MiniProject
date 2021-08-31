@@ -2,13 +2,18 @@
 @use './../components' as *;
 
 .footer {
-  @include boxSizeMax(1200px);
-  font-weight: bold;
+  // font-weight: bold;
   padding: rem(40px);
   position: relative;
+  background-color: black;
+  color: rgba(white, 0.5);
+
+  @include desktop {
+    height: rem(400px);
+  }
 
   &-container {
-    border-top: 1px solid black;
+    @include boxSizeMax(1200px);
 
     @include desktop {
       position: relative;
@@ -19,10 +24,8 @@
     display: block;
     padding: rem(30px) 0;
     @include mobile {
-      font-size: rem(16px);
+      font-size: rem(20px);
       padding-left: rem(16px);
-      border-top: 1px solid black;
-      border-bottom: 1px solid black;
     }
 
     @include desktop {
@@ -61,33 +64,20 @@
 
   &-sns {
     position: relative;
-    display: flex;
+    @include flexbox(column);
     margin: rem(32px) 0;
     padding: rem(16px) 0;
     padding-left: rem(16px);
     gap: rem(20px);
 
-    img {
-      @include responsive;
-
+    &-heading {
       @include desktop {
-        margin-top: rem(16px);
+        display: block;
       }
     }
-
-    &-heading {
-      @include mobile {
-        position: absolute;
-        top: rem(-12px);
-        left: 0;
-        padding-left: rem(16px);
-      }
-
-      @include desktop {
-        position: absolute;
-        top: -20%;
-        right: 60%;
-      }
+    .fab {
+      font-size: rem(50px);
+      margin-right: rem(10px);
     }
 
     @include desktop {
