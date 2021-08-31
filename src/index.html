@@ -1,73 +1,70 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Free Gallery</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="shortcut icon" type="image/x-icon" href="assets/images/titleLogo.ico" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-</head>
-
-<body>
-  <div class="container">
-    <header class="header is-top">
-      <h1>
-        <a href="#">
-          <img class="header__logo" src="./assets/images/logo-bold.svg" alt="FREE GALLERY" />
-        </a>
-      </h1>
-      <div class="header__bg">
-        <div class="header__bg__gallery">
-          <div class="box1"></div>
-          <div class="box2"></div>
-          <div class="box3"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Gallery</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/titleLogo.ico"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header is-top">
+        <div class="header__container">
+          <h1>
+            <a href="#">
+              <img
+                class="header__logo"
+                src="./assets/images/logo-bold.svg"
+                alt="FREE GALLERY"
+              />
+            </a>
+          </h1>
+          <div class="header__bg">
+            <div class="header__bg__cat"></div>
+          </div>
+          <button class="header__menu" aria-label="메뉴 열기">
+            <i class="fas fa-bars"></i>
+          </button>
         </div>
-        <div class="header__bg__cat"></div>
-      </div>
-      <button class="header__menu" aria-label="메뉴 열기">
-        <i class="fas fa-bars"></i>
-      </button>
-    </header>
-    <nav class="nav is-top">
-      <ul class="nav__list">
-        <li class="nav__link"><a href="#">FREE GALLERY 소개</a></li>
-        <li class="nav__link"><a href="#">갤러리 둘러보기</a></li>
-        <li class="nav__link"><a href="#">인기 사진</a></li>
-        <li class="nav__link"><a href="#">신규 작가</a></li>
-        <li class="nav__link"><a href="#">사진 올리기</a></li>
-        <button class="nav__close" aria-label="메뉴 열기">
-          <i class="fas fa-times"></i>
-        </button>
-      </ul>
-    </nav>
-    <main class="main">
-      <section class="greeting">
-        <h2 class="greeting__heading a11yHidden">Free gallery 환영영상</h2>
-        <div class="greeting__videoContainer">
-          <video class="greeting__video" muted playsinline loop autoplay stop>
-            <source src="assets/video/greeting.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <span class="greeting__slogan">
-          당신의<br /><strong>추억</strong>을<br />공유하세요.</span>
-        <button class="greeting__button">
-          <!-- <i class="fas fa-play"></i> -->
-          <!-- <i class="fas fa-pause"></i> -->
-          <i class="play fas fa-pause"></i>
-        </button>
-      </section>
-      <section class="intro">
-        <h2 class="intro__heading a11yHidden">Free Gallery 소개 섹션</h2>
-        <div class="intro-container">
-          <div class="intro-videoContainer">
-            <video muted playsinline loop autoplay>
-              <source src="assets/video/Photographer.mp4" type="video/mp4" />
+      </header>
+      <nav class="nav is-top">
+        <ul class="nav__list">
+          <li class="nav__link"><a href="#">FREE GALLERY 소개</a></li>
+          <li class="nav__link"><a href="#">갤러리 둘러보기</a></li>
+          <li class="nav__link"><a href="#">인기 사진</a></li>
+          <li class="nav__link"><a href="#">신규 작가</a></li>
+          <li class="nav__link"><a href="#">사진 올리기</a></li>
+          <button class="nav__close" aria-label="메뉴 열기">
+            <i class="fas fa-times"></i>
+          </button>
+        </ul>
+      </nav>
+      <main class="main">
+        <section class="greeting">
+          <h2 class="greeting__heading a11yHidden">Free gallery 환영영상</h2>
+          <div class="greeting__videoContainer">
+            <video class="greeting__video" muted playsinline loop autoplay stop>
+              <source src="assets/video/greeting.mp4" type="video/mp4" />
             </video>
           </div>
           <div class="intro__text">
@@ -387,6 +384,33 @@
             </form>
             <div class="register__thumbnail-container">
               <img class="register__thumbnail" src="" alt="" />
+            </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer-container">
+          <span class="footer-heading">FREE GALLERY</span>
+          <address class="footer-address">
+            <span>서울특별시 강남구 강남대로 364</span>
+            <span
+              >TEL
+              <a class="address__telephone" href="tel:022345678"
+                >02-234-5678</a
+              ></span
+            >
+            <span
+              ><a class="address__link" href="mailto:dlwoabsdk@gmail.com"
+                >contact@freegallery.com</a
+              ></span
+            >
+          </address>
+          <div class="footer-sns">
+            <span class="footer-sns-heading">Follow us</span>
+            <div class="sns-wrap">
+              <a href="#"><i class="fab fa-facebook-square"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-github"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
             </div>
           </div>
         </div>
