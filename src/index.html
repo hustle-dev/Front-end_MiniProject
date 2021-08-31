@@ -45,21 +45,31 @@
       </header>
       <nav class="nav is-top">
         <ul class="nav__list">
-          <li class="nav__link"><a href="#">FREE GALLERY 소개</a></li>
-          <li class="nav__link"><a href="#">갤러리 둘러보기</a></li>
-          <li class="nav__link"><a href="#">인기 사진</a></li>
-          <li class="nav__link"><a href="#">신규 작가</a></li>
-          <li class="nav__link"><a href="#">사진 올리기</a></li>
-          <button class="nav__close" aria-label="메뉴 열기">
-            <i class="fas fa-times"></i>
-          </button>
+          <li class="nav__link">
+            <a href="#">FREE GALLERY 소개</a>
+          </li>
+          <li class="nav__link">
+            <a href="#">갤러리 둘러보기</a>
+          </li>
+          <li class="nav__link">
+            <a href="#">인기 사진</a>
+          </li>
+          <li class="nav__link">
+            <a href="#">신규 작가</a>
+          </li>
+          <li class="nav__link">
+            <a href="#">사진 올리기</a>
+          </li>
         </ul>
+        <button class="nav__close" aria-label="메뉴 닫기">
+          <i class="fas fa-times"></i>
+        </button>
       </nav>
       <main class="main">
         <section class="greeting">
           <h2 class="greeting__heading a11yHidden">Free gallery 환영영상</h2>
           <div class="greeting__videoContainer">
-            <video class="greeting__video" muted playsinline loop autoplay stop>
+            <video class="greeting__video" muted playsinline loop autoplay>
               <source src="assets/video/greeting.mp4" type="video/mp4" />
             </video>
           </div>
@@ -370,48 +380,46 @@
           <ul class="author__list">
             <li class="author__item">
               <figure class="author__container">
-                <img class="author__img" src="./assets/images/example.png""
+                <img class="author__img" src="./assets/images/author1.jpg""
                 alt=" 작가 인물 사진" />
-                <figcaption class="author__caption">윤석규</figcaption>
+                <figcaption class="author__caption">Agnes</figcaption>
               </figure>
             </li>
             <li class="author__item">
               <figure class="author__container">
                 <img
                   class="author__img"
-                  src="./assets/images/example.png"
+                  src="./assets/images/author2.jpg"
                   alt=" 작가 인물 사진"
                 />
-                <figcaption class="author__caption">이정민</figcaption>
+                <figcaption class="author__caption">Bella</figcaption>
               </figure>
             </li>
             <li class="author__item">
               <figure class="author__container">
                 <img
                   class="author__img"
-                  src="./assets/images/example.png"
+                  src="./assets/images/author3.jpg"
                   alt=" 작가 인물 사진"
                 />
-                <figcaption class="author__caption">박채영</figcaption>
+                <figcaption class="author__caption">Jackson</figcaption>
               </figure>
             </li>
             <li class="author__item">
               <figure class="author__container">
                 <img
                   class="author__img"
-                  src="./assets/images/example.png"
+                  src="./assets/images/author4.jpg"
                   alt=" 작가 인물 사진"
                 />
-                <figcaption class="author__caption">강희</figcaption>
+                <figcaption class="author__caption">Noah</figcaption>
               </figure>
             </li>
           </ul>
         </section>
         <section class="register">
           <div class="register__box">
-            <h2 class="register__heading">
-              <span class="register__heading--underline">이미지 업로드</span>
-            </h2>
+            <h2 class="register__heading">이미지 업로드</h2>
             <p class="register__detail">
               당신의 사진을 공유해주세요. 당신의 행복한 순간을 다른 사람들과
               공유할 수 있습니다.
