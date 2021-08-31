@@ -72,7 +72,6 @@ body {
 .intro {
   padding: rem(60px);
   width: 100vw;
-  height: 100vh;
   // color: $gray3;
 
   &-container {
@@ -84,11 +83,12 @@ body {
     margin: 0 auto;
     @include desktop {
       max-width: 1200px;
+      height: 100vh;
       justify-content: space-between;
     }
 
     @include mobile {
-      flex-flow: column wrap;
+      flex-flow: column nowrap;
     }
   }
 
@@ -186,13 +186,56 @@ body {
 .gallery {
   background-color: $gray1;
   width: 100vw;
-  height: 4000px;
+
+  @include desktop {
+    height: 4000px;
+
+    .ph1 img {
+      height: rem(500px);
+      overflow: hidden;
+      object-fit: cover;
+      transform: translateY(rem(150px));
+    }
+    .ph3 img {
+      width: rem(600px);
+      height: rem(600px);
+      transform: translateY(rem(150px));
+    }
+    .ph5 img {
+      width: rem(700px);
+      transform: translate(rem(-200px), rem(150px));
+    }
+  }
+  @include mobile {
+    .ph1 img {
+      height: rem(300px);
+      overflow: hidden;
+      object-fit: cover;
+    }
+    .ph2 img {
+      position: relative;
+      bottom: rem(50px);
+    }
+    .ph3 img {
+      width: rem(300px);
+      height: rem(300px);
+      position: relative;
+      bottom: rem(50px);
+    }
+    .ph5 img {
+      width: rem(400px);
+      position: relative;
+      bottom: rem(50px);
+    }
+  }
   &__container {
-    position: sticky;
-    overflow: hidden;
-    padding-top: rem(100px);
-    position: -webkit-sticky;
-    top: 0;
+    @include desktop {
+      position: sticky;
+      overflow: hidden;
+      padding-top: rem(100px);
+      position: -webkit-sticky;
+      top: 0;
+    }
   }
   &__slogan {
     color: $gray3;
@@ -214,48 +257,58 @@ body {
     }
   }
   &__slide {
-    width: 4000px;
-    height: 100vh;
-    @include flexbox(row, space-around);
+    @include desktop {
+      width: 4000px;
+      height: 100vh;
+      @include flexbox(row, space-around);
+    }
   }
   &__blank {
-    width: rem(300px);
-    height: 100%;
+    @include mobile {
+      width: rem(300px);
+      height: rem(320px);
+    }
+    @include desktop {
+      width: rem(300px);
+      height: 100%;
+    }
   }
   &__photo {
-    position: relative;
+    margin: rem(20px);
     img {
-      width: rem(500px);
       border-radius: rem(10px);
       overflow: hidden;
       box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
     }
-  }
-  .ph1 img {
-    height: rem(500px);
-    overflow: hidden;
-    object-fit: cover;
-    transform: translateY(rem(150px));
-  }
-  .ph3 img {
-    width: rem(600px);
-    height: rem(600px);
-    transform: translateY(rem(150px));
-  }
-  .ph5 img {
-    width: rem(700px);
-    transform: translate(rem(-200px), rem(150px));
+    @include desktop {
+      img {
+        width: rem(500px);
+      }
+    }
+    @include mobile {
+      &:nth-child(even) {
+        @include flexbox(column, center, flex-end);
+      }
+
+      img {
+        width: rem(300px);
+      }
+    }
   }
 }
 
 // best photo
 .carousel {
   padding: rem(40px) 0;
-  height: 100vh;
   margin-bottom: rem(20px);
   background-color: $gray3;
   color: white;
   @include flexbox(column, center, center);
+
+  @include desktop {
+    height: 100vh;
+  }
+
   &__container {
     @include boxSizeMax(1200px);
     @include flexbox(column, center, center);
@@ -322,7 +375,7 @@ body {
   max-width: $maxWidth;
   margin: 0 auto;
   padding: 0 rem(20px);
-  height: 100vh;
+
   @include flexbox(column, center, center);
   &__heading {
     text-align: center;
@@ -336,6 +389,7 @@ body {
     }
     @include desktop {
       // font-size: rem(42px);
+      height: 100vh;
     }
   }
   &__detail {
@@ -406,7 +460,9 @@ body {
   // border-radius: rem(15px);
   padding: rem(20px) rem(40px);
   color: $gray3;
-  height: 100vh;
+  @include desktop {
+    height: 100vh;
+  }
 
   // 사진 등록 제목
   &__heading {
