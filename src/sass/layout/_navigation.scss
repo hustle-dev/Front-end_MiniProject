@@ -2,32 +2,30 @@
 @use './../components' as *;
 
 .nav {
-  &__list {
-    display: block;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    background-color: rgba($gray3, 0.8);
-    padding: rem(90px) 0;
-    color: white;
-    font-weight: lighter;
-    font-size: rem(20px);
-    word-break: keep-all;
-    @include flexbox(column);
-    height: 100%;
-    transform: translateX(-100%);
-    transition: all 0.3s ease;
+  display: block;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: rgba($gray3, 0.8);
+  padding: rem(90px) 0;
+  color: white;
+  font-weight: lighter;
+  font-size: rem(20px);
+  word-break: keep-all;
+  @include flexbox(column);
+  height: 100%;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
 
-    @include mobile {
-      width: 50%;
-    }
-    @include desktop {
-      width: 30%;
-    }
+  @include mobile {
+    width: 50%;
+  }
+  @include desktop {
+    width: 30%;
   }
 
-  &__list.is-active {
+  &.is-active {
     transform: translateX(0%);
   }
   &__link {
@@ -35,11 +33,12 @@
   }
   &__link a {
     display: block;
+    padding: rem(20px);
     line-height: 1;
     margin: rem(10px) rem(20px);
   }
   &__link:hover {
-    background-color: rgba($gray3, 0.9);
+    background-color: rgba(0, 0, 0, 0.5);
   }
   &__close {
     position: absolute;
