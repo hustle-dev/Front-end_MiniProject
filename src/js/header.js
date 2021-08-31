@@ -77,14 +77,3 @@ greetingButton.addEventListener('focus', () => {
   menu.style.transform = 'translateX(0)';
   menu.style.opacity = '1';
 });
-
-// focus event
-let headerLink = document.querySelector('.header__link');
-let headerMenu = document.querySelector('.header__menu');
-let header = document.querySelector('.header');
-headerLink.addEventListener('focus', () => {
-  header.style.transform = 'translateY(0)';
-});
-headerMenu.addEventListener('focus', () => {
-  header.style.transform = 'translateY(0)';
-});
