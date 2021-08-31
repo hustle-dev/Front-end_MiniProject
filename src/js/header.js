@@ -42,3 +42,14 @@ close.addEventListener('click', () => {
   menu.classList.toggle('is-active');
   navList.classList.toggle('is-active');
 });
+
+// focus event
+let headerLink = document.querySelector('.header__link');
+let headerMenu = document.querySelector('.header__menu');
+let header = document.querySelector('.header');
+headerLink.addEventListener('focus', () => {
+  header.style.transform = 'translateY(0)';
+});
+headerMenu.addEventListener('focus', () => {
+  header.style.transform = 'translateY(0)';
+});
