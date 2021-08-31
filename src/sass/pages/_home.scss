@@ -552,7 +552,10 @@ body {
       margin-top: rem(30px);
       word-break: keep-all;
       line-height: 1.4;
-      text-align: center;
+
+      @include mobile {
+        text-align: center;
+      }
     }
   }
 }
