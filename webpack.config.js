@@ -27,6 +27,7 @@ module.exports = {
   },
   entry: {
     main: './src/index.js',
+    survey: './src/survey.js',
   },
   output: {
     publicPath: '/',
