@@ -516,15 +516,14 @@ body {
   }
 
   &__button {
-    position: absolute;
-    bottom: rem(30px);
-    right: rem(30px);
+    font-style: rem(40px);
+    margin-top: rem(50px);
 
+    border-radius: rem(5px);
     border: 2px solid white;
     background-color: transparent;
     color: white;
     padding: rem(12px);
-    font-size: rem(12px);
 
     transition: all 250ms;
 
@@ -537,6 +536,7 @@ body {
       background-color: $red2;
       border-color: $red2;
       color: white;
+      transform: translateY(rem(-10px));
     }
   }
 }
