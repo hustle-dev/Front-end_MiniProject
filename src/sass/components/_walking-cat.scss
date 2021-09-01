@@ -2,12 +2,12 @@
 
 // 걷는 고양이 ------------------------------
 @mixin walkingCat {
-  width: rem(400px);
-  height: rem(200px);
+  width: rem(80px);
+  height: rem(40px);
 
   transform: scaleX(-1);
 
-  background-image: url("/src/assets/images/cat.png");
+  background-image: url('/src/assets/images/cat.png');
   background-repeat: no-repeat;
   overflow: hidden;
 
@@ -20,37 +20,37 @@
       background-position-y: 0px;
     }
     9% {
-      background-position-y: -200px;
+      background-position-y: -40px;
     }
     18% {
-      background-position-y: -400px;
+      background-position-y: -80px;
     }
     27% {
-      background-position-y: -600px;
+      background-position-y: -120px;
     }
     36% {
-      background-position-y: -800px;
+      background-position-y: -160px;
     }
     45% {
-      background-position-y: -1000px;
+      background-position-y: -200px;
     }
     54% {
-      background-position-y: -1200px;
+      background-position-y: -240px;
     }
     63% {
-      background-position-y: -1400px;
+      background-position-y: -280px;
     }
     72% {
-      background-position-y: -1600px;
+      background-position-y: -320px;
     }
     81% {
-      background-position-y: -1800px;
+      background-position-y: -360px;
     }
     90% {
-      background-position-y: -2000px;
+      background-position-y: -400px;
     }
     100% {
-      background-position-y: -2200px;
+      background-position-y: -440px;
     }
   }
 }
