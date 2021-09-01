@@ -514,6 +514,31 @@ body {
       }
     }
   }
+
+  &__button {
+    position: absolute;
+    bottom: rem(30px);
+    right: rem(30px);
+
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    padding: rem(12px);
+    font-size: rem(12px);
+
+    transition: all 250ms;
+
+    @include mobile {
+      font-size: rem(8px);
+      padding: rem(8px);
+    }
+
+    &:hover {
+      background-color: $red2;
+      border-color: $red2;
+      color: white;
+    }
+  }
 }
 
 @keyframes unfoldIn {
@@ -718,11 +743,8 @@ body {
   }
   &__list {
     @include mobile {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: auto;
-      gap: 15px;
-      justify-content: center;
+      @include flexbox(row, center, center, wrap);
+      gap: rem(16px);
     }
     @include desktop {
       @include flexbox($justify-content: center);
@@ -736,6 +758,10 @@ body {
     a:hover .author__caption,
     a:focus .author__caption {
       transform: translate(-50%, -100%);
+    }
+
+    @include mobile {
+      flex: 0 0 48%;
     }
     @include desktop {
       max-width: rem(250px);
