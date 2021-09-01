@@ -280,6 +280,22 @@ body {
     transform-origin: left;
   }
 
+  &__item--innerline[class*='first'] {
+    width: 40%;
+  }
+
+  &__item--innerline[class*='second'] {
+    width: 80%;
+  }
+
+  &__item--innerline[class*='first'] {
+    width: 60%;
+  }
+
+  &__item--innerline[class*='first'] {
+    width: 25%;
+  }
+
   &__item--line::before {
     content: attr(data-first);
     position: absolute;

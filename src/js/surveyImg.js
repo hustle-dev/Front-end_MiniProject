@@ -1,9 +1,6 @@
 $(function () {
   let cnt = 0;
 
-  let itemBars = document.querySelectorAll('.survey__item--line');
-  let i = 0;
-
   let leftPic = [
     ['dog1', '개'],
     ['city', '도시'],
@@ -21,20 +18,11 @@ $(function () {
     $(this).css('opacity', '0');
     $('.survey__select').not('.selected').css('transform', 'translateY(300px)');
     $('.survey__select').not('.selected').css('opacity', '0');
-    let select = $(this).children('.survey__img').children('img').attr('alt');
-    let non_select = $('.survey__select')
-      .not('.selected')
-      .children('.survey__img')
-      .children('img')
-      .attr('alt');
-    console.log(select);
-    itemBars[i].setAttribute('data-first', select);
-    itemBars[i].setAttribute('data-last', non_select);
-    i++;
 
     setTimeout(function () {
       if (cnt === 3) {
         console.log('끝');
+        $('.survey__heading').html('다른 사람과 취향을 비교해보세요');
         $('.survey__result').css('display', 'flex');
       } else {
         $('.img1').attr('src', `../assets/images/${leftPic[cnt][0]}.jpg`);
