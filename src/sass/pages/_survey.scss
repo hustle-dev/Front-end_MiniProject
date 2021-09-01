@@ -122,6 +122,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: rem(10px);
+    gap: rem(20px);
 
     @include mobile {
       flex-direction: column;
