@@ -142,7 +142,13 @@ body {
   &__result {
     width: 70vw;
     height: 70vh;
-    background-color: #fff;
+    background: linear-gradient(
+      35deg,
+      rgba(188, 214, 247, 1) 0%,
+      rgba(215, 232, 254, 1) 33%,
+      rgba(237, 244, 255, 1) 54%,
+      rgba(254, 254, 254, 1) 87%
+    );
     position: absolute;
     top: 0;
     left: 0;
@@ -151,7 +157,8 @@ body {
   }
 
   &__list {
-    background-color: pink;
+    // background-color: pink;
+    max-width: rem(700px);
     padding: rem(10px);
     width: 100%;
     height: 100%;
@@ -163,27 +170,87 @@ body {
   }
 
   &__item {
-    @include flexbox(row, space-between);
-    border: 1px solid red;
-    height: rem(60px);
-  }
-
-  &__item--img1,
-  &__item--img2 {
-    flex: 0 0 20%;
-    height: 100%;
+    @include flexbox(row, space-around);
     background-color: #fff;
+    border-radius: rem(8px);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    height: rem(80px);
   }
 
   &__item--bar {
+    @include flexbox(column, center, center);
     flex: 0 0 60%;
     height: 100%;
-    background-color: yellow;
+    gap: 7%;
   }
 
-  &__item--barline {
+  &__message {
+    text-align: left;
+    align-self: flex-start;
+    position: relative;
+    line-height: 5;
+  }
+
+  &__message:before {
+    content: 'your choice is';
+    font-size: rem(10px);
+    position: absolute;
+    top: rem(-5px);
+    left: 0;
+  }
+
+  &__highlight {
+    font-weight: 900;
+  }
+
+  &__item--line {
+    height: 25%;
     width: 100%;
-    height: 30%;
-    background-color: red;
+    background: $gray1;
+    position: relative;
+    border-radius: rem(20px);
+  }
+
+  @keyframes increase {
+    0% {
+      transform: scaleX(0);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
+
+  &__item--innerline {
+    // 동적으로 변경해야 하는 부분
+    width: 50%;
+    height: 100%;
+    border-radius: rem(10px);
+    background-color: $gray3;
+    position: relative;
+    text-align: right;
+    color: #fff;
+    font-size: rem(13px);
+    line-height: 1.5;
+    padding-right: rem(5px);
+    animation: increase 1000ms ease forwards;
+    transform-origin: left;
+  }
+
+  &__item--line::before {
+    content: attr(data-first);
+    position: absolute;
+    font-size: rem(10px);
+    top: rem(-14px);
+    left: rem(5px);
+    color: black;
+  }
+
+  &__item--line::after {
+    content: attr(data-last);
+    position: absolute;
+    font-size: rem(10px);
+    width: rem(20px);
+    top: rem(-12px);
+    right: rem(5px);
   }
 }
