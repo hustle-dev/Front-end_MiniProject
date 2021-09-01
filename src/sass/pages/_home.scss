@@ -146,7 +146,6 @@ body {
         margin-top: rem(12px);
         font-size: rem(16px);
         line-height: rem(20px);
-        text-align: end;
         font-weight: lighter;
       }
 
@@ -165,6 +164,7 @@ body {
       display: flex;
       margin-top: rem(32px);
       border: 2px solid white;
+      border-radius: rem(5px);
 
       flex-flow: row nowrap;
       justify-content: space-between;
@@ -273,12 +273,7 @@ body {
       order: -1;
       text-align: center;
       margin-bottom: rem(16px);
-      @include desktop {
-        width: 90%;
-      }
-      @include mobile {
-        width: 100%;
-      }
+      width: 100%;
     }
     &--image {
       max-width: 100%;
