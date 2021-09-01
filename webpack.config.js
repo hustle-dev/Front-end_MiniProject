@@ -27,7 +27,6 @@ module.exports = {
   },
   entry: {
     main: './src/index.js',
-    survey: './src/survey.js',
   },
   output: {
     publicPath: '/',
@@ -86,12 +85,12 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      template: path.join(__dirname, './src/index.html'),
+    }),
+    new HtmlWebpackPlugin({
       template: path.join(__dirname, './src/survey.html'),
       filename: './survey.html',
       chunks: ['survey'],
-    }),
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, './src/index.html'),
     }),
     new MiniCSSExtractPlugin({
       linkType: false,
