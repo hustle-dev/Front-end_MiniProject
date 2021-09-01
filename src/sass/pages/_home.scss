@@ -72,7 +72,8 @@ body {
 .intro {
   padding: rem(60px);
   width: 100vw;
-  // color: $gray3;
+  color: $white;
+  background-color: black;
 
   &-container {
     display: flex;
@@ -112,11 +113,12 @@ body {
     width: 100%;
     margin-bottom: rem(30px);
     word-break: keep-all;
+    order: -1;
 
     @include desktop {
       display: flex;
       flex-flow: column wrap;
-      align-items: flex-end;
+      align-items: flex-start;
     }
 
     @include mobile {
@@ -162,7 +164,7 @@ body {
       }
       display: flex;
       margin-top: rem(32px);
-      border: 2px solid $gray3;
+      border: 2px solid white;
 
       flex-flow: row nowrap;
       justify-content: space-between;
@@ -182,10 +184,17 @@ body {
   }
 }
 
+// 새소식
 .news {
-  min-width: 320px;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
+  // background-color: rgba($gray2, 0.3);
+  @include flexbox(row, center, center);
+
+  &__container {
+    min-width: 320px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
   @include mobile {
     padding: rem(40px);
@@ -195,10 +204,22 @@ body {
     height: 100vh;
   }
 
-  .news__heading {
-    margin-bottom: rem(40px);
+  &__heading {
+    color: black;
+    font-size: rem(50px);
+    font-weight: 700;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
     text-align: center;
-    font-size: rem(40px);
+    margin-bottom: rem(16px);
+    @include mobile {
+      font-size: rem(32px);
+    }
+  }
+  &__heading--line {
+    display: inline-block;
+    margin-bottom: rem(30px);
+    padding-bottom: rem(15px);
+    border-bottom: 1px solid $red2;
   }
 
   &__article-list {
@@ -250,14 +271,21 @@ body {
 
     &--imageContainer {
       order: -1;
-      width: 100%;
       text-align: center;
       margin-bottom: rem(16px);
+      @include desktop {
+        width: 90%;
+      }
+      @include mobile {
+        width: 100%;
+      }
     }
     &--image {
       max-width: 100%;
       object-fit: cover;
       object-position: center;
+      border-radius: rem(10px);
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
     }
   }
 }
@@ -269,6 +297,17 @@ body {
 
   @include desktop {
     height: 4000px;
+
+    &__bg {
+      position: absolute;
+      background-image: url('../assets/images/bg.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: bottom;
+      width: 100vw;
+      height: 100vh;
+      bottom: 0;
+    }
 
     .ph1 img {
       height: rem(500px);
@@ -295,6 +334,18 @@ body {
     }
   }
   @include mobile {
+    position: relative;
+    &__bg {
+      position: absolute;
+      background-image: url('../assets/images/bg.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: bottom;
+      width: 100vw;
+      height: 200vh;
+      z-index: 1;
+      bottom: 0;
+    }
     .ph1 img {
       height: rem(300px);
       overflow: hidden;
@@ -308,7 +359,11 @@ body {
       width: rem(300px);
       height: rem(300px);
       position: relative;
-      bottom: rem(50px);
+      bottom: rem(100px);
+    }
+    .ph4 img {
+      position: relative;
+      bottom: rem(10px);
     }
     .ph5 img {
       width: rem(400px);
@@ -321,8 +376,10 @@ body {
       position: sticky;
       overflow: hidden;
       padding-top: rem(100px);
+      // margin-top: rem(100px);
       position: -webkit-sticky;
       top: 0;
+      width: 100%;
     }
   }
   &__slogan {
@@ -366,20 +423,21 @@ body {
       border-radius: rem(10px);
       overflow: hidden;
       box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+      z-index: 3;
     }
     @include desktop {
       img {
-        width: rem(500px);
+        width: clamp(500px, 50% + 20px, 900px);
+        transform: translateX(-1%);
       }
     }
     @include mobile {
+      img {
+        width: clamp(300px, 50% + 20px, 600px);
+        margin: 0 rem(20px);
+      }
       &:nth-child(even) {
         @include flexbox(column, center, flex-end);
-      }
-
-      img {
-        width: rem(300px);
-        margin: 0 rem(20px);
       }
     }
   }
@@ -390,7 +448,6 @@ body {
   position: relative;
   padding: rem(40px) rem(40px);
   height: 100vh;
-  margin-bottom: rem(20px);
   color: white;
   background-color: $gray3;
   @include flexbox(column, center, center);
@@ -408,6 +465,15 @@ body {
     margin-bottom: rem(20px);
     font-weight: 700;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+    @include mobile {
+      font-size: rem(32px);
+    }
+  }
+  &__heading--line {
+    display: inline-block;
+    padding-bottom: rem(15px);
+    margin-bottom: rem(30px);
+    border-bottom: 1px solid $red2;
   }
 
   &__detail {
@@ -530,7 +596,9 @@ body {
         order: -1;
         width: 100%;
         text-align: center;
-        margin-top: rem(-80px);
+
+        margin-top: rem(-30px);
+        padding: rem(16px);
       }
     }
 
@@ -585,7 +653,8 @@ body {
   animation-fill-mode: forwards;
 
   @include mobile {
-    flex-flow: row wrap;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
   }
 }
 
@@ -602,16 +671,27 @@ body {
   color: white;
   font-size: rem(32px);
   border: none;
+
+  @include mobile {
+    font-size: rem(24px);
+    top: -5%;
+    right: -5%;
+  }
 }
 
 // 신규작가
 .author {
-  max-width: $maxWidth;
-  margin: 0 auto;
-
+  background-color: rgba($gray2, 0.4);
   @include flexbox(column, center, center);
+  height: 100vh;
+
+  &__container {
+    max-width: $maxWidth;
+    margin: 0 auto;
+    @include flexbox(column, center, center);
+  }
+
   @include desktop {
-    height: 100vh;
     padding: 0 rem(20px);
   }
   @include mobile {
@@ -628,7 +708,15 @@ body {
       font-size: rem(32px);
     }
   }
+  &__heading--line {
+    display: inline-block;
+    padding-bottom: rem(15px);
+    margin-bottom: rem(30px);
+    border-bottom: 1px solid $red2;
+  }
   &__detail {
+    display: block;
+    text-align: center;
     font-weight: lighter;
     font-size: rem(18px);
     margin-bottom: rem(50px);
@@ -693,16 +781,12 @@ body {
 // 입력 폼
 .register {
   @include flexbox(column, center, center);
-
+  height: 100vh;
   margin-top: rem(60px);
   min-width: rem(320px);
-  background: #f8f9fa;
 
   padding: rem(40px);
   color: $gray3;
-  @include desktop {
-    height: 100vh;
-  }
 
   &__box {
     width: 100%;
@@ -723,6 +807,12 @@ body {
     @include mobile {
       font-size: rem(32px);
     }
+  }
+  &__heading--line {
+    display: inline-block;
+    padding-bottom: rem(15px);
+    margin-bottom: rem(30px);
+    border-bottom: 1px solid $red2;
   }
 
   // 사진 등록 설명
@@ -939,14 +1029,17 @@ body {
   object-fit: cover;
 }
 
+// customer voice
 .voice {
   @include flexbox(column, center, center);
   margin-top: rem(20px);
   padding: rem(20px);
   height: 100vh;
+  width: 100vw;
+  background-color: $gray1;
+  overflow: hidden;
 
   &__container {
-    background-color: white;
     width: 100%;
     max-width: rem(1000px);
     min-width: rem(320px);
@@ -957,9 +1050,14 @@ body {
   }
 
   &__heading {
+    font-size: rem(50px);
+    font-weight: 700;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
     text-align: center;
-    font-size: rem(42px);
-    padding: rem(15px);
+    margin-bottom: rem(16px);
+    @include mobile {
+      font-size: rem(32px);
+    }
   }
 
   &__heading--line {
