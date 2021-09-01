@@ -62,7 +62,7 @@ module.exports = {
                       features: {
                         'nesting-rules': true,
                       },
-                      autoprefixer: { grid: true },
+                      autoprefixer: { grid: false },
                     },
                   ],
                 ],
