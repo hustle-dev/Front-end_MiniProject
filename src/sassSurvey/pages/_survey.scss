@@ -44,6 +44,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     overflow: hidden;
+    position: relative;
   }
   &__question {
     display: block;
@@ -79,5 +80,53 @@ body {
     height: 100%;
     background-color: red;
     border-radius: rem(10px);
+  }
+
+  &__result {
+    width: 70vw;
+    height: 70vh;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: rem(40px);
+    box-sizing: border-box;
+  }
+
+  &__list {
+    background-color: pink;
+    padding: rem(10px);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-content: center;
+    margin: auto;
+  }
+
+  &__item {
+    @include flexbox(row, space-between);
+    border: 1px solid red;
+    height: rem(60px);
+  }
+
+  &__item--img1,
+  &__item--img2 {
+    flex: 0 0 20%;
+    height: 100%;
+    background-color: #fff;
+  }
+
+  &__item--bar {
+    flex: 0 0 60%;
+    height: 100%;
+    background-color: yellow;
+  }
+
+  &__item--barline {
+    width: 100%;
+    height: 30%;
+    background-color: red;
   }
 }
