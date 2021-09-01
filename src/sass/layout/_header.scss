@@ -61,7 +61,7 @@ body {
       // 걷는 고양이
       &__cat {
         @include walkingCat {
-          zoom: 0.2;
+          // zoom: 0.2;
           position: absolute;
           left: 100%;
         }
