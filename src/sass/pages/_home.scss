@@ -30,7 +30,7 @@ body {
     line-height: 1.2;
     font-weight: lighter;
     word-break: keep-all;
-    @include headingAnimation(0.2s);
+    @include headingAnimation(3.7s);
 
     @include desktop {
       top: 60%;
