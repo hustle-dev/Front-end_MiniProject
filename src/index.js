@@ -7,3 +7,4 @@ import './js/gallery.js';
 import './js/greeting.js';
 import './js/modal.js';
 import './js/splash';
+import './js/hashbutton.js';
