@@ -24,6 +24,11 @@
   </head>
   <body>
     <div class="container">
+      <div class="splash"></div>
+      <div class="splash__text">
+        <span>당신의 삶을 바꿀 갤러리</span>
+        <span>FREE GALLERY</span>
+      </div>
       <header class="header is-top">
         <div class="header__container">
           <h1>
@@ -495,6 +500,7 @@
                       <input
                         type="text"
                         id="Name"
+                        name="name"
                         class="register__item--name"
                         placeholder="이름을 입력해주세요"
                       />
@@ -504,10 +510,34 @@
                       <textarea
                         name="image-explanation"
                         id="Explain"
+                        name="explain"
                         rows="5"
                         class="register__item--explain"
                         placeholder="사진에 대해 간단히 설명해주세요"
                       ></textarea>
+                    </li>
+                    <li>
+                      <button
+                        type="button"
+                        class="register__hashbutton"
+                        data-label="#친구"
+                      >
+                        #친구
+                      </button>
+                      <button
+                        type="button"
+                        class="register__hashbutton"
+                        data-label="#가족"
+                      >
+                        #가족
+                      </button>
+                      <button
+                        type="button"
+                        class="register__hashbutton"
+                        data-label="#생일"
+                      >
+                        #생일
+                      </button>
                     </li>
                     <li class="register__item">
                       <label
