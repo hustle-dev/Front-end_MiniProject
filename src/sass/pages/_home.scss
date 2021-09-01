@@ -514,6 +514,31 @@ body {
       }
     }
   }
+
+  &__button {
+    position: absolute;
+    bottom: rem(30px);
+    right: rem(30px);
+
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    padding: rem(12px);
+    font-size: rem(12px);
+
+    transition: all 250ms;
+
+    @include mobile {
+      font-size: rem(8px);
+      padding: rem(8px);
+    }
+
+    &:hover {
+      background-color: $red2;
+      border-color: $red2;
+      color: white;
+    }
+  }
 }
 
 @keyframes unfoldIn {
