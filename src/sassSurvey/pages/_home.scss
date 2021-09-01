@@ -1,0 +1,20 @@
+@use './../utils' as *;
+
+header {
+  width: 100vw;
+  height: 10vh;
+  background-color: pink;
+}
+
+main {
+  width: 100vw;
+  height: 10vh;
+  background-color: yellow;
+}
+
+footer {
+  width: 100vw;
+  height: 10vh;
+
+  background-color: lime;
+}
