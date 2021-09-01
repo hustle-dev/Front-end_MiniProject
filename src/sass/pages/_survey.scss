@@ -180,8 +180,11 @@ body {
   }
 
   &__result {
+    display: none;
+    justify-content: center;
+    align-content: center;
     width: 70vw;
-    height: 70vh;
+    height: 100%;
     background: linear-gradient(
       35deg,
       rgba(188, 214, 247, 1) 0%,
@@ -192,7 +195,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    padding: rem(40px);
+    padding: rem(10px) rem(40px);
     box-sizing: border-box;
   }
 
@@ -289,8 +292,9 @@ body {
     content: attr(data-last);
     position: absolute;
     font-size: rem(10px);
-    width: rem(20px);
+    width: rem(41px);
     top: rem(-12px);
     right: rem(5px);
+    text-align: right;
   }
 }
