@@ -5,6 +5,13 @@ body {
   color: $gray3;
   font-family: 'NEXON Lv1 Gothic OTF Light', sans-serif;
 }
+
+.headAnimation {
+  opacity: 0;
+}
+.headingAnimation {
+  @include headingAnimation;
+}
 // greeting
 .greeting {
   position: relative;
@@ -706,21 +713,21 @@ body {
   @include flexbox(column, center, center);
   min-height: 100vh;
 
-  &__container {
-    max-width: $maxWidth;
-    margin: 0 auto;
-    @include flexbox(column, center, center);
-  }
-
   @include desktop {
     padding: 0 rem(20px);
   }
   @include mobile {
     padding: rem(100px) rem(20px);
   }
+
+  &__container {
+    height: 100%;
+    max-width: $maxWidth;
+    margin: 0 auto;
+    @include flexbox(column, center, center);
+  }
   &__heading {
     text-align: center;
-    margin-bottom: rem(20px);
     font-weight: 700;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
     font-size: rem(50px);
@@ -741,6 +748,9 @@ body {
     font-weight: lighter;
     font-size: rem(18px);
     margin-bottom: rem(50px);
+    @include mobile {
+      margin-bottom: rem(32px);
+    }
   }
   &__list {
     @include mobile {

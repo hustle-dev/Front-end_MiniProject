@@ -8,3 +8,4 @@ import './js/greeting.js';
 import './js/modal.js';
 import './js/splash';
 import './js/hashbutton.js';
+import './js/headingAnimation';
