@@ -1,10 +1,10 @@
 @use './../utils' as *;
+@use './../components/' as *;
 
 body {
   color: $gray3;
   font-family: 'NEXON Lv1 Gothic OTF Light', sans-serif;
 }
-
 // greeting
 .greeting {
   position: relative;
@@ -29,6 +29,7 @@ body {
     line-height: 1.2;
     font-weight: lighter;
     word-break: keep-all;
+    @include headingAnimation(0.2s);
 
     @include desktop {
       top: 60%;

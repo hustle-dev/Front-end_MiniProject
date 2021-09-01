@@ -1,0 +1,23 @@
+//-------- 헤딩 애니메이션
+@use '../utils' as *;
+
+@mixin headingAnimation($delay: 0s) {
+  opacity: 0;
+  animation: moveup 2s $delay ease-in-out forwards;
+  @content;
+
+  @keyframes moveup {
+    0% {
+      opacity: 0;
+      transform: translateY(0);
+    }
+    40% {
+      opacity: 1;
+      transform: translateY(rem(-20px));
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
