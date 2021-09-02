@@ -689,12 +689,23 @@
               </div>
               <div class="voice__imgbox">
                 <div class="voice__background" aria-hidden="true"></div>
-                <img
-                  src="./assets/images/default.png"
-                  data-src="./assets/images/customer.jpeg"
-                  alt="Free Gallery 리뷰를 남긴 30대 여자 사진"
-                  class="voice__image lazy"
-                />
+                <picture>
+                  <source
+                    srcset="./assets/images/customer.avif"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="./assets/images/customer.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./assets/images/default.png"
+                    data-src="./assets/images/customer.jpeg"
+                    alt="Free Gallery 리뷰를 남긴 30대 여자 사진"
+                    class="voice__image"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
             </div>
           </div>
