@@ -81,6 +81,7 @@
           <h2 class="greeting__heading a11yHidden">Free gallery 환영영상</h2>
           <div class="greeting__videoContainer">
             <video class="greeting__video" muted playsinline loop autoplay>
+              <source src="assets/video/greeting.webm" type="video/webm" />
               <source src="assets/video/greeting.mp4" type="video/mp4" />
             </video>
           </div>
@@ -96,6 +97,10 @@
           <div class="intro-container">
             <div class="intro-videoContainer">
               <video muted playsinline loop autoplay>
+                <source
+                  src="assets/video/Photographer.webm"
+                  type="video/webm"
+                />
                 <source src="assets/video/Photographer.mp4" type="video/mp4" />
               </video>
             </div>
@@ -182,25 +187,41 @@
               <li class="gallery__blank"></li>
               <li class="gallery__photo ph1">
                 <img
-                  src="./assets/images/dog.jpg"
+                  class="lazy"
+                  src="./assets/images/default.png"
+                  data-src="./assets/images/dog.jpg"
                   alt="리트리버 한 마리가 웃는 사진"
                 />
               </li>
               <li class="gallery__photo ph2">
-                <img src="./assets/images/dinner.jpg" alt="따듯한 저녁식사" />
+                <img
+                  class="lazy"
+                  src="./assets/images/default.png"
+                  data-src="./assets/images/dinner.jpg"
+                  alt="따듯한 저녁식사"
+                />
               </li>
               <li class="gallery__photo ph3">
                 <img
-                  src="./assets/images/space.jpg"
+                  class="lazy"
+                  src="./assets/images/default.png"
+                  data-src="./assets/images/space.jpg"
                   alt="우주에 떠있는 우주인"
                 />
               </li>
               <li class="gallery__photo ph4">
-                <img src="./assets/images/love.jpg" alt="사랑하는 커플" />
+                <img
+                  class="lazy"
+                  src="./assets/images/default.png"
+                  data-src="./assets/images/love.jpg"
+                  alt="사랑하는 커플"
+                />
               </li>
               <li class="gallery__photo ph5">
                 <img
-                  src="./assets/images/code.jpg"
+                  class="lazy"
+                  src="./assets/images/default.png"
+                  data-src="./assets/images/code.jpg"
                   alt="코드가 적혀있는 컴퓨터 화면"
                 />
               </li>
