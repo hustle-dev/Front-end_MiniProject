@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Gallery - Survey</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/titleLogo.ico"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <section class="survey">
+        <a href="index.html#BestPhoto" class="goToHome"
+          ><i class="fas fa-arrow-left"></i
+        ></a>
+        <h2 class="survey__heading">당신의 사진 취향은?</h2>
+        <div class="survey__container">
+          <h3 class="survey__question">
+            <span
+              >둘중에서 가장&nbsp;<strong>끌리는 사진</strong>을 고르세요.</span
+            >
+            <span>어떤 사진을 선택하시나요?</span>
+          </h3>
+          <div class="survey__wrap">
+            <a href="#" role="button" class="survey__select"
+              ><figure class="survey__img">
+                <img
+                  class="img1"
+                  src="../assets/images/mauntain.jpg"
+                  alt="산"
+                />
+                <figcaption>산</figcaption>
+              </figure></a
+            >
+            <a href="#" role="button" class="survey__select"
+              ><figure class="survey__img">
+                <img class="img2" src="../assets/images/sea.jpg" alt="바다" />
+                <figcaption>바다</figcaption>
+              </figure></a
+            >
+          </div>
+          <div class="survey__result" aria-labelledby="Result">
+            <h3 id="Result" class="a11yHidden">테스트 설문결과</h3>
+            <ul class="survey__list">
+              <li class="survey__item">
+                <p class="survey__message">산 vs 바다</p>
+                <div class="survey__item--bar">
+                  <div
+                    class="survey__item--line"
+                    data-first="산"
+                    data-last="바다"
+                  >
+                    <div class="survey__item--innerline first">40%</div>
+                  </div>
+                </div>
+              </li>
+              <li class="survey__item">
+                <p class="survey__message">개 vs 고양이</p>
+                <div class="survey__item--bar">
+                  <div
+                    class="survey__item--line"
+                    data-first="개"
+                    data-last="고양이"
+                  >
+                    <div class="survey__item--innerline second">80%</div>
+                  </div>
+                </div>
+              </li>
+              <li class="survey__item">
+                <p class="survey__message">도시 vs 시골</p>
+                <div class="survey__item--bar">
+                  <div
+                    class="survey__item--line"
+                    data-first="도시"
+                    data-last="시골"
+                  >
+                    <div class="survey__item--innerline third">60%</div>
+                  </div>
+                </div>
+              </li>
+              <li class="survey__item">
+                <p class="survey__message">사람 vs 동물</p>
+                <div class="survey__item--bar">
+                  <div
+                    class="survey__item--line"
+                    data-first="사람"
+                    data-last="동물"
+                  >
+                    <div class="survey__item--innerline fourth">25%</div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="survey__bg"></div>
+      </section>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

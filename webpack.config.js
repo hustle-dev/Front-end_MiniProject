@@ -24,9 +24,13 @@ module.exports = {
     compress: true,
     overlay: true,
     hot: true,
+    headers: {
+      'Cache-Control': 'max-age=31536000',
+    },
   },
   entry: {
     main: './src/index.js',
+    survey: './src/survey.js',
   },
   output: {
     publicPath: '/',
@@ -61,7 +65,7 @@ module.exports = {
                       features: {
                         'nesting-rules': true,
                       },
-                      autoprefixer: { grid: true },
+                      autoprefixer: { grid: false },
                     },
                   ],
                 ],
@@ -86,6 +90,11 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, './src/index.html'),
+    }),
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, './src/survey.html'),
+      filename: './survey.html',
+      chunks: ['survey'],
     }),
     new MiniCSSExtractPlugin({
       linkType: false,

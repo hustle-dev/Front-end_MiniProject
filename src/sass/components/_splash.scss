@@ -1,0 +1,80 @@
+@use '../utils' as *;
+@use '../components/heading' as *;
+
+.splash.display-none,
+.splash__text.display-none {
+  display: none;
+}
+.splash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  z-index: 9999;
+
+  overflow: hidden;
+  animation: splashAnimation 3s 1s forwards;
+
+  &__text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    z-index: 9999;
+    text-align: center;
+    word-break: keep-all;
+    // opacity: 0;
+    @include flexbox(column, center, center);
+
+    span:first-child {
+      opacity: 0;
+      font-size: rem(20px);
+      animation: fontAnimation 3.5s forwards;
+      margin-bottom: rem(10px);
+      color: white;
+      background-color: black;
+    }
+    span:last-child {
+      opacity: 0;
+      font-size: rem(50px);
+      font-weight: bolder;
+      animation: fontAnimation 3s 0.5s forwards;
+      color: white;
+      background-color: black;
+    }
+  }
+
+  @keyframes splashAnimation {
+    0% {
+    }
+    80% {
+      transform: scaleY(0.21);
+    }
+    100% {
+      transform: scaleY(0);
+    }
+  }
+  @keyframes fontAnimation {
+    0% {
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+      transform: translateY(rem(-10px));
+    }
+    60% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    92% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
