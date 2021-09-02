@@ -2,6 +2,7 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content="free gallery" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Free Gallery</title>
@@ -28,7 +29,7 @@
       <header class="header is-top">
         <div class="header__container">
           <h1>
-            <a class="header__link" href="#">
+            <a class="header__link" href="#Greeting">
               <img
                 class="header__logo"
                 src="./assets/images/logo.svg"
@@ -73,7 +74,7 @@
         </button>
       </nav>
       <main class="main">
-        <section class="greeting">
+        <section id="Greeting" class="greeting">
           <h2 class="greeting__heading a11yHidden">Free gallery 환영영상</h2>
           <div class="greeting__videoContainer">
             <video class="greeting__video" muted playsinline loop autoplay>
@@ -108,8 +109,9 @@
                 누구나 언제 어디서든<br />
                 추억을 즐길 수 있습니다.
               </p>
-              <a href="#"
-                ><span>사진 보러가기</span><i class="fas fa-images fa-lg"></i>
+              <a href="#watchPic"
+                ><span id="watchPic">사진 보러가기</span
+                ><i class="fas fa-images fa-lg"></i>
               </a>
             </div>
           </div>
@@ -121,8 +123,8 @@
             </h2>
             <ul class="news__article-list">
               <li class="news__article-item">
-                <a href="#">
-                  <article class="news__article">
+                <a href="#Article1">
+                  <article id="Article1" class="news__article">
                     <h3 class="news__article--title">새소식 제목</h3>
                     <p class="news__article--body">
                       야무와, 한글 로렘입숨. 서서 조금씩 비치어, 것을 허공을
@@ -143,8 +145,8 @@
                 </a>
               </li>
               <li class="news__article-item">
-                <a href="#">
-                  <article class="news__article">
+                <a href="#Article2">
+                  <article id="Article2" class="news__article">
                     <h3 class="news__article--title">새소식 제목</h3>
                     <p class="news__article--body">
                       야무와, 한글 로렘입숨. 서서 조금씩 비치어, 것을 허공을
@@ -168,6 +170,7 @@
           </div>
         </section>
         <section id="Gallery" class="gallery">
+          <h2 class="gallery__heading a11yHidden">Free gallery 갤러리모음</h2>
           <div class="gallery__container">
             <div class="gallery__bg"></div>
             <div class="gallery__slogan">
@@ -237,7 +240,7 @@
             </span>
             <div class="bestPhoto__imgContainer">
               <div class="bestPhoto__imgContainer--item">
-                <a class="modal-button1" role="button">
+                <a class="modal-button1" role="button" tabindex="0">
                   <picture>
                     <source
                       srcset="./assets/images/daily1.avif"
@@ -305,7 +308,7 @@
                 </div>
               </div>
               <div class="bestPhoto__imgContainer--item">
-                <a class="modal-button2" role="button">
+                <a class="modal-button2" role="button" tabindex="0">
                   <picture>
                     <source
                       srcset="./assets/images/daily2.avif"
@@ -373,7 +376,7 @@
                 </div>
               </div>
               <div class="bestPhoto__imgContainer--item">
-                <a class="modal-button3" role="button">
+                <a class="modal-button3" role="button" tabindex="0">
                   <picture>
                     <source
                       srcset="./assets/images/daily3.avif"
@@ -441,7 +444,7 @@
                 </div>
               </div>
               <div class="bestPhoto__imgContainer--item">
-                <a class="modal-button4" role="button">
+                <a class="modal-button4" role="button" tabindex="0">
                   <picture>
                     <source
                       srcset="./assets/images/daily4.avif"
@@ -524,8 +527,8 @@
             >
             <ul class="author__list">
               <li class="author__item">
-                <a href="#">
-                  <figure class="author__container">
+                <a href="#Author1">
+                  <figure id="Author1" class="author__container">
                     <img
                       class="author__img lazy"
                       src="./assets/images/default.png"
@@ -537,8 +540,8 @@
                 </a>
               </li>
               <li class="author__item">
-                <a href="#">
-                  <figure class="author__container">
+                <a href="#Author2">
+                  <figure id="Author2" class="author__container">
                     <img
                       class="author__img lazy"
                       src="./assets/images/default.png"
@@ -550,8 +553,8 @@
                 </a>
               </li>
               <li class="author__item">
-                <a href="#"
-                  ><figure class="author__container">
+                <a href="#Author3"
+                  ><figure id="Author3" class="author__container">
                     <img
                       class="author__img lazy"
                       src="./assets/images/default.png"
@@ -563,8 +566,8 @@
                 >
               </li>
               <li class="author__item">
-                <a href="#">
-                  <figure class="author__container">
+                <a href="#Author4">
+                  <figure id="Author4" class="author__container">
                     <img
                       class="author__img lazy"
                       src="./assets/images/default.png"
@@ -641,6 +644,7 @@
                       <label
                         for="File"
                         class="register__item--upload"
+                        tabindex="0"
                         data-label=""
                         >파일 업로드</label
                       >
@@ -726,10 +730,14 @@
           <div class="footer-sns">
             <span class="footer-sns-heading">Follow us</span>
             <div class="sns-wrap">
-              <a href="#"><i class="fab fa-facebook-square"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-github"></i></a>
-              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#Facebook"
+                ><i id="Facebook" class="fab fa-facebook-square"></i
+              ></a>
+              <a href="#Instagram"
+                ><i id="Instagram" class="fab fa-instagram"></i
+              ></a>
+              <a href="#Github"><i id="Github" class="fab fa-github"></i></a>
+              <a href="#Youtube"><i id="Youtube" class="fab fa-youtube"></i></a>
             </div>
           </div>
           <small class="footer-copyright">
