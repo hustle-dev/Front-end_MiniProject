@@ -35,12 +35,16 @@
       font-size: rem(20px);
       animation: fontAnimation 3.5s forwards;
       margin-bottom: rem(10px);
+      color: white;
+      background-color: black;
     }
     span:last-child {
       opacity: 0;
       font-size: rem(50px);
       font-weight: bolder;
       animation: fontAnimation 3s 0.5s forwards;
+      color: white;
+      background-color: black;
     }
   }
 
@@ -48,7 +52,7 @@
     0% {
     }
     80% {
-      transform: scaleY(0.18);
+      transform: scaleY(0.21);
     }
     100% {
       transform: scaleY(0);

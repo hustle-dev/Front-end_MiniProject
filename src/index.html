@@ -2,13 +2,10 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content="free gallery" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Free Gallery</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
     <link
       rel="shortcut icon"
       type="image/x-icon"
@@ -32,7 +29,7 @@
       <header class="header is-top">
         <div class="header__container">
           <h1>
-            <a class="header__link" href="#">
+            <a class="header__link" href="#Greeting">
               <img
                 class="header__logo"
                 src="./assets/images/logo.svg"
@@ -77,10 +74,11 @@
         </button>
       </nav>
       <main class="main">
-        <section class="greeting">
+        <section id="Greeting" class="greeting">
           <h2 class="greeting__heading a11yHidden">Free gallery 환영영상</h2>
           <div class="greeting__videoContainer">
             <video class="greeting__video" muted playsinline loop autoplay>
+              <source src="assets/video/greeting.webm" type="video/webm" />
               <source src="assets/video/greeting.mp4" type="video/mp4" />
             </video>
           </div>
@@ -96,6 +94,10 @@
           <div class="intro-container">
             <div class="intro-videoContainer">
               <video muted playsinline loop autoplay>
+                <source
+                  src="assets/video/Photographer.webm"
+                  type="video/webm"
+                />
                 <source src="assets/video/Photographer.mp4" type="video/mp4" />
               </video>
             </div>
@@ -107,8 +109,9 @@
                 누구나 언제 어디서든<br />
                 추억을 즐길 수 있습니다.
               </p>
-              <a href="#"
-                ><span>사진 보러가기</span><i class="fas fa-images fa-lg"></i>
+              <a href="#watchPic"
+                ><span id="watchPic">사진 보러가기</span
+                ><i class="fas fa-images fa-lg"></i>
               </a>
             </div>
           </div>
@@ -120,8 +123,8 @@
             </h2>
             <ul class="news__article-list">
               <li class="news__article-item">
-                <a href="#">
-                  <article class="news__article">
+                <a href="#Article1">
+                  <article id="Article1" class="news__article">
                     <h3 class="news__article--title">새소식 제목</h3>
                     <p class="news__article--body">
                       야무와, 한글 로렘입숨. 서서 조금씩 비치어, 것을 허공을
@@ -142,8 +145,8 @@
                 </a>
               </li>
               <li class="news__article-item">
-                <a href="#">
-                  <article class="news__article">
+                <a href="#Article2">
+                  <article id="Article2" class="news__article">
                     <h3 class="news__article--title">새소식 제목</h3>
                     <p class="news__article--body">
                       야무와, 한글 로렘입숨. 서서 조금씩 비치어, 것을 허공을
@@ -167,6 +170,7 @@
           </div>
         </section>
         <section id="Gallery" class="gallery">
+          <h2 class="gallery__heading a11yHidden">Free gallery 갤러리모음</h2>
           <div class="gallery__container">
             <div class="gallery__bg"></div>
             <div class="gallery__slogan">
@@ -182,25 +186,41 @@
               <li class="gallery__blank"></li>
               <li class="gallery__photo ph1">
                 <img
-                  src="./assets/images/dog.jpg"
+                  class="lazy"
+                  src="./assets/images/default.png"
+                  data-src="./assets/images/dog.jpg"
                   alt="리트리버 한 마리가 웃는 사진"
                 />
               </li>
               <li class="gallery__photo ph2">
-                <img src="./assets/images/dinner.jpg" alt="따듯한 저녁식사" />
+                <img
+                  class="lazy"
+                  src="./assets/images/default.png"
+                  data-src="./assets/images/dinner.jpg"
+                  alt="따듯한 저녁식사"
+                />
               </li>
               <li class="gallery__photo ph3">
                 <img
-                  src="./assets/images/space.jpg"
+                  class="lazy"
+                  src="./assets/images/default.png"
+                  data-src="./assets/images/space.jpg"
                   alt="우주에 떠있는 우주인"
                 />
               </li>
               <li class="gallery__photo ph4">
-                <img src="./assets/images/love.jpg" alt="사랑하는 커플" />
+                <img
+                  class="lazy"
+                  src="./assets/images/default.png"
+                  data-src="./assets/images/love.jpg"
+                  alt="사랑하는 커플"
+                />
               </li>
               <li class="gallery__photo ph5">
                 <img
-                  src="./assets/images/code.jpg"
+                  class="lazy"
+                  src="./assets/images/default.png"
+                  data-src="./assets/images/code.jpg"
                   alt="코드가 적혀있는 컴퓨터 화면"
                 />
               </li>
@@ -220,13 +240,23 @@
             </span>
             <div class="bestPhoto__imgContainer">
               <div class="bestPhoto__imgContainer--item">
-                <a class="modal-button1" role="button">
-                  <img
-                    class="lazy"
-                    src="./assets/images/default.png"
-                    data-src="./assets/images/daily1.jpg"
-                    alt="양말이 걸려있는 의자"
-                  />
+                <a class="modal-button1" role="button" tabindex="0">
+                  <picture>
+                    <source
+                      srcset="./assets/images/daily1.avif"
+                      type="image/avif"
+                    />
+                    <source
+                      srcset="./assets/images/daily1.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      src="./assets/images/default.png"
+                      data-src="./assets/images/daily1.jpg"
+                      loading="lazy"
+                      alt="양말이 걸려있는 의자"
+                    />
+                  </picture>
                 </a>
               </div>
               <div
@@ -238,12 +268,22 @@
                 <div class="modal-content" role="document" tabindex="-1">
                   <h2 id="title-dialog1" class="a11yHidden">사진 설명</h2>
                   <div class="modal-image">
-                    <img
-                      class="lazy"
-                      src="./assets/images/default.png"
-                      data-src="./assets/images/daily1.jpg"
-                      alt="양말이 걸려있는 의자"
-                    />
+                    <picture>
+                      <source
+                        srcset="./assets/images/daily1.avif"
+                        type="image/avif"
+                      />
+                      <source
+                        srcset="./assets/images/daily1.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="./assets/images/default.png"
+                        data-src="./assets/images/daily1.jpg"
+                        loading="lazy"
+                        alt="양말이 걸려있는 의자"
+                      />
+                    </picture>
                   </div>
                   <div class="modal-text">
                     <span class="modal-text__date"
@@ -268,13 +308,23 @@
                 </div>
               </div>
               <div class="bestPhoto__imgContainer--item">
-                <a class="modal-button2" role="button">
-                  <img
-                    class="lazy"
-                    src="./assets/images/default.png"
-                    data-src="./assets/images/daily2.jpg"
-                    alt="전봇대와 구름"
-                  />
+                <a class="modal-button2" role="button" tabindex="0">
+                  <picture>
+                    <source
+                      srcset="./assets/images/daily2.avif"
+                      type="image/avif"
+                    />
+                    <source
+                      srcset="./assets/images/daily2.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      src="./assets/images/default.png"
+                      data-src="./assets/images/daily2.jpg"
+                      alt="전봇대와 구름"
+                    />
+                  </picture>
                 </a>
               </div>
               <div
@@ -286,12 +336,22 @@
                 <div class="modal-content" role="document" tabindex="-1">
                   <h2 id="title-dialog2" class="a11yHidden">사진 설명</h2>
                   <div class="modal-image">
-                    <img
-                      class="lazy"
-                      src="./assets/images/default.png"
-                      data-src="./assets/images/daily2.jpg"
-                      alt="전봇대와 구름"
-                    />
+                    <picture>
+                      <source
+                        srcset="./assets/images/daily2.avif"
+                        type="image/avif"
+                      />
+                      <source
+                        srcset="./assets/images/daily2.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        loading="lazy"
+                        src="./assets/images/default.png"
+                        data-src="./assets/images/daily2.jpg"
+                        alt="전봇대와 구름"
+                      />
+                    </picture>
                   </div>
                   <div class="modal-text">
                     <span class="modal-text__date"
@@ -316,13 +376,23 @@
                 </div>
               </div>
               <div class="bestPhoto__imgContainer--item">
-                <a class="modal-button3" role="button">
-                  <img
-                    class="lazy"
-                    src="./assets/images/default.png"
-                    data-src="./assets/images/daily3.jpg"
-                    alt="커피, 책, 볼펜, 식물"
-                  />
+                <a class="modal-button3" role="button" tabindex="0">
+                  <picture>
+                    <source
+                      srcset="./assets/images/daily3.avif"
+                      type="image/avif"
+                    />
+                    <source
+                      srcset="./assets/images/daily3.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      src="./assets/images/default.png"
+                      data-src="./assets/images/daily3.jpg"
+                      alt="커피, 책, 볼펜, 식물"
+                    />
+                  </picture>
                 </a>
               </div>
               <div
@@ -334,12 +404,22 @@
                 <div class="modal-content" role="document" tabindex="-1">
                   <h2 id="title-dialog3" class="a11yHidden">사진 설명</h2>
                   <div class="modal-image">
-                    <img
-                      class="lazy"
-                      src="./assets/images/default.png"
-                      data-src="./assets/images/daily3.jpg"
-                      alt="커피, 책, 볼펜, 식물"
-                    />
+                    <picture>
+                      <source
+                        srcset="./assets/images/daily3.avif"
+                        type="image/avif"
+                      />
+                      <source
+                        srcset="./assets/images/daily3.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        loading="lazy"
+                        src="./assets/images/default.png"
+                        data-src="./assets/images/daily3.jpg"
+                        alt="커피, 책, 볼펜, 식물"
+                      />
+                    </picture>
                   </div>
                   <div class="modal-text">
                     <span class="modal-text__date"
@@ -364,13 +444,23 @@
                 </div>
               </div>
               <div class="bestPhoto__imgContainer--item">
-                <a class="modal-button4" role="button">
-                  <img
-                    class="lazy"
-                    src="./assets/images/default.png"
-                    data-src="./assets/images/daily4.jpg"
-                    alt="어두운 분위기의 작업실 모습"
-                  />
+                <a class="modal-button4" role="button" tabindex="0">
+                  <picture>
+                    <source
+                      srcset="./assets/images/daily4.avif"
+                      type="image/avif"
+                    />
+                    <source
+                      srcset="./assets/images/daily4.webp"
+                      type="image/webp"
+                    />
+                    <img
+                      loading="lazy"
+                      src="./assets/images/default.png"
+                      data-src="./assets/images/daily4.jpg"
+                      alt="어두운 분위기의 작업실 모습"
+                    />
+                  </picture>
                 </a>
               </div>
               <div
@@ -382,12 +472,22 @@
                 <div class="modal-content" role="document" tabindex="-1">
                   <h2 id="title-dialog4" class="a11yHidden">사진 설명</h2>
                   <div class="modal-image">
-                    <img
-                      class="lazy"
-                      src="./assets/images/default.png"
-                      data-src="./assets/images/daily4.jpg"
-                      alt="어두운 분위기의 작업실 모습"
-                    />
+                    <picture>
+                      <source
+                        srcset="./assets/images/daily4.avif"
+                        type="image/avif"
+                      />
+                      <source
+                        srcset="./assets/images/daily4.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        loading="lazy"
+                        src="./assets/images/default.png"
+                        data-src="./assets/images/daily4.jpg"
+                        alt="어두운 분위기의 작업실 모습"
+                      />
+                    </picture>
                   </div>
                   <div class="modal-text">
                     <span class="modal-text__date"
@@ -427,8 +527,8 @@
             >
             <ul class="author__list">
               <li class="author__item">
-                <a href="#">
-                  <figure class="author__container">
+                <a href="#Author1">
+                  <figure id="Author1" class="author__container">
                     <img
                       class="author__img lazy"
                       src="./assets/images/default.png"
@@ -440,8 +540,8 @@
                 </a>
               </li>
               <li class="author__item">
-                <a href="#">
-                  <figure class="author__container">
+                <a href="#Author2">
+                  <figure id="Author2" class="author__container">
                     <img
                       class="author__img lazy"
                       src="./assets/images/default.png"
@@ -453,8 +553,8 @@
                 </a>
               </li>
               <li class="author__item">
-                <a href="#"
-                  ><figure class="author__container">
+                <a href="#Author3"
+                  ><figure id="Author3" class="author__container">
                     <img
                       class="author__img lazy"
                       src="./assets/images/default.png"
@@ -466,8 +566,8 @@
                 >
               </li>
               <li class="author__item">
-                <a href="#">
-                  <figure class="author__container">
+                <a href="#Author4">
+                  <figure id="Author4" class="author__container">
                     <img
                       class="author__img lazy"
                       src="./assets/images/default.png"
@@ -510,7 +610,6 @@
                     <li class="register__item">
                       <label for="Explain" class="a11yHidden">사진 설명</label>
                       <textarea
-                        name="image-explanation"
                         id="Explain"
                         name="explain"
                         rows="5"
@@ -598,13 +697,24 @@
               </div>
               <div class="voice__imgbox">
                 <div class="voice__background" aria-hidden="true"></div>
-                <img
-                  src="./assets/images/default.png"
-                  data-src="./assets/images/customer.jpeg"
-                  alt="Free Gallery 리뷰를 남긴 30대 여자 사진"
-                  class="voice__image lazy"
-                  tabindex="0"
-                />
+                <picture>
+                  <source
+                    srcset="./assets/images/customer.avif"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="./assets/images/customer.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./assets/images/default.png"
+                    data-src="./assets/images/customer.jpeg"
+                    alt="Free Gallery 리뷰를 남긴 30대 여자 사진"
+                    class="voice__image"
+                    loading="lazy"
+                    tabindex="0"
+                  />
+                </picture>
               </div>
             </div>
           </div>
@@ -630,10 +740,22 @@
           <div class="footer-sns">
             <span class="footer-sns-heading">Follow us</span>
             <div class="sns-wrap">
-              <a href="#"><i class="fab fa-facebook-square"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-github"></i></a>
-              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#Facebook"
+                ><span class="a11yHidden">페이스북</span
+                ><i id="Facebook" class="fab fa-facebook-square"></i
+              ></a>
+              <a href="#Instagram"
+                ><span class="a11yHidden">페이스북</span
+                ><i id="Instagram" class="fab fa-instagram"></i
+              ></a>
+              <a href="#Github"
+                ><span class="a11yHidden">페이스북</span
+                ><i id="Github" class="fab fa-github"></i
+              ></a>
+              <a href="#Youtube"
+                ><span class="a11yHidden">페이스북</span
+                ><i id="Youtube" class="fab fa-youtube"></i
+              ></a>
             </div>
           </div>
           <small class="footer-copyright">

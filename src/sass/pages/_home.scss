@@ -4,6 +4,18 @@
 body {
   color: $gray3;
   font-family: 'NEXON Lv1 Gothic OTF Light', sans-serif;
+  height: 0;
+  animation: bodyAnimation 3s 1s forwards;
+  overflow: hidden;
+}
+
+@keyframes bodyAnimation {
+  0% {
+  }
+  100% {
+    height: 100%;
+    overflow: auto;
+  }
 }
 
 .headAnimation {
@@ -276,6 +288,7 @@ body {
       text-align: center;
       margin-bottom: rem(16px);
       width: 100%;
+      // overflow: hidden;
     }
     &--image {
       max-width: 100%;
@@ -283,6 +296,7 @@ body {
       object-position: center;
       border-radius: rem(10px);
       box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+      // @include responsive;
     }
   }
 }
@@ -373,7 +387,6 @@ body {
       position: sticky;
       overflow: hidden;
       padding-top: rem(100px);
-      // margin-top: rem(100px);
       position: -webkit-sticky;
       top: 0;
       width: 100%;
@@ -431,7 +444,6 @@ body {
     @include mobile {
       img {
         width: clamp(300px, 50% + 20px, 600px);
-        margin: 0 rem(20px);
       }
       &:nth-child(even) {
         @include flexbox(column, center, flex-end);
@@ -987,49 +999,6 @@ body {
     max-width: 100%;
     height: 100%;
   }
-}
-
-//
-.swiper {
-  &-slide {
-    background-color: transparent !important;
-    border-color: transparent !important;
-    position: relative;
-
-    img {
-      @include responsive;
-    }
-  }
-  width: 100%;
-  height: 50vh;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  border: 1px solid black;
-
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 // customer voice
