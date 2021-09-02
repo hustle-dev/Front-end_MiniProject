@@ -385,7 +385,6 @@ body {
       position: sticky;
       overflow: hidden;
       padding-top: rem(100px);
-      // margin-top: rem(100px);
       position: -webkit-sticky;
       top: 0;
       width: 100%;
@@ -443,7 +442,6 @@ body {
     @include mobile {
       img {
         width: clamp(300px, 50% + 20px, 600px);
-        margin: 0 rem(20px);
       }
       &:nth-child(even) {
         @include flexbox(column, center, flex-end);
