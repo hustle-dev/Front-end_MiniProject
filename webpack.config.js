@@ -24,6 +24,9 @@ module.exports = {
     compress: true,
     overlay: true,
     hot: true,
+    headers: {
+      'Cache-Control': 'max-age=31536000',
+    },
   },
   entry: {
     main: './src/index.js',
