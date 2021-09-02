@@ -1,12 +1,6 @@
 @use './../utils' as *;
 @use './../components/' as *;
 
-body {
-  height: auto;
-  color: $gray3;
-  font-family: 'NEXON Lv1 Gothic OTF Light', sans-serif;
-}
-
 .goToHome {
   position: absolute;
   top: 0;

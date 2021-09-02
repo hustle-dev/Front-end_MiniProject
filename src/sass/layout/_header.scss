@@ -1,10 +1,6 @@
 @use './../utils' as *;
 @use './../components' as *;
 
-body {
-  height: 500vh;
-}
-
 .header {
   transition: all 0.2s ease;
   @at-root .header.is-top {
