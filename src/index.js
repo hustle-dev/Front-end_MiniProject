@@ -8,6 +8,7 @@ import './js/modal.js';
 import './js/splash';
 import './js/hashbutton.js';
 import './js/headingAnimation';
+import './js/uploadButton';
 
 if (history.scrollRestoration) {
   history.scrollRestoration = 'manual';
