@@ -226,14 +226,8 @@ body {
 
   &__heading {
     color: black;
-    font-size: rem(50px);
-    font-weight: 700;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    @include headingStyle;
     margin-bottom: rem(16px);
-    @include mobile {
-      font-size: rem(32px);
-    }
   }
   &__heading--line {
     display: inline-block;
@@ -475,14 +469,8 @@ body {
   }
   &__heading {
     padding-top: rem(20px);
-    text-align: center;
-    font-size: rem(50px);
     margin-bottom: rem(20px);
-    font-weight: 700;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
-    @include mobile {
-      font-size: rem(32px);
-    }
+    @include headingStyle;
   }
   &__heading--line {
     display: inline-block;
@@ -739,14 +727,7 @@ body {
     @include flexbox(column, center, center);
   }
   &__heading {
-    text-align: center;
-    font-weight: 700;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-    font-size: rem(50px);
-
-    @include mobile {
-      font-size: rem(32px);
-    }
+    @include headingStyle;
   }
   &__heading--line {
     display: inline-block;
@@ -839,18 +820,8 @@ body {
 
   // 사진 등록 제목
   &__heading {
-    font-weight: 700;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    @include headingStyle;
     margin-bottom: rem(16px);
-
-    @include desktop {
-      font-size: rem(50px);
-    }
-
-    @include mobile {
-      font-size: rem(32px);
-    }
   }
   &__heading--line {
     display: inline-block;
@@ -1097,14 +1068,8 @@ body {
   }
 
   &__heading {
-    font-size: rem(50px);
-    font-weight: 700;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    @include headingStyle;
     margin-bottom: rem(16px);
-    @include mobile {
-      font-size: rem(32px);
-    }
   }
 
   &__heading--line {

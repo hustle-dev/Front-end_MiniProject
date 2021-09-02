@@ -183,6 +183,7 @@ body {
     display: none;
     justify-content: center;
     align-content: center;
+    min-width: 20rem;
     width: 70vw;
     height: 100%;
     background: linear-gradient(
@@ -197,6 +198,7 @@ body {
     left: 0;
     padding: rem(10px) rem(40px);
     box-sizing: border-box;
+    // font-size: clamp(0.625rem, 4vw, 1rem);
   }
 
   &__list {
@@ -218,6 +220,8 @@ body {
     border-radius: rem(8px);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
     height: rem(80px);
+    padding: 0 rem(10px);
+    min-width: 70%;
   }
 
   &__item--bar {
@@ -229,14 +233,20 @@ body {
 
   &__message {
     text-align: left;
-    align-self: flex-start;
+    align-self: center;
     position: relative;
     line-height: 5;
+    text-overflow: hidden;
+
+    @media (max-width: 477px) {
+      flex-basis: 40%;
+      font-size: rem(14px);
+    }
   }
 
   &__message:before {
     content: 'your choice is';
-    font-size: rem(10px);
+    font-size: 30%;
     position: absolute;
     top: rem(-5px);
     left: 0;
