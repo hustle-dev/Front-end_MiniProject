@@ -645,7 +645,6 @@
                         for="File"
                         class="register__item--upload"
                         tabindex="0"
-                        data-label=""
                         >파일 업로드</label
                       >
                       <input
@@ -653,6 +652,7 @@
                         id="File"
                         class="register__item--file"
                         accept="image/*"
+                        tabindex="0"
                       />
                     </li>
                   </ul>
@@ -672,19 +672,28 @@
         <section id="Voice" class="voice">
           <div class="voice__container">
             <h2 class="voice__heading headAnimation">
-              <span class="voice__heading--line">Customer Voice</span>
+              <span class="voice__heading--line" tabindex="0"
+                >Customer Voice</span
+              >
             </h2>
             <div class="voice__contentbox">
               <p class="voice__content">
-                <q
+                <q tabindex="0"
                   >Free Gallery를 통해서 저의 추억을 다른 사람들과 공유할 수
                   있어서 좋아요. 이제 편리하게 언제 어디서든 저의 추억을 볼 수
                   있어 이전보다 사진을 관리하기 편리해졌어요</q
                 >
               </p>
               <div class="voice__member">
-                <span class="voice__member--name">이민정</span>
-                <span class="voice__member--detail">Free Gallery 멤버</span>
+                <span
+                  class="voice__member--name"
+                  tabindex="0"
+                  aria-label="고객 이름"
+                  >이민정</span
+                >
+                <span class="voice__member--detail" tabindex="0"
+                  >Free Gallery 멤버</span
+                >
               </div>
               <div class="voice__imgbox">
                 <div class="voice__background" aria-hidden="true"></div>
@@ -703,6 +712,7 @@
                     alt="Free Gallery 리뷰를 남긴 30대 여자 사진"
                     class="voice__image"
                     loading="lazy"
+                    tabindex="0"
                   />
                 </picture>
               </div>
