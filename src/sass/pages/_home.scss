@@ -293,10 +293,6 @@ body {
       box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
     }
     &--image {
-      // max-width: 100%;
-      // object-fit: cover;
-      // object-position: center;
-
       @include responsive;
     }
   }
@@ -326,9 +322,7 @@ body {
       overflow: hidden;
       object-fit: cover;
     }
-    // .ph2 img {
-    //   transform: translateX(rem(-200px));
-    // }
+
     .ph3 img {
       width: rem(600px);
       height: rem(600px);
@@ -557,11 +551,9 @@ body {
     transform: scaleX(0) scaleY(0.005);
   }
   50% {
-    /* 0.5 초간 세로 크기는 작은상태로 가로 너비만 확대 */
     transform: scaleX(1) scaleY(0.005);
   }
   100% {
-    /* 0.5 초간 세로 크기를 확대 */
     transform: scaleY(1) scaleX(1);
   }
 }
@@ -847,7 +839,6 @@ body {
   &__container {
     @include autoMargin;
     margin-top: rem(35px);
-    // min-width: rem(320px);
 
     @include desktop {
       @include flexbox(row, space-between);
@@ -862,9 +853,7 @@ body {
 
   // 입력 서식
   &__formbox {
-    // @include flexbox(column);
     gap: 10%;
-    // box-shadow: 0 0 5px $gray2;
     padding: rem(20px) rem(10px);
 
     @include desktop {
@@ -964,7 +953,6 @@ body {
 
   // 사진 등록 버튼
   &__button {
-    // margin-top: rem(10px);
     flex: 1 1 10%;
     padding: rem(10px);
     border: 0;

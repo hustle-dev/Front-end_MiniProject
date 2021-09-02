@@ -2,7 +2,7 @@
 @use './unit' as *;
 @use './media-query' as *;
 
-// 고해상도 배경이미지 처리 ---------------------------------------------------- /
+// 고해상도 배경이미지 처리
 @mixin bgRetina($file, $type, $width, $height) {
   background-image: url('./../assets/images/' + $file + '.' + $type);
   background-repeat: no-repeat;
@@ -15,7 +15,7 @@
   }
 }
 
-// Float 해제를 위한 clear 스타일 ---------------------------------------------------- /
+// Float 해제를 위한 clear 스타일
 @mixin clearFix {
   &::after {
     content: '';
@@ -24,16 +24,14 @@
   }
 }
 
-// Auto Margin을 활용한 박스 가운데 정렬 ------------------------------------------------ /
+// Auto Margin을 활용한 박스 가운데 정렬
 @mixin autoMargin($marginX: auto) {
   margin-left: $marginX;
   margin-right: $marginX;
 }
 
-// 요소 박스의 가로 크기를 뷰포트 기준 100vw로 설정 -------------------------------------------- /
+// 요소 박스의 가로 크기를 뷰포트 기준 100vw로 설정
 @mixin boxSizeFull($width: 100vw) {
-  // width: 100vw로 인해 body 영역에 가로 스크롤바가 나타난다.
-  // 이를 헤결하기 위해 루트 요소인 html에 overflow-x: hidden;을 추가해야 한다.
   width: 100vw;
   position: relative;
   left: 50%;
@@ -41,7 +39,7 @@
   @content;
 }
 
-// 요소 박스의 최대 크기 설정 ----------------------------------------------------------- /
+// 요소 박스의 최대 크기 설정
 @mixin boxSizeMax($width: 1000px, $paddingX: 0) {
   max-width: $width;
   padding-left: $paddingX;
@@ -50,13 +48,13 @@
   @content;
 }
 
-// 반응형 미디어 ----------------------------------------------------------- /
+// 반응형 미디어
 @mixin responsive($width: max-width) {
   #{$width}: 100%;
   height: auto;
 }
 
-// 텍스트 ellipsis ----------------------------------------------------------- /
+// 텍스트 ellipsis
 @mixin ellipsis {
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -73,11 +71,10 @@
   max-height: $line-number * 1.5em;
 }
 
-// 반응형 iframe ----------------------------------------------------------- /
+// 반응형 iframe
 @mixin responsiveIframe($ratio-width, $ratio-height) {
   position: relative;
   width: 100%;
-  // padding 트릭 (iframe에는 높이가 안먹어서 padding-top으로 대신)
   height: 0 !important;
   padding-top: math.div($ratio-height, $ratio-width) * 100%;
 
@@ -90,7 +87,7 @@
   }
 }
 
-// 헤딩 스타일----------------------------------------------------------- /
+// 헤딩 스타일
 @mixin headingStyle {
   font-weight: 700;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
