@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Free Gallery</title>
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <link
       rel="shortcut icon"
       type="image/x-icon"
       href="assets/images/titleLogo.ico"
@@ -611,7 +607,6 @@
                     <li class="register__item">
                       <label for="Explain" class="a11yHidden">사진 설명</label>
                       <textarea
-                        name="image-explanation"
                         id="Explain"
                         name="explain"
                         rows="5"
@@ -689,13 +684,23 @@
               </div>
               <div class="voice__imgbox">
                 <div class="voice__background" aria-hidden="true"></div>
-                <img
-                  src="./assets/images/default.png"
-                  data-src="./assets/images/customer.jpeg"
-                  alt="Free Gallery 리뷰를 남긴 30대 여자 사진"
-                  class="voice__image lazy"
-                  loading="lazy"
-                />
+                <picture>
+                  <source
+                    srcset="./assets/images/customer.avif"
+                    type="image/avif"
+                  />
+                  <source
+                    srcset="./assets/images/customer.webp"
+                    type="image/webp"
+                  />
+                  <img
+                    src="./assets/images/default.png"
+                    data-src="./assets/images/customer.jpeg"
+                    alt="Free Gallery 리뷰를 남긴 30대 여자 사진"
+                    class="voice__image"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
             </div>
           </div>
