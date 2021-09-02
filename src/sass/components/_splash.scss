@@ -25,6 +25,8 @@
     height: 100vh;
     color: white;
     z-index: 9999;
+    text-align: center;
+    word-break: keep-all;
     // opacity: 0;
     @include flexbox(column, center, center);
 
@@ -46,7 +48,7 @@
     0% {
     }
     80% {
-      transform: scaleY(0.15);
+      transform: scaleY(0.18);
     }
     100% {
       transform: scaleY(0);
