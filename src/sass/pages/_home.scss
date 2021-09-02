@@ -375,6 +375,7 @@ body {
     }
     .ph4 img {
       position: relative;
+      height: rem(200px);
       bottom: rem(10px);
     }
     .ph5 img {
@@ -445,6 +446,7 @@ body {
     @include mobile {
       img {
         width: clamp(300px, 50% + 20px, 600px);
+        height: auto;
       }
       &:nth-child(even) {
         @include flexbox(column, center, flex-end);

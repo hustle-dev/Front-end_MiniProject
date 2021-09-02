@@ -27,7 +27,9 @@ body {
   background-color: rgba(white, 0.9);
   @include flexbox(row, center, center);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+
   &__logo {
+    // @include responsive;
     height: rem(40px);
     padding: rem(10px);
   }
