@@ -1,12 +1,6 @@
 @use './../utils' as *;
 @use './../components/' as *;
 
-body {
-  height: auto;
-  color: $gray3;
-  font-family: 'NEXON Lv1 Gothic OTF Light', sans-serif;
-}
-
 .goToHome {
   position: absolute;
   top: 0;
@@ -136,7 +130,7 @@ body {
   }
   &__img {
     position: relative;
-    padding-top: 100%; /* 1:1 ratio */
+    padding-top: 100%;
     overflow: hidden;
     border-radius: rem(10px);
     transition: all 350ms;
@@ -199,11 +193,9 @@ body {
     left: 0;
     padding: rem(10px) rem(40px);
     box-sizing: border-box;
-    // font-size: clamp(0.625rem, 4vw, 1rem);
   }
 
   &__list {
-    // background-color: pink;
     max-width: rem(700px);
     padding: rem(10px);
     width: 100%;
@@ -275,7 +267,6 @@ body {
   }
 
   &__item--innerline {
-    // 동적으로 변경해야 하는 부분
     width: 50%;
     height: 100%;
     border-radius: rem(10px);

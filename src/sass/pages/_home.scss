@@ -288,15 +288,12 @@ body {
       text-align: center;
       margin-bottom: rem(16px);
       width: 100%;
-      // overflow: hidden;
-    }
-    &--image {
-      max-width: 100%;
-      object-fit: cover;
-      object-position: center;
+      overflow: hidden;
       border-radius: rem(10px);
       box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-      // @include responsive;
+    }
+    &--image {
+      @include responsive;
     }
   }
 }
@@ -325,9 +322,7 @@ body {
       overflow: hidden;
       object-fit: cover;
     }
-    // .ph2 img {
-    //   transform: translateX(rem(-200px));
-    // }
+
     .ph3 img {
       width: rem(600px);
       height: rem(600px);
@@ -374,6 +369,7 @@ body {
     }
     .ph4 img {
       position: relative;
+      height: rem(200px);
       bottom: rem(10px);
     }
     .ph5 img {
@@ -444,6 +440,7 @@ body {
     @include mobile {
       img {
         width: clamp(300px, 50% + 20px, 600px);
+        height: auto;
       }
       &:nth-child(even) {
         @include flexbox(column, center, flex-end);
@@ -554,11 +551,9 @@ body {
     transform: scaleX(0) scaleY(0.005);
   }
   50% {
-    /* 0.5 초간 세로 크기는 작은상태로 가로 너비만 확대 */
     transform: scaleX(1) scaleY(0.005);
   }
   100% {
-    /* 0.5 초간 세로 크기를 확대 */
     transform: scaleY(1) scaleX(1);
   }
 }
@@ -844,7 +839,6 @@ body {
   &__container {
     @include autoMargin;
     margin-top: rem(35px);
-    // min-width: rem(320px);
 
     @include desktop {
       @include flexbox(row, space-between);
@@ -860,6 +854,7 @@ body {
   // 입력 서식
   &__formbox {
     gap: 10%;
+    padding: rem(20px) rem(10px);
 
     @include desktop {
       max-width: 50%;
@@ -958,7 +953,6 @@ body {
 
   // 사진 등록 버튼
   &__button {
-    // margin-top: rem(10px);
     flex: 1 1 10%;
     padding: rem(10px);
     border: 0;
