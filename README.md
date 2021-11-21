@@ -14,7 +14,10 @@
 
 ### 페이지 첫 화면 및 웹 페이지 보러가기
 
-![](https://images.velog.io/images/hustle-dev/post/783662fb-2f2d-47cf-824f-80e542a4ce9f/%E1%84%91%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%20%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB.gif)
+<p align="center">  
+  <img src="https://user-images.githubusercontent.com/53992007/142768379-960eff8f-8b81-4fe2-bca4-aa63b5749560.gif">
+</p>
+
 
 페이지를 처음 들어가게 되면 다음과 같은 화면을 볼 수 있다. 첫 화면 뿐만 아니라 최대한 움직이고 화려한 요소들을 넣기 위해서 애니메이션 효과들을 많이 사용하였다. 또한 반응형으로 만들어서 width가 768 사이즈 아래로 내려가게 되면 UI가 바뀌게 된다.
 
@@ -25,7 +28,11 @@
 
 ### 인트로 영상
 
-![](https://images.velog.io/images/hustle-dev/post/39bba660-5330-429c-945b-f81b6e4f596b/%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%90%E1%85%B3%E1%84%85%E1%85%A9.gif)
+
+<p align="center">  
+  <img src="https://user-images.githubusercontent.com/53992007/142768585-278a2602-0233-48a1-8587-b50cb2a4f657.gif">
+</p>
+
 
 > 이 UI는 야놀자 UI를 참고하였는데 이 웹 페이지가 사진 갤러리임을 말하고 싶어 pixabay에서 제공하는 무료 동영상 중 사진과 관련된 동영상을 가져왔다.
 
@@ -33,13 +40,19 @@
 
 ### 인기사진
 
-![](https://images.velog.io/images/hustle-dev/post/ef81a30a-2a3e-42e4-bf56-40d26c825def/%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%80%E1%85%B5%E1%84%89%E1%85%A1%E1%84%8C%E1%85%B5%E1%86%AB%20%E1%84%83%E1%85%A6%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%90%E1%85%A1%E1%86%B8.gif)
+<p align="center">  
+  <img src="https://user-images.githubusercontent.com/53992007/142768681-dbfa2b43-db0d-4e91-8589-cc8cd737d1e6.gif">
+</p>
+
 
 > 이 UI는 모달창을 이용하여 만들었는데 wai-aria의 best practice를 참고하였다. 페이지가 반응형이기 때문에 width를 768아래로 줄여서 보면 새로운 배치를 볼 수 있다.
 
 ### 사진 취향의 animation
 
-![](https://images.velog.io/images/hustle-dev/post/fbb59e3d-08a7-4db2-bb6d-d9b06af9215b/%E1%84%89%E1%85%A1%E1%84%8C%E1%85%B5%E1%86%AB%20%E1%84%8B%E1%85%A2%E1%84%82%E1%85%B5%E1%84%86%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%89%E1%85%A7%E1%86%AB.gif)
+<p align="center">  
+  <img src="https://user-images.githubusercontent.com/53992007/142768737-44086acf-e0f3-4ca6-a8b1-e3323be44c6f.gif">
+</p>
+
 
 > 인기사진 부분에서 `나의 사진 취향 알아보러 가기 버튼`을 누르면 위 페이지로 이동할 수 있다. 페이지에서 유저가 사진을 클릭하였을 시, 자신이 어떤 사진을 클릭하였는 지 알기 쉽게 하기 위해 hover 속성과 애니메이션을 주었다.
 
