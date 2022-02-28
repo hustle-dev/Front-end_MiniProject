@@ -1,6 +1,6 @@
-# Front-end-Mini-Project
-
 블로그 회고 링크: https://velog.io/@hustle-dev/%ED%8C%A8%EC%8A%A4%ED%8A%B8%EC%BA%A0%ED%8D%BC%EC%8A%A4-%EB%84%A4%EC%B9%B4%EB%9D%BC%EC%BF%A0%EB%B0%B0-2%EA%B8%B0-%EB%AF%B8%EB%8B%88%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%9A%8C%EA%B3%A0%EB%A1%9D
+
+# Front-end-Mini-Project
 
 ## https://gallerya.netlify.app
 
